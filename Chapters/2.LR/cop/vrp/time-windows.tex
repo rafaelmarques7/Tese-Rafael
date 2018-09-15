@@ -1,0 +1,39 @@
+\subsubsection{VRP with time-windows}
+\label{sec:time-windows-vrp}
+
+The Vehicle Routing Problem with time windows (VRPTW) is a generalization of the VRP,
+in which every customer has a time window associated to the period of time in which it may be server.
+The research around this object includes both on the classical VRP, \cite{vrptw_1} \cite{vrptw_2}, and on the time-dependent VRP,
+focusing both on the static \cite{tdvrptw_1} and dynamic case, \cite{dynamic_vrptw} \cite{dynamic_vrp_review}. Without loss of generality,
+below we introduce a definition of the static time-dependent VRPTW, which considers time-dependent travel costs,
+and constant travel distance. It is possible to reduce this definition into the classical VRPTW,
+by considering travel time to be constant, and not a function of time.
+
+The time-dependent VRP with time windows (TDVRPTW) is defined, following the work of \cite{tdvrptw_1}, as follows.
+Let $G=(V,A)$ be a graph where $A=\{(v_i, v_j): i \not j \wedge i,j \in V\}$
+is the set of arcs, and $V = (v_0, ..., v_{n+1})$ is the set of vertex
+Vertices $v_{0}$ and $v_{n+1}$ denote the depot at which the vehicles are based.
+It is considered that each vehicle has an uniform capacity of $q_{max}$.
+It is also expected that each vertex in $i \in V$ has an associated demand $q_i \geq 0$,
+a service time $g_i \geq 0$, and the depot has $q_0 = 0$ and $g_0 = 0$,
+aswell as a service time window, denoted by $[e_i, l_i]$
+The set of vertex $ C = (v_1, ..., v_{n})$ specified the set of $n$ customers.
+The arrival time of a vehicle at customer $i$, $i \in C$, is denoted by $a_i$,
+and its departure time $b_i$. Each arc $(v_i, v_j)$ has an associated distance $d_{ij} \geq 0$,
+and a travel time $t_{ij}(b_i) \geq 0$. Note that the travel time is a function 
+of the departure time from costumer $i$.
+The set of available vehicles is denoted by $K$. 
+Consider that the cost per unit of route \textit{duration} is denoted by $c_{t}$,
+and the cost per unit of route \textit{distance} is denoted by $c_{d}$. 
+
+The goal of this formulation of the TDVRPTW is to: 
+
+\begin{itemize}
+  \item  minimize the total number of vehicles used; 
+  \item minimize  the total cost, which depends both on the travel time and distance covered;
+  \item visit each customer during its defined time window.
+\end{itemize}
+
+
+
+

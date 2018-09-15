@@ -1,0 +1,161 @@
+
+flight data:
+
+*overall curiosity
+the flight Porto - Lis are,
+at the 8 jan 2018,
+13 for the days: 19, 22,23,24
+
+However, when you search for the price in june, its 15
+for setember, its 19
+they purposely increase the price of the trips that are far ahead.
+
+the furthest away they have currently is october,
+which makes it 10 month.
+google has the information until november, being thus slightly ahead.
+
+
+
+google QPX:
+
+  usage
+  " Today, QPX for enterprise enables travel companies to process
+   millions of user-generated flight queries per day.
+   Many air travel shopping websites, including Google Flights,
+   are built on QPX for enterprise data."
+
+  *discuntiuement of one service, but has others, not so usefull
+  "While some companies found the QPX Express API useful,
+   there was simply not enough adoption to continue supporting the product.
+  As a result, we informed users that we will be shutting down
+  the QPX Express API on April 10, 2018. ""
+
+  PRICE
+  "The usage fee has been reduced from $0.035 to $0.02 per query in
+  excess of the free quota of 50 queries per day"
+
+  implementation
+  "QPX Express follows the same standards and syntax as other Google APIs.
+  While code development is necessary to integrate with QPX Express,
+  the lightweight API that employs industry standards minimizes the
+  amount of work considerably.
+  It can be implemented with minimum efforts by travel companies with
+ the technical ability to integrate a JSON API with their own websites."
+
+
+SKY SCANNER:
+
+SkyScanner also has a VERY NEAT monthly price page
+https://www.skyscanner.pt/transporte/voos/opo/lis?adults=1&children=0&adultsv2=1&childrenv2&infants=0&cabinclass=economy&rtn=1&preferdirects=false&outboundaltsenabled=false&inboundaltsenabled=false&oym=1801&iym=1801&ref=day-view&selectedoday=08&selectediday=08
+
+
+SEAMS free
+here is the scheme
+they do not charge anything for the query.
+they have a smart way of caching their data, and thus allow easy "cheapest" searches
+however, when you build your product on top of their engine,
+you will "be invated to have a share", or something like that,
+when you "reach enough volume sales".
+
+"Our APIs and White Label are completely free to use,
+we don't charge any fee per-booking, or any yearly or monthly fees.
+Once your site is generating enough bookings,
+you will become eligible to receive a commission on these.
+ For more information, please see this article.
+ https://support.business.skyscanner.net/hc/en-us/articles/207322339-Do-you-offer-commissions-for-use-of-your-White-Label-or-API-
+
+"
+
+You are eligible to be contracted and paid when your integration reaches £1000
+ of revenue within one month. Once you have reached the threshold of £1000 revenue,
+  you can contact us and we will send you a Partnership Agreement
+   to complete (pending a review of your site and your integration).
+   Once this has been accepted and counter-signed by Skyscanner,
+   you may send us your invoice detailing the commission you are due.
+   Please contact us if you have any questions regarding this.
+"
+However, our API and White Label are free to use at any volume,
+to get started please go to our Sign In page and follow the instructions.
+
+
+if we wish to create a free service, or charge for something else,
+that would be fine,
+but if we want to create a profitable business,
+we need another solution
+
+
+TRAVEL FUSION
+https://www.travelfusion.com/corporate/page/tf-flight-api
+
+i could not understand if it was free or not
+they never especifically said it,
+all they say is "register" and "contact us"
+so i guess not.
+
+however, this service allows query and booking.
+they also have a very structured integration phase.
+seems cool for statups.
+
+Expedia
+
+Provides flight's availability and pricing for a given origin and
+destination airports and travel dates.
+Currently international airports are NOT supported.
+ONLY US to US and Canada to Canada airports are supported.
+
+
+
+
+
+
+
+
+
+
+
+
+some guy advice on building this:
+
+            I own a marketing company that’s working on a unique flight deals product.
+            Our client didn’t want to build another flight booking website. They wanted to create a portal that incorporated value-added services and a unique flight discovery process on top of various related datasets offered in the broader travel industry.
+            Because of the scope and breadth of the project we faced a number of challenges:
+            sourcing the right data partners so we could have a reasonable amount of optionality and better understand the pros and cons of each solution
+            evaluating and analyzing the various providers based on our buying criteria (EG. do they have this data or that, how does their system perform / scale, what’s the pricing model and how does it fit with our business model, etc)
+            Considerations around integrating flight booking, flight ticketing, flight status, and flight schedules into the product…Among other, related data.
+            Enabling a unique flight search experience that allowed our users to sort and filter by a not-so-common set of parameters—and finding a data provider that enabled our engineers on the frontend and backend to make that happen.
+            Considerations around maintenance needs, upgrades, changes to the API, maturity, stability, rate limits, request/response formats, legality, etc.
+            Data formats, clients, and integration options. Can we work with a JSON based REST API, or do we need to consume XML / SOAP APIs, etc.
+            Will the data support all of the functionality our design team dreamt up…Or more specifically will this API enable us to pursue our goals from a UX, UI, and user acquisition perspective? Do we need to make sacrifices anywhere along those paradigms?
+            Once you’ve decided you need a free API for flight fare search you should begin your design sprint.
+            During the design sprint make sure that you don’t put yourself in a data straight jacket. Come up with as many unique ideas and features for your product as you can. Focus on the value your users want or need. Don’t look at the data that’s available. Assume you can get whatever you’ll need. You can cut scope later when you make your data partner decisions.
+            Comparing pricing is challenging. Since this is a fairly commoditized offering you’ll notice the players in this space avoid speaking in plain, direct language.
+            They are selling access to an API, and they are probably somewhere in the middle of the value chain, not the originator or sole owner of the data they sell. Because of this, it’s a roundabout process of finding data, evaluating pros and cons, and comparing pricing as request volume scales. You’ll probably need to speak with a sales guy.
+
+            Also note, booking and ticketing are unique datasets, with different data structures.
+
+            Read the terms and conditions of the data provider carefully. Caveat emptor.
+
+            The flight search APIs we evaluated were:
+
+            SkyScanner Meta Search API
+            Google / ITA Matrix
+            Rocket Route
+            DCS+
+            Amadeus
+            Datalex
+            Open Jaw Tech
+            Travelaer
+            SwitchFly
+            Air Black Box
+            TravelPort
+            Sabre
+            Flight Stats
+            TravelFusion
+            FlightView
+            Some Free Flight API Data Sources Include:
+
+            Open Flights
+            Our Airports
+            Airport Data
+            SkyScanner (sort of)
+            ""

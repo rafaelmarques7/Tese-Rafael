@@ -1,0 +1,24 @@
+\subsubsection{Problem definition}
+\label{sec:classic_tsp}
+
+The Traveling Salesman occurs both as combinatorial optimization and as a Graph Problem.
+In either case, the TSP is defined by a graph $G = (N, A)$, where $N$ is the set of 
+nodes, and $A$ is the set of arcs connecting those nodes.
+The set of nodes is of size $n = |N|$, while the size of the set of arcs is $m = |N|^2$.
+Each arc, $a_{ij}, i, j \in N, i \ne j$ has an associated weight, $c_{ij}$, which represents, for example, the distance between cities.
+The set of arcs is fully connected, that is, each node is capable of reaching any other node directly, without visiting a third node.
+When two nodes can not be connected by an arc, the cost of that node is considered as very high.
+In the classical TSP formulation, the graph is undirected, which implies symmetry in the costs of the arcs, that is: $c_{ij} = c_{ji} \forall i, j \in N$.
+Because of the characteristics of this TSP formulation, the graph is said to be connected, weighted and undirected.
+
+The objective of the TSP is to find the minimum cost Hamiltonian cycle, that is a path which visits each node exactly once, and returns to the initial node, closing the path.
+A generic solution to the TSP is any permutation $\sigma$ over the set of nodes, $N$. 
+$\sigma$ is also a set, where $\sigma_{i}, i \in len(\sigma)$, represents the node in the i'th index of the cycle.
+The cost of a cycle is given by the sum of the weights of each arc by which it is composed,
+that is $C(\sigma) = \sum_{i=1}^{n} c_{\sigma_{i} \sigma_{i+1}}$, where $\sigma_{n+1} = \sigma_{1}$
+
+The TSP can solve diferent types of problems by optimising different parameters. In the classic formulation,
+the weight between of an arc connecting two nodes represent the distance between two cities. However, the weight
+of an arc can represent different things, particularly, travel time or travel cost. Althoug changing the parameter
+may lead the TSP formulation intact, in some cases, it changes the problem. 
+This occurs for example when considering that costs are time-dependent and this will be approached in section $\ref{sec:time-dependent-tsp}$.

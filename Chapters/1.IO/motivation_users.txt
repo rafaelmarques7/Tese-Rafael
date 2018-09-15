@@ -1,0 +1,20 @@
+Desde que a aviação comercial se tornou uma realidade, o mundo e as pessoas mudaram, e viajar tornou-se uma necessidade, quer por razões pessoais como por motivos de negócio. Como qualquer necessidade, do ponto de vista do consumidor, é crucial minimizar o seu custo. As companhias aéreas estão bem cientes disso e conseguem maximizas os seus lucros estudando o problema de todas os pontos de vista possíveis. Porém, para o utilizador comum, muitas vezes não é fácil conseguir minimizar o custo desses serviços. Isso é particularmente verdade porque os preços dos bilhetes de avião variam de forma aparentemente caótica. 
+Com este trabalho pretende desenvolver-se uma ferramenta que permita melhorar a qualidade de pesquisa de viagens de avião. Esta plataforma deverá ser acessível via Web, e implementar as seguintes funcionalidades:
+•	Procurar a viagem mais barata entre dois sítios, num certo período de tempo;
+•	Procurar o preço mais baixo da combinação de voos ida e volta entre dois sítios, num certo período de tempo;
+•	Procurar a viagem mais barata, que passa em N cidades. 
+O ultimo ponto referido merece uma nota. Esta abordagem ao problema permite ser o mais geral possível. Repare-se que a viagem a que se refere é uma combinação de N-1 voos, e poderá ou não ter as seguintes características:
+a)	Ordem fixa;
+b)	Datas fixas;
+c)	Origem e destino iguais;
+Caso se tenha a), b) e c) em conjunto, estamos perante um problema que é rígido no sentido em que só tem uma solução possível. A otimização deste problema passa então, apenas, por procurar dentro dos bilhetes disponíveis para a determinada rota, quais os que minimizam o custo. Isto é o que companhias como a Edreams, Skyscanner e Google Flights tradicionalmente fazem.
+Caso a) e b) não se verifiquem, estamos perante a formulação do Traveling Salesman Problem, TSP, com custos variáveis, TSPWC. Caso c) também não se verifique, trata-se do Assymetric TSP com custos variáveis, ATSPWC. Repare-se que poucas ou nenhumas operadoras de vendas de bilhetes que ofereçam ferramentas para resolver este problemas. Algumas apresentam tempos flexíveis, b), mas para apenas uma viagem, ou, possivelmente, uma viagem de ida e volta. Porém, nenhuma o faz para um conjunto de mais que duas viagens.
+Por fim, caso não se verifique a), mas se verifique b), estamos perante o TSP com (multiple) Time Windows and Variable Costs, TSPTWVC.  Novamente, se não se verificar c) trata-se do caso assimétrico do problema.
+Repare-se que a primeira e a segunda ferramentas de pesquisa que se pretende introduzir com este serviço, são simples e fáceis de realizar até “à força bruta”, quer em termos computacionais como em termos humanos. Apesar de exequível em termos humanos, a tarefa é geralmente muito demorada e tediosa, o que leva a que muitos utilizadores não o façam de forma persistente, acabando por pagar mais pelo serviço. Note-se que as empresas de pesquisa e venda de bilhetes sabem isto, e possivelmente por essa razão é que (ainda) não oferecem estas ferramentas.
+Porém, há que notar a complexidade da terceira ferramenta de pesquisa que se pretende introduzir. Para resolver tal problema, é necessário introduzir um algoritmo flexível e rápido, capaz de resolver o problema do ATSPTWVC (assymetric TSP with time Windows and variable costs). É precisamente este o problema sobre o qual nos debruçaremos ao longo desta tese. 
+Coloca-se então a questão, quem poderá beneficiar disto?
+1.	Qualquer pessoa que queira poupar numa viagem simples ou de ida e volta;
+2.	Empresas que queiram gerir melhor as (múltiplas) viagens de negócio;
+3.	Qualquer pessoa ou empresa que necessite de fazer múltiplas viagens seguidas;
+Outra coisa que vale notar é que o algoritmo não sabe que tipo de dados está a processar. Por essa razão, custos monetários podem também ser custos temporais ou simplesmente distâncias, consoante a formulação do problema que se está a resolver. Isto pode ser útil para traçar possíveis paralelos com outros problemas semelhantes ao TSP, podendo beneficiar os problemas em que o custo é variável com o tempo.
+

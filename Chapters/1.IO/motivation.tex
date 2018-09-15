@@ -1,0 +1,124 @@
+\section{Motivation}
+
+The motivation for this work is the resolution of a consumer problem,
+felt in first hand. Specifically, how online traveling agencies do not offer
+support and optimization for complex airplane routes. In this work, we wish
+to address this problem. We propose a complete system for the implementation
+of such functionalities in a web application,
+aswel as an optimization algorithm for the resolution of such problem.
+
+Online Traveling Agencies are online applications which sell traveling goods,
+as commercial flights. Althoug users still have the option of buying
+their airplane tickets in the respective airline company website,
+57% of today's users buy tickets from an OTA. This businness is increasing in size,
+offering a variety of consumer goods, including hotel and car rental,
+as well as cruiseships, and are also expecting to enter the rail businness.
+In fact, the size of the OTA market is expected to reach a global value of 1.000B\$,
+by 2022.  This market is dominated by two comapny aggregates,
+while Google, with its Google Flights service, is growing in market size.
+
+The user functionality of the majority of the websites has increased,
+by prodiving users with some refined search experience. These functionalities
+include price overview over extended search periods
+and price tracking in real time.
+
+However, when searching for a trip
+with more than two flights, users are not offered any search functionalities.
+Instead, to find the cheapest trip, users need to check any
+possible combination of flights, one by one. As the trip size increases, finding
+the cheapest trip becomes virtualy impossible for a human. Because of this,
+users will ultimately pay more than necessary for this service.
+
+Most user trips can be modulated as a Traveling Salesman problem, or a variation
+of it. For example, a two way flight is a two city TSP problem. This problem has
+a specific depot, and the cost between the two arcs varies over time. This means
+that in fact, this problem must be addressed as time dependent TSP variation.
+
+Ant colony optimization is a meta heuristic algorithm which provide
+high quality solutions in a short ammount of time. This algorithm
+can be adapted to the resolution of any combinatorial optimization Problem,
+as is the TSP and the TDTSP.
+
+The Traveling Salesman Problem requires a cost matrix with the
+cost of any possible flight between two cities. Because of this,
+the resolution of this problem requires an extensive ammount of data.
+
+Public flight API's charge a fixed fee for the request of any flight data.
+Due to this, requesting flight information through a public API to describe
+a TSP instance is an expensive process. The alternative to this is designing
+a data mining algorithm which scrapes the web for the data necessary to solve
+the TSP instances.
+
+
+\subsection{Direct TSP applications}
+
+The TSP is conceived as very simple routing problem, with very few constraints.
+Due to its nature, the TSP arises as a subproblem for many transportation
+and logistics applications. In fact, the problem of optimizing a school bus route 
+had a particular impact in the history of the TSP, as it served as motivation 
+for one of the pioneers in the research of the TSP, Merrill Flood.  
+(cite $http://www.cs.yorku.ca/~aaw/Zambito/TSP_Survey.pdf$)
+ 
+ During the 1930's and 1940's, a statistical study of aggriculture production 
+ was conducted in India, where are the time jute crops accounted for a quarter of the 
+ total exports. During this period, Mahalanobis notices that a major component
+ in the costs of the survey would be the necessary time to move men and equipment 
+ from one sample area to another. In sum, the formulated problem was identical to the TSP.
+ Although Mahalanobis does not propose a way for solving the problem,
+ a statistical analysis to estimate the lower bound was conducted. 
+(cite https://www.isical.ac.in/events/In%20Pursit%20of%20the%20Travelling%20Salesman.pdf)
+
+The TSP has also direct applications in the cost minimization when mapping celestial objects.
+The Starlight Interferometer Program is NASA program to map celestial objectives
+with high accuracy. This program utilizes a Lin-Kerninghan heuristic to select 
+the sequence of celestial objects to be mapped. The objective is to  reduce 
+the total fuel spent by repositioning the satellites involved in the interferometer process.
+This problem is trated as a TSP. 
+(cite: $http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.40.1906\&rep=rep1\&type=pdf$)
+
+
+In the manufacturing industry, the TSP has several applications.
+It was used to organize computer wiring (cite: Lenstra $\&$ Rinnooy Kan, 1974).
+Also related to computer wiring are, more recently, the circuit board  manufacturing processes
+(cite: $http://ieeexplore.ieee.org/document/1205218/?reload=true and http://digital-library.theiet.org/content/conferences/10.1049/cp_19991183$),
+which can be modulated as a TSP.
+Finally, a classic application of the TSP is the drilling problem (cite: $https://link.springer.com/content/pdf/10.1007/BF01415960.pdf$). Actually,
+due to the diferent sizes of the drills, 
+the drilling problem may be viewed as a series of TSP's. 
+The objective is to minimize the total time required in the manufacturing of a 
+printed circuit board (PCB's), maximizing thus the throughoutput.
+%(sourcE: $http://www.exatas.ufpr.br/portal/docs_degraf/paulo/Traveling_Salesman_Problem__Theory_and_Applications.pdf$)
+(NOTE: We can easily expend this paragraph if we want to.)
+ 
+ 
+ 
+ 
+\subsection{Tsp related problems}
+
+The Traveling Salesman Problem is a densily researched problem because it is 
+one of the simples routing problem, yet, solving it may be a very difficult task. 
+Many routing problems are generalization of the simple TSP. An example of this is the 
+is the Vehicle Routing problem. It can be stated in one line as "What is the optimal
+set of routes for a vehicle fleet to serve a set of costumers?". The VRP requires 
+each costumer to be visited once and once only, by a single vehicle. The objective 
+is to find a set of routes which optimizes some decision variable, as cost or serving time.
+If there is only one available vehicle, the VHR becomes the simple TSP. 
+
+When organizing a routing problem, there are many real life limitations that may be imposed on the problem.
+When handling with customers, mosten, there is a timetable which has to be respected. 
+This leads to a series of time constrained VRP. (cite TW VRP...)
+When handling with cargo distribution, the weights or dimensions of each cargo unit 
+can also be taken into account when designing the problem. This class of problems 
+is known as the capacited VRP (cite CVRP).
+
+INTRODUCE TIME DEPENDENCY 
+ 
+
+
+
+
+
+
+
+
+

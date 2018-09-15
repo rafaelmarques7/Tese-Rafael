@@ -1,0 +1,50 @@
+\section{Motivation}
+
+Online Traveling Agencies (OTA) are online applications which sell traveling goods, 
+as, for example, commercial flight tickets.
+Although consumers retain the option to buy flights directly from airline companies,
+the majority chooses to use OTA.
+The main reason for this is that these agencies aggregate flight data 
+from multiple airlines, instead of being limited to a single one, 
+which ultimately increases the options of the consumer.
+Furthermore, many OTA work as meta-search engines, searching over a variety of websites
+in order to find the best flights which satisfy the consumer requirements.
+While OTA usually provide very complete search functionalities for simple flights,
+the majority fails to offer the same search options for a trip composed of multiple cities. 
+
+Consider a trip starting and ending at any given city,
+which must visit every city specified in a particular list of cities. 
+If there are no constraints associated with the order in which these cities must be visited, 
+this problem is known, in the scientific community, 
+as the Traveling Salesman Problem (TSP). This problem 
+is considered very difficult to solve, since the total number 
+of possible solutions increases in an exponential way, as the number of cities increases.
+
+If commercial flights are the means of transportation between every pair of cities,
+this problem can no longer be considered the \textit{classic} Traveling Salesman,
+but rather its \textit{time-dependent} counterpart. This is because
+some of the major flight characteristics, as its price and duration,
+cannot be considered constant over time. Rather, they are dependent on the particular flight selected, 
+and the characteristics of that flight may follow no
+apparent logical rule, at least from the consumers perspective.
+
+Consequently, finding the most efficient set of flights, from the consumer point of view,
+is a very repetitive and time-consuming task. Faced with this problem, only the most 
+persistent consumer will be able to find the best solution for the problem, and this can only 
+occur for a very small list of cities. As the number of cities increases,
+even the most persistent consumer cannot verify all possible solutions.
+This means that, ultimately, the final consumer will pay more than necessary for the requested service.
+
+This work also arises as a response to the public contest called \textit{Traveling Salesman Challenge} \cite{tsc_kiwi},
+issued by \textit{Kiwi}, a well established OTA, even though the beginning of this work dates prior to the issue of the challenge.
+In this challenge, Kiwi recognizes that, in most cases, users do not care about the order in which they visit 
+a given list of cities, and that there exists a market niche interested in this type of services.
+Kiwi also recognizes that most OTA do not offer these type of services due to the computational 
+complexity associated with the problem.
+
+This work intends to address the problem of solving multi-city trips, by studying it, and by developing 
+the necessary technologies to effectively solve the problem in a time-efficient manner.
+It also wishes to develop a proof of concept online flight search application, 
+implementing these technologies in order to, ultimately, provide high-quality search
+for multi-city trips.
+

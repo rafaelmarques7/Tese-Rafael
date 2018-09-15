@@ -1,0 +1,17 @@
+\babel@toc {english}{}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Introduction}{1}{chapter.1}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces The different services provided by Online Traveling Agencies\relax }}{4}{figure.caption.9}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Literature review}{11}{chapter.2}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Illustration of the classes P, NP, NP-complete and NP-hard\relax }}{14}{figure.caption.14}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces The 2-opt local search works by reconnecting two edges, hoping to fold possible crossovers, decreasing the overall tour coust. In the left image, a crossover is identified. In the middle image, a the edges beloning to this crossover are removed, and in the figure to the right, they are reconnected, forming a new valid tour\relax }}{29}{figure.caption.15}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces The crossing bridges can only be solved by reordering 4 edges. The resolution of this problem with local search is only possible with 4-opt or higher.\relax }}{29}{figure.caption.16}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces The double bridge experiment. On the left, two bridges with the same length. Experimental results show that ants distribute themselves evenly amonst both bridges. On the right, one of the bridges is longer than the other. Experimental results show that ants use the shorter bridge more often.\relax }}{31}{figure.caption.17}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Problem Formulation}{35}{chapter.3}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Illustration of a Flying Tourist Problem using a multipartite graph. To each node (A,B,C) it is associated a waiting period of respectively (1,2,3) time units. The red arrows represent a possible solution to the problem.\relax }}{38}{figure.caption.20}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Code of Project}{41}{appendix.A}
+\addvspace {10\p@ }
+\contentsline {xchapter}{A Large Table}{49}{appendix.B}

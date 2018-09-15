@@ -1,0 +1,71 @@
+\subsubsection{Time Dependent TSP}
+\label{sec:time-dependent-tsp}
+
+The time-dependent traveling salesman problem is a generalization 
+of the TSP where arc costs depend on their position in the tour, \cite{time_dependent_tsp, tdtsp_single_machine}.
+This section first introduces the TDTSP as a graph problem,
+followed by the definition as a sequencing problem. 
+
+\textbf{TDTSP as a graph problem}
+
+Let $N = {1, 2, ..., n}$ and let $N_{0} = N \cup \{0\}$.
+The TDTSP on a complete graph $K(N_{0})$ can be modeled 
+as an optimization problem over a layered graph $(V, A)$.
+$V$ is the set composed by the source node $0$, the termination node $T$,
+and intermediate nodes $(i, t)$ for $i, t \in N$.
+In this representation of the intermediate nodes,
+the first index of $(i, t)$ identifies the vertex $i$ of the graph $K(N)$,
+and the second index represents the position of vertex $i$ in a path between nodes $0$ and $T$.
+In its turn, $A$ is the set of arcs connecting each node.
+This set is composed of initiation, intermediate, and termination arcs.
+For $i \in N$, $(0, i, 0)$ denotes an initiation arc from node 0 to node $(i, 1)$,
+and $(i, T, n)$ denotes a termination arc from node $(i, n)$ to node $T$.
+Given $i, j \in N$ such that $i \neq j$, and $1 \leq t \leq n-1$,
+$(i,j,t)$ denotes an intermediate arc from node $(i,n)$ to node $(j, t+1)$.
+The third index of an arc represents its layer, that is,
+the position in which it occurs in the path, or in other words, the time 
+of the arc traversal, if we consider 1 time unit for each of these traversals.
+
+When working on the TDTSP, it is often convenient to define $G(n)$ as a subgraph 
+of $(V, A)$, induced by $V\backslash\{0, T\}$. This way, $G(n)$ has $n^2$ nodes 
+${(i, t): i, t \in N}$ and all the $n(n-1)^2$ intermediate arcs of $A$.
+A path with $n$ vertices in $G(n)$ is of the form ${(v_{t}. t): v_{t} \in N, 1 \leq t \leq n}$.
+Since consecutives nodes are in consecutive layers,
+the path can be described by an ordered array $(v_{t}: t \in N)$.
+This path can be extended to a $0-T$ path of $(V,A)$ by appending
+node $0$ and $T$ to the begining and end of the tour, respectively.
+
+The classical TSP and its time-dependent variation share the same objective, 
+which is to find the minimum cost hamiltionan cycle over graph $(V, A)$.
+Another property they share is the possibility of working over 
+a symetric or assymetric problem.
+
+
+\textbf{TDTSP as one-machine sequencing problem}
+
+
+In operation scheduling, the time dependent problem TSP can also be stated as a 
+one-machine sequencing problem, \cite{tdtsp_single_machine}.
+
+Consider a set of $n$ jobs, $J_{1}$, ..., $J_{n}$, to be executed on a single machine.
+Each job has a setup cost $C_{i,j}^{t}$, ocurring when job $J_{i}$, processed in
+the t-th time unit, is followed by job $J_{j}$, processed in the (t+1)-th
+time unit. Consider that each job completion takes exactly one time unit.
+The machine is in some given initial state, denoted by 0, before the job processing beings.
+As happens with the classical TSP, the machine has to be returned to its original
+state, after the job processing ends. The problem is to find a sequence,
+$J_{w(1)}$, ..., $J_{w(n)}$, that minimized the total set-up cost C(w), defined by:
+
+\begin{equation}
+  C(w) = C_{0, w(1)}^{0} + \sum_{i=1}^{n-1} C_{w(i), w(i+1)}^{i} +  C_{w(n), 0}^{n}
+\end{equation}
+
+It is important to note some important characteristics of this formulation.
+First, problems with unspecified initial/final state can be formulated
+in the same way using 0 as the initiation/termination cost, that is
+$C_{0, w(1)}^{0} = 0$ and $C_{0, w(1)}^{n} = 0$.
+Secondly, the overwriting of the above formulation reduces the defined problem
+into the classical TSP and the classical Assignment Problem. The first case
+is achieved by considering that setup costs are not time-dependent, that is,
+$C_{i, j}^{t} = C_{i, j}$. The latter is accomplished by considering that setup costs
+are not dependent on the second/first job, that is, $C_{i, j}^{t} = C_{i}^{t}$.

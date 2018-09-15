@@ -1,0 +1,106 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: main.aux
+The style file: IEEEtran.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: ./Thesis-MSc-Bibliography.bib
+Unbalanced braces---line 1052 of file ./Thesis-MSc-Bibliography.bib
+ :    title = "The Traveling Salesman Problem and its variations
+ :                                                              }",
+I'm skipping whatever remains of this entry
+Unbalanced braces---line 1059 of file ./Thesis-MSc-Bibliography.bib
+ :    title = "The Traveling Salesman problem: applications, formulations and varitions
+ :                                                                                     }",
+I'm skipping whatever remains of this entry
+Repeated entry---line 1207 of file ./Thesis-MSc-Bibliography.bib
+ : @article{cite_21
+ :                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1542 of file ./Thesis-MSc-Bibliography.bib
+ : @article{heuristics_tsp
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1549 of file ./Thesis-MSc-Bibliography.bib
+ : @article{local_search_book
+ :                           },
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "tsptw_soloman"
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty journal in tourism_tec
+Warning--empty journal in OTA_industry_report
+Warning--empty title in cite_1
+Warning--empty journal in cite_1
+Warning--empty year in cite_1
+Warning--empty title in tsp_book
+Warning--empty journal in tsp_book
+Warning--empty year in tsp_book
+Warning--empty author in bnb_review
+Warning--empty title in bnb_review
+Warning--empty journal in bnb_review
+Warning--empty year in bnb_review
+Warning--empty author in held_karp_lb
+Warning--empty title in held_karp_lb
+Warning--empty journal in held_karp_lb
+Warning--empty year in held_karp_lb
+Warning--empty author in lkh_original
+Warning--empty title in lkh_original
+Warning--empty journal in lkh_original
+Warning--empty year in lkh_original
+Warning--empty author in atsp_to_tsp_1
+Warning--empty title in atsp_to_tsp_1
+Warning--empty journal in atsp_to_tsp_1
+Warning--empty year in atsp_to_tsp_1
+Warning--empty author in atsp_to_tsp_2
+Warning--empty title in atsp_to_tsp_2
+Warning--empty journal in atsp_to_tsp_2
+Warning--empty year in atsp_to_tsp_2
+
+Done.
+You've used 79 entries,
+            4087 wiz_defined-function locations,
+            1163 strings with 18790 characters,
+and the built_in function-call counts, 31007 in all, are:
+= -- 2401
+> -- 662
+< -- 27
++ -- 317
+- -- 148
+* -- 1298
+:= -- 5532
+add.period$ -- 146
+call.type$ -- 79
+change.case$ -- 72
+chr.to.int$ -- 57
+cite$ -- 107
+duplicate$ -- 2794
+empty$ -- 2933
+format.name$ -- 193
+if$ -- 6911
+int.to.chr$ -- 0
+int.to.str$ -- 79
+missing$ -- 490
+newline$ -- 264
+num.names$ -- 73
+pop$ -- 1379
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 2394
+stack$ -- 0
+substring$ -- 204
+swap$ -- 1521
+text.length$ -- 8
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 79
+warning$ -- 28
+while$ -- 83
+width$ -- 81
+write$ -- 639
+(There were 5 error messages)

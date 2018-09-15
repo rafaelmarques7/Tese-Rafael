@@ -1,0 +1,43 @@
+\babel@toc {english}{}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Motivation}{2}{section.1.1}
+\contentsline {section}{\numberline {1.2}Existing Services}{3}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}User Search Tools}{5}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Developer Search Tools}{7}{subsection.1.2.2}
+\contentsline {section}{\numberline {1.3}Objectives}{8}{section.1.3}
+\contentsline {section}{\numberline {1.4}Document structure}{9}{section.1.4}
+\contentsline {chapter}{\numberline {2}Literature review}{11}{chapter.2}
+\contentsline {section}{\numberline {2.1}Combinatorial Optimization and Routing Problems}{12}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Combinatorial Optimization and Computational Complexity}{12}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}The Traveling Salesman Problem}{13}{subsection.2.1.2}
+\contentsline {subsubsection}{\numberline {2.1.2.A}Problem definition}{15}{subsubsection.2.1.2.1}
+\contentsline {subsubsection}{\numberline {2.1.2.B}Common TSP variations}{15}{subsubsection.2.1.2.2}
+\contentsline {subsubsection}{\numberline {2.1.2.C}Time Dependent TSP}{17}{subsubsection.2.1.2.3}
+\contentsline {subsubsection}{\numberline {2.1.2.D}TSP with time-windows}{18}{subsubsection.2.1.2.4}
+\contentsline {subsubsection}{\numberline {2.1.2.E}Multi objective TSP}{20}{subsubsection.2.1.2.5}
+\contentsline {subsection}{\numberline {2.1.3}Vehicle Routing Problem}{21}{subsection.2.1.3}
+\contentsline {subsubsection}{\numberline {2.1.3.A}Problem definition}{21}{subsubsection.2.1.3.1}
+\contentsline {subsubsection}{\numberline {2.1.3.B}Time-dependent VRP}{22}{subsubsection.2.1.3.2}
+\contentsline {subsubsection}{\numberline {2.1.3.C}Multi-objective VRP}{23}{subsubsection.2.1.3.3}
+\contentsline {section}{\numberline {2.2}Algorithmic overview}{23}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Exact algorithms}{24}{subsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.1.A}Integer Linear Programming}{24}{subsubsection.2.2.1.1}
+\contentsline {subsubsection}{\numberline {2.2.1.B}Branch and Bound}{25}{subsubsection.2.2.1.2}
+\contentsline {subsection}{\numberline {2.2.2}Heuristic algorithms}{26}{subsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.2.A}Held-Karp Lower Bound}{27}{subsubsection.2.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2.B}Tour construction}{27}{subsubsection.2.2.2.2}
+\contentsline {paragraph}{\numberline {A~--}Nearest neighbour}{27}{paragraph.2.2.2.2.1}
+\contentsline {paragraph}{\numberline {B~--}Greedy heuristic}{28}{paragraph.2.2.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.2.C}Tour improvement}{28}{subsubsection.2.2.2.3}
+\contentsline {paragraph}{\numberline {A~--}2 and 3 opt tours}{28}{paragraph.2.2.2.3.1}
+\contentsline {paragraph}{\numberline {B~--}k opt tour}{29}{paragraph.2.2.2.3.2}
+\contentsline {paragraph}{\numberline {C~--}Lin-Kernighan heuristic}{29}{paragraph.2.2.2.3.3}
+\contentsline {subsection}{\numberline {2.2.3}Meta-Heuristic algorithms}{30}{subsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.3.A}Ant Colony Optimization}{31}{subsubsection.2.2.3.1}
+\contentsline {subsubsection}{\numberline {2.2.3.B}Simulated Annealing}{33}{subsubsection.2.2.3.2}
+\contentsline {chapter}{\numberline {3}Problem Formulation}{35}{chapter.3}
+\contentsline {section}{\numberline {3.1}Flying Tourist Problem}{37}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Relation to the TSP}{38}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Graph construction}{39}{subsection.3.1.2}
+\contentsline {chapter}{\numberline {A}Code of Project}{41}{appendix.A}
+\contentsline {chapter}{\numberline {B}A Large Table}{49}{appendix.B}

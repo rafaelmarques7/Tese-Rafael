@@ -1,0 +1,45 @@
+\subsubsection{Branch and Bound}
+\label{sec:bnb}
+
+Branch and Bound ($B\&B$) is one of the most used tools to solve large NP-hard combinatorial optimization problems.
+To be precise, $B\&B$ should be classified as an algorithm paradigm, constitued by 3 main parts, 
+which have to be choosen according to the problem under consideration, and for which many options may exist, \cite{bnb_review}.
+
+The force of the $B\&B$ comes from it being a search algorithm which (indirectly) searches the complete search space of the problem.
+Since this is not directly feasible, due to the common exponential growth of the solution space,
+$B\&B$ takes advantage of \textit{bounds}, combined the information about the current best solution,
+to safely discard certain solutions amongst the search space.
+
+At any point of the algorithm, there is a \textit{current solution}, and a \textit{pool} of unexplored subsets 
+of the solution space. At the beginning of the algorithm, this pool consists of (only) the root node,
+and at the end of the algorithm, it will consists of an empty set, meaning that the entire search space was sucessfully explored.
+The initialisation of the $B\&B$ requires the \textit{incumbent}, which denotes the objective function value of the current solution,
+to be initialised as $\infty$. If it possible to generate an initial feasible solution using some heuristic method,
+this solution is recorded and its objective value is set as incumbent. 
+The process of generating an initial solution has usually a positive impact on the $B\&B$ algorithm.
+After the initialisation, this algorithm enters in an iterative proccess, untill the pool of unexplored subsets is empty.
+This processes consists of three main components: 
+
+\begin{itemize}
+  \item selection of a node to process;
+  \item bound calculation;
+  \item branching.
+\end{itemize}
+
+Branch and Bound algorithms vary according to the strategies estabilished for each of the three main components of the iterative proccess,
+aswell as the initial heuristic. In any case, the bounding function selected is the key for any good branch and bounding algorithm,
+because the selection of a bad function can not be compensated with good choices on the branching and bounding strategies.
+For example, consider the trivial case where the bounding function is the constanst value of 0. It is obvious that this will always be a lower bound 
+to the problem, but it does not produce any quality information of which solutions to discard.
+Ideally, the value of the bounding function for a given subproblem should be equal to the value of the beast feasible solution 
+to that problem. This is usually not possible, since subproblems may also be NP-hard. 
+Thus, bounding functions are choosen according to the proximity to the best possible value, and to its time complexity - usually restricted to polynomial time.
+
+To complete this overview, selection strategies for the TSP usually revolve around Best First, Depth First and Breadth First Search.
+There are several works which discuss the main differences of each selection strategy and report on which strategy might be more adequate according to the problem characteristics.
+Finally, the branching strategy in the TSP usually consinsts of selecting any node with a degree 3 or higher in the search tree.
+There are several comments around this strategy, some authors opting for the selection of a node with a low bound,
+as this theoritically will reduce the number of searches when processing the node with higher bounds.
+
+
+

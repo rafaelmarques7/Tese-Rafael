@@ -154,18 +154,37 @@
 % Pages number is starting with arabic style. Until here were on roman mode
 \setcounter{page}{1} \pagenumbering{arabic}
 \baselineskip 18pt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 % -----------------------------------------------------------------------------
 % This a suggestion for the Content of the Document
 % Add more Chapters by duplicating a Chapter Block, pointing to the file
+
+
 %Chapter 1
 \acresetall
-\input{./Chapters/Thesis-MSc-Chapter_1.tex}
+\input{./Chapters/1.IO/io.tex}
 % If Printing on DOUBLE SIDED pages, the second page should be white.
 % Otherwise, comment the following command:
 \cleardoublepage
 %
 %Chapter 2
-\input{./Chapters/Thesis-MSc-Chapter_2.tex}
+\input{./Chapters/2.LR/lr.tex}
 % If Printing on DOUBLE SIDED pages, the second page should be white.
 % Otherwise, comment the following command:
 \cleardoublepage
@@ -175,26 +194,31 @@
 % If Printing on DOUBLE SIDED pages, the second page should be white.
 % Otherwise, comment the following command:
 \cleardoublepage
-%
-%Chapter 4
-\input{./Chapters/Thesis-MSc-Chapter_4.tex}
-% If Printing on DOUBLE SIDED pages, the second page should be white.
-% Otherwise, comment the following command:
-\cleardoublepage
-%
-%Chapter 5
-\input{./Chapters/Thesis-MSc-Chapter_5.tex}
-% If Printing on DOUBLE SIDED pages, the second page should be white.
-% Otherwise, comment the following command:
-\cleardoublepage
-%
-%Chapter 6
-\input{./Chapters/Thesis-MSc-Chapter_6.tex}
-% If Printing on DOUBLE SIDED pages, the second page should be white.
-% Otherwise, comment the following command:
-\cleardoublepage
+
+
+
 %
 % -----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 % BIBLIOGRAPHY
 % Add the Bibliography to the PDF table of contents (not the document table of contents)
 \pdfbookmark[0]{Bibliography}{bib}
