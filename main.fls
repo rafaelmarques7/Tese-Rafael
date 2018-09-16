@@ -861,6 +861,12 @@ INPUT ./Chapters/5.SD/sd.tex
 INPUT ./Chapters/5.SD/sd.tex
 INPUT main.mtc4
 INPUT main.mtc4
+OUTPUT main.mtc
+INPUT main.mtc
+INPUT main.mtc
+OUTPUT main.mtc
+INPUT main.mtc4
+INPUT main.mtc4
 INPUT ./Chapters/5.SD/intro.tex
 INPUT ./Chapters/5.SD/intro.tex
 INPUT ./Chapters/5.SD/SA/main.tex
@@ -897,6 +903,12 @@ INPUT ./Chapters/5.SD/DC/main.tex
 INPUT ./Chapters/5.SD/DC/main.tex
 INPUT ./Chapters/6.SI/si.tex
 INPUT ./Chapters/6.SI/si.tex
+INPUT main.mtc5
+INPUT main.mtc5
+OUTPUT main.mtc
+INPUT main.mtc
+INPUT main.mtc
+OUTPUT main.mtc
 INPUT main.mtc5
 INPUT main.mtc5
 INPUT ./Chapters/6.SI/SA/main.tex
