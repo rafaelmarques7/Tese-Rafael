@@ -50,8 +50,48 @@
 \BOOKMARK [1][]{section.3.1}{3.1 Flying Tourist Problem}{chapter.3}% 50
 \BOOKMARK [2][]{subsection.3.1.1}{3.1.1 Relation to the TSP}{section.3.1}% 51
 \BOOKMARK [2][]{subsection.3.1.2}{3.1.2 Graph construction}{section.3.1}% 52
-\BOOKMARK [0][]{bib.0}{Bibliography}{}% 53
-\BOOKMARK [1][]{appendix.1}{Appendix A}{bib.0}% 54
-\BOOKMARK [0][]{appendix.A}{A Code of Project}{}% 55
-\BOOKMARK [1][]{appendix.1}{Appendix B}{appendix.A}% 56
-\BOOKMARK [0][]{appendix.B}{B A Large Table}{}% 57
+\BOOKMARK [1][]{section.3.2}{3.2 Optimization System}{chapter.3}% 53
+\BOOKMARK [2][]{subsection.3.2.1}{3.2.1 Initial Response}{section.3.2}% 54
+\BOOKMARK [2][]{subsection.3.2.2}{3.2.2 Ant Colony Optimization}{section.3.2}% 55
+\BOOKMARK [2][]{subsection.3.2.3}{3.2.3 Simmulated Annealing}{section.3.2}% 56
+\BOOKMARK [0][]{chapter.4}{4 System Design}{}% 57
+\BOOKMARK [1][]{section.4.1}{4.1 System Architecture}{chapter.4}% 58
+\BOOKMARK [2][]{subsection.4.1.1}{4.1.1 Client Side Application}{section.4.1}% 59
+\BOOKMARK [2][]{subsection.4.1.2}{4.1.2 Server Side Application}{section.4.1}% 60
+\BOOKMARK [3][]{subsubsection.4.1.2.1}{4.1.2.A Data Management System}{subsection.4.1.2}% 61
+\BOOKMARK [3][]{subsubsection.4.1.2.2}{4.1.2.B Optimization System}{subsection.4.1.2}% 62
+\BOOKMARK [1][]{section.4.2}{4.2 Design Choices}{chapter.4}% 63
+\BOOKMARK [2][]{subsection.4.2.1}{4.2.1 Problem Formulation}{section.4.2}% 64
+\BOOKMARK [2][]{subsection.4.2.2}{4.2.2 System Goal}{section.4.2}% 65
+\BOOKMARK [2][]{subsection.4.2.3}{4.2.3 Data Collection and Storage}{section.4.2}% 66
+\BOOKMARK [2][]{subsection.4.2.4}{4.2.4 Optimization System}{section.4.2}% 67
+\BOOKMARK [2][]{subsection.4.2.5}{4.2.5 User Interface}{section.4.2}% 68
+\BOOKMARK [0][]{chapter.5}{5 System Implementation}{}% 69
+\BOOKMARK [1][]{section.5.1}{5.1 System Architecture}{chapter.5}% 70
+\BOOKMARK [2][]{subsection.5.1.1}{5.1.1 Underlying technologies}{section.5.1}% 71
+\BOOKMARK [3][]{subsubsection.5.1.1.1}{5.1.1.A Heroku}{subsection.5.1.1}% 72
+\BOOKMARK [3][]{subsubsection.5.1.1.2}{5.1.1.B Node.js}{subsection.5.1.1}% 73
+\BOOKMARK [3][]{subsubsection.5.1.1.3}{5.1.1.C Django}{subsection.5.1.1}% 74
+\BOOKMARK [3][]{subsubsection.5.1.1.4}{5.1.1.D React and Redux}{subsection.5.1.1}% 75
+\BOOKMARK [1][]{section.5.2}{5.2 Client Side Application}{chapter.5}% 76
+\BOOKMARK [2][]{subsection.5.2.1}{5.2.1 User Input}{section.5.2}% 77
+\BOOKMARK [2][]{subsection.5.2.2}{5.2.2 Communication with API}{section.5.2}% 78
+\BOOKMARK [2][]{subsection.5.2.3}{5.2.3 User Interface}{section.5.2}% 79
+\BOOKMARK [1][]{section.5.3}{5.3 Server Side Application}{chapter.5}% 80
+\BOOKMARK [2][]{subsection.5.3.1}{5.3.1 API architecture}{section.5.3}% 81
+\BOOKMARK [2][]{subsection.5.3.2}{5.3.2 Api protocol}{section.5.3}% 82
+\BOOKMARK [2][]{subsection.5.3.3}{5.3.3 Data Management System}{section.5.3}% 83
+\BOOKMARK [1][]{section.5.4}{5.4 Optimization System}{chapter.5}% 84
+\BOOKMARK [2][]{subsection.5.4.1}{5.4.1 Initial Response}{section.5.4}% 85
+\BOOKMARK [2][]{subsection.5.4.2}{5.4.2 Ant Colony Optimization}{section.5.4}% 86
+\BOOKMARK [2][]{subsection.5.4.3}{5.4.3 Simmulated Annealing}{section.5.4}% 87
+\BOOKMARK [0][]{chapter.6}{6 Experimental Results}{}% 88
+\BOOKMARK [1][]{section.6.1}{6.1 Experimental Results}{chapter.6}% 89
+\BOOKMARK [2][]{subsection.6.1.1}{6.1.1 Optimization system}{section.6.1}% 90
+\BOOKMARK [2][]{subsection.6.1.2}{6.1.2 Utility Test}{section.6.1}% 91
+\BOOKMARK [1][]{section.6.2}{6.2 Conclusions}{chapter.6}% 92
+\BOOKMARK [0][]{bib.0}{Bibliography}{}% 93
+\BOOKMARK [1][]{appendix.1}{Appendix A}{bib.0}% 94
+\BOOKMARK [0][]{appendix.A}{A Code of Project}{}% 95
+\BOOKMARK [1][]{appendix.1}{Appendix B}{appendix.A}% 96
+\BOOKMARK [0][]{appendix.B}{B A Large Table}{}% 97

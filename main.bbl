@@ -26,7 +26,8 @@ Kiwi.com, ``{Travelling Salesman Challenge},''
   \url{https://travellingsalesman.cz/}, June 2018.
 
 \bibitem{tourism_tec}
-N.~Rosenberg, ``Innovation and economic growth,'' pp. 43--52, 06 2006.
+N.~Rosenberg, ``Innovation and economic growth,'' \emph{Innovation and Growth
+  in Tourism, OECD}, pp. 43--52, 06 2006.
 
 \bibitem{travel_report}
 W.~Travel and T.~Council, ``{Travel and Tourism: world economic impact in
@@ -382,6 +383,82 @@ J.-C. Picard and M.~Queyranne, ``The time-dependent traveling salesman problem
   and its application to the tardiness problem in one-machine scheduling,''
   \emph{Operations Research}, vol.~26, no.~1, pp. 86--110, 1978. [Online].
   Available: \url{https://doi.org/10.1287/opre.26.1.86}
+\BIBentrySTDinterwordspacing
+
+\bibitem{multi_agent_SA}
+
+
+\bibitem{list_based_SA}
+
+
+\bibitem{heroku_what}
+H.~D. Center, ``{What is Heroku},'' \url{https://www-staging.heroku.com/what},
+  June 2018.
+
+\bibitem{google_app}
+G.~Cloud, ``{Google App Engine},'' \url{https://cloud.google.com/appengine/},
+  June 2018.
+
+\bibitem{amazon_web}
+Amazon.com, ``{Amazon Web Services},'' \url{https://aws.amazon.com/}, June
+  2018.
+
+\bibitem{cloud_comparison}
+Stackshare, ``{Heroku vs. Google App Engine vs. AWS Elastic Beanstalk},''
+  \url{https://stackshare.io/stackups/aws-elastic-beanstalk-vs-google-app-engine-vs-heroku},
+  June 2018.
+
+\bibitem{cloud_article}
+\BIBentryALTinterwordspacing
+H.~Jin, S.~Ibrahim, T.~Bell, W.~Gao, D.~Huang, and S.~Wu, \emph{Cloud Types and
+  Services}.\hskip 1em plus 0.5em minus 0.4em\relax Springer US, 2010, pp.
+  335--355. [Online]. Available:
+  \url{https://doi.org/10.1007/978-1-4419-6524-0_14}
+\BIBentrySTDinterwordspacing
+
+\bibitem{heroku_how}
+H.~D. Center, ``{How Heroku Works},''
+  \url{https://devcenter.heroku.com/articles/how-heroku-works}, June 2018.
+
+\bibitem{nodejs}
+N.~Foundation, ``{Node.js},'' \url{https://nodejs.org/en/}, June 2018.
+
+\bibitem{node_article}
+S.~Tilkov and S.~Vinoski, ``Node.js: Using javascript to build high-performance
+  network programs,'' vol.~14, pp. 80 -- 83, 01 2011.
+
+\bibitem{node_book}
+M.~Cantelon, M.~Harter, T.~Holowaychuk, and N.~Rajlich, \emph{Node.Js in
+  Action}, 1st~ed.\hskip 1em plus 0.5em minus 0.4em\relax Greenwich, CT, USA:
+  Manning Publications Co., 2013.
+
+\bibitem{django}
+D.~S. Foundation, ``{Django},'' \url{https://www.djangoproject.com/}, June
+  2018.
+
+\bibitem{django_docs}
+------, ``{Django Documentation},''
+  \url{https://docs.djangoproject.com/en/2.0/}, June 2018.
+
+\bibitem{learn_django}
+M.~Foundation, ``{Learn Django},''
+  \url{https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Introduction},
+  June 2018.
+
+\bibitem{react}
+F.~Inc., ``{React: a JavaScript library for building User Interfaces},''
+  \url{https://reactjs.org/}, June 2018.
+
+\bibitem{react_redux_article}
+M.~K. Caspers, ``React and redux,'' \emph{Rich Internet Applications, Carl von
+  Ossietzky University, Oldenburg}, pp. 14--18, 02 2017.
+
+\bibitem{TDTSP_construction}
+\BIBentryALTinterwordspacing
+R.~J.~V. Wiel and N.~V. Sahinidis, ``Heuristic bounds and test problem
+  generation for the time-dependent traveling salesman problem,''
+  \emph{Transportation Science}, vol.~29, no.~2, pp. 167--183, 1995. [Online].
+  Available: \url{https://doi.org/10.1287/trsc.29.2.167}
 \BIBentrySTDinterwordspacing
 
 \end{thebibliography}

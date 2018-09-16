@@ -1,0 +1,99 @@
+
+Heroku is a Cloud Platform as a Service (PaaS), which allows applications to be built, deployed, monitored and scaled,
+in an easy and fast way, by bypassing implementation details specific to infrastructure and software, as the hardware and the servers \cite{heroku_what}.
+In terms of services, Heroku competes directly with other cloud platform services, 
+which include, but are not limited to, Google's App Engine \cite{google_app} and Amazon's Web Services \cite{amazon_web}.
+A succinct comparison of the advantages and inconveniences amongst these different services can be consulted in \cite{cloud_comparison},
+while a more comprehensive (although somehow outdated) overview is available at \cite{cloud_article}.
+
+Heroku provides a detailed explanation of its services and how to use them in order to deploy and manage an application,
+available at \cite{heroku_how}. Following this overview, an Heroku application can be defined as a \textit{slug} which runs on \textit{dynos}.
+Clarifying these terms, a \textit{slug} is a bundle of source code, any required dependencies, the programming language runtime,
+and any compiled output of the build system, everyting ready for execution. In its turn, a \textit{dyno} is an isolated, virtualized Unix container,
+that provides the necessary environment to run the application. 
+
+A slug is typically the result of the deployment and bundling of an application. The Heroku client has a particular application defined by its source code,
+and in order to run it on Heroku, he must specify the app's programming language, its dependencies, and a \textit{Procfile} - a file which lists the 
+commands to be executed. These applications can be deployed to Heroku via \textit{git}, or using Heroku's own API. Upon deployment,
+Heroku builds the app, producing the slug, ready to be executed. These are the fundatamental steps to deploy and run an Heroku app,
+but it is much more customizable than this. For example, it is possible to specify add-ons, as databases, and e-mail services.
+
+The produced slug runs on the dynos, and Heroku offers the possibility to run applications in a completly free manner, by providing a single free dyno. 
+This free option has one inconvenience, which is that upon 30 minutes of inactivity, the app "sleeps". This means that the next connection 
+to an inactive and sleeping application will require some extra time. It is possible to overcome this by utilizing a paid dyno. 
+Furthermore, as the application grows and the number of users increase, a single dyno may not be enough 
+to handle all user connections. Thus, it is possible to \textit{scale} the app, by increasing the number of total dynos utilized.
+
+During the development of this work, Heroku is used as the host service for both the client and the server side applications.
+Both of these applications run on a single free dyno, and do not utilize any database or other add-ons. 
+
+
+% the fundamental functions, in the words of the Cloud Application Platform | Heroku site : 
+% “Your apps run inside smart containers in a fully managed runtime environment, we handle everything critical for production 
+% — configuration, orchestration, load balancing, failovers, logging, security, and more.”
+
+% how heroku works: https://devcenter.heroku.com/articles/how-heroku-works
+
+% Heroku lets you deploy, run and manage applications written in Ruby, Node.js, Java, Python, Clojure, Scala, Go and PHP.
+
+% *Defining an application?
+% An application is a collection of source code written in one of these languages, perhaps a framework, and 
+% some dependency description that instructs a build system as to which additional dependencies are needed 
+% in order to build and run the application.
+% The source code for your application, together with the dependency file, should provide enough information for the 
+% Heroku platform to build your application, to produce something that can be executed.
+
+% *What to run?
+% you may need to explicitly declare what can be executed. You do this in a text file that accompanies your source code 
+% - a Procfile. Each line declares a process type - a named command that can be executed against your built application. 
+% Heroku is a polyglot platform – it lets you build, run and scale applications in a similar manner across all the languages – utilizing the dependencies and Procfile. 
+% The Procfile exposes an architectural aspect of your application  and this architecture lets you, for example, scale each part independently
+
+% *Deploy apps?
+% The Heroku platform uses Git as the primary means for deploying applications (there are other ways to transport your source code to Heroku, including via an API).
+% When you create an application on Heroku, it associates a new Git remote, typically named heroku, with the local Git repository for your application.
+% As a result, deploying code is just the familiar git push, but to the heroku remote instead:
+
+% *Building apps?
+% When the Heroku platform receives the application source, it initiates a build of the source application. The build mechanism is typically language specific, but follows the same pattern, 
+% typically retrieving the specified dependencies, and creating any necessary assets (whether as simple as processing style sheets or as complex as compiling code).
+% For example, when the build system receives a Rails application, it may fetch all the dependencies specified in the Gemfile.
+% The source code for your application, together with the fetched dependencies and output of the build phase such as generated assets or compiled code, as well as the language and framework, are assembled into a slug.
+% These slugs are a fundamental aspect of what happens during application execution - they contain your compiled, assembled application - ready to run - together with the instructions (the Procfile) of what you may want to execute.
+% Terminology: A slug is a bundle of your source, fetched dependencies, the language runtime, and compiled/generated output of the build system - ready for execution.
+
+% *Running apps?
+% Heroku executes applications by running a command you specified in the Procfile, on a dyno that’s been preloaded with your prepared slug (
+% think of a running dyno as a lightweight, secure, virtualized Unix container that contains your application slug in its file system.
+% Terminology: Dynos are isolated, virtualized Unix containers, that provide the environment required to run an application
+
+% Terminology: Applications that use the free dyno type will sleep. When a sleeping application receives HTTP traffic, it will be awakened - causing a delay of a few seconds. Using one of the other dyno types will avoid sleeping.
+
+% *Add ons?
+
+% Applications typically make use of add-ons to provide backing services such as databases, queueing & caching systems, storage, email services and more. 
+% Add-ons are provided as services by Heroku and third parties - there’s a large marketplace of add-ons you can choose from.
+% Heroku treats these add-ons as attached resources: provisioning an add-on is a matter of choosing one from the add-on marketplace, and attaching it to your application.
+
+% Resumo: 
+
+% *Deploy
+% - Applications consist of your source code, a description of any dependencies, and a Procfile.
+% - Procfiles list process types - named commands that you may want executed.
+% - Deploying applications involves sending the application to Heroku using either Git, GitHub, or via an API.
+% - Buildpacks lie behind the slug compilation process. Buildpacks take your application, its dependencies, and the language runtime, and produce slugs.
+% - A slug is a bundle of your source, fetched dependencies, the language runtime, and compiled/generated output of the build system - ready for execution.
+% - Config vars contain customizable configuration data that can be changed independently of your source code. The configuration is exposed to a running application via environment variables.
+% - Add-ons are third party, specialized, value-added cloud services that can be easily attached to an application, extending its functionality.
+% - A release is a combination of a slug (your application), config vars and add-ons. Heroku maintains an append-only ledger of releases you make.
+
+% *Runtime
+% - Dynos are isolated, virtualized Unix containers, that provide the environment required to run an application.
+% - Your application’s dyno formation is the total number of currently-executing dynos, divided between the various process types you have scaled.
+% - The dyno manager is responsible for managing dynos across all applications running on Heroku.
+% - Applications that use the free dyno type will sleep after 30 minutes of inactivity. Scaling to multiple web dynos, or a different dyno type, will avoid this.
+% - One-off Dynos are temporary dynos that run with their input/output attached to your local terminal. They’re loaded with your latest release.
+% - Each dyno gets its own ephemeral filesystem - with a fresh copy of the most recent release. It can be used as temporary scratchpad, but changes to the filesystem are not reflected to other dynos.
+% - Logplex automatically collates log entries from all the running dynos of your app, as well as other components such as the routers, providing a single source of activity.
+% - Scaling an application involves varying the number of dynos of each process type.
+

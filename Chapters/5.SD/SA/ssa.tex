@@ -1,0 +1,22 @@
+The Server Side Application (SSA) is the module responsible for creating a solution 
+to a user selected request. In this case, the SSA receives a shallow Flying Tourist Problem,
+that is, an instance of the problem which does not yet have the set of arcs $A$ associated to the problem.
+Thus, the SSA has two main goals:
+
+\begin{enumerate}
+  \item create the list of arcs associated to the problem;
+  \item produce a solution to the user selected request;
+\end{enumerate}
+
+The system which is responsible for producing the list of arcs will be denoted as \textit{Data Management System},
+while the production of a solution to the user request relies on a system called \textit{Optimization System}.
+
+
+\subsubsection{Data Management System}
+\label{sec:dms_design}
+\input{./Chapters/5.SD/SA/dms.tex}
+
+\subsubsection{Optimization System}
+\label{sec:optimization_design}
+\input{./Chapters/5.SD/SA/optimization.tex}
+

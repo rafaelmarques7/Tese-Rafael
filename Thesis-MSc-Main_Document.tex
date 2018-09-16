@@ -96,8 +96,16 @@
 \dominitoc
 \dominilof
 \dominilot
+
+
+
+
+
+
+
+
 % -----------------------------------------------------------------------------
-% Lists of Contents
+%                                   Lists of Contents
 \renewcommand{\baselinestretch}{1}
 \pdfbookmark[0]{Contents}{toc}
 \tableofcontents
@@ -108,6 +116,13 @@
 % reposition baseline
 \renewcommand{\baselinestretch}{1.5}
 % -----------------------------------------------------------------------------
+
+
+
+
+
+
+
 % List of Figures
 \pdfbookmark[1]{List of Figures}{lof}
 \listoffigures
@@ -172,28 +187,44 @@
 
 
 % -----------------------------------------------------------------------------
-% This a suggestion for the Content of the Document
-% Add more Chapters by duplicating a Chapter Block, pointing to the file
+%                                   CHAPTERS 
+
 
 
 %Chapter 1
 \acresetall
 \input{./Chapters/1.IO/io.tex}
-% If Printing on DOUBLE SIDED pages, the second page should be white.
-% Otherwise, comment the following command:
 \cleardoublepage
 %
 %Chapter 2
 \input{./Chapters/2.LR/lr.tex}
-% If Printing on DOUBLE SIDED pages, the second page should be white.
-% Otherwise, comment the following command:
 \cleardoublepage
 %
 %Chapter 3
 \input{./Chapters/3.FTP/ftp.tex}
-% If Printing on DOUBLE SIDED pages, the second page should be white.
-% Otherwise, comment the following command:
 \cleardoublepage
+
+% %Chapter 4
+\acresetall
+\input{./Chapters/4.OS/os.tex}
+\cleardoublepage
+%
+%Chapter 5
+\input{./Chapters/5.SD/sd.tex}
+\cleardoublepage
+%
+%Chapter 6
+\input{./Chapters/6.SI/si.tex}
+\cleardoublepage
+%Chapter 7
+\acresetall
+\input{./Chapters/7.ER/er.tex}
+\cleardoublepage
+%
+%Chapter 8
+\input{./Chapters/8.CC/cc.tex}
+\cleardoublepage
+
 
 
 

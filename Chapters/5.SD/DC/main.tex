@@ -1,0 +1,121 @@
+\section{Design Choices}
+This section wishes to clarify some of the design choices considered, and the reasons that led to  particular decisions.
+
+
+
+\subsection{Problem Formulation}
+The formulation of the problem relies heavily on the goal of the overall system.
+The start point to this work was the development of an flight search application,
+which could solve the multicity trip routing problem,
+aswell as any single and round flights,
+presenting the best set of flights, that is, those which would minimize 
+the total cost of the trip.
+
+To develop rich user experience, that is, a search which is simple and declarative,
+and covers a broad number of situations, it is necessary to think like a user.
+No matter what trip the user is searching for, there are always some questions which are the same,
+and can be grouped into 4 classes: the where, when,  what, and  how.
+That is, \textit{where} do we start and finish, 
+\textit{when} do we start, \textit{what} cities will are to be visited,
+while the \textit{how} may represint a variety of things 
+which further characterize the trip, as the duration, possible time windows and/or routing constraints.
+
+In most cases, users have a specific start and returning point, which might or not be the same.
+In its turn, the schedule for the trip is usually much more broader.
+That is, instead of having a single start date, in some cases user consider a time span of a few days, weeks, or even months. 
+Thus, it was decided that instead of forcing a single start date, 
+a time period would be considered. 
+The same type of reasoning can be applied to the duration of each city.
+While some users may have a well defined number of days, say 3,
+others might be more flexible and consider staying in the city for 3 to 5 days for example.
+This flexibility upon the duration was considered during the development of the formulation,
+but not introduced in the overall system, due the extra complexity it would introduce,
+and also because it would be difficult to effectively test such a system.
+The same can be said about the time windows associated to each city.
+While it makes sense to have a broader definition which contemplates
+this possibility, it is more convenient to have a simpler but efficient formulation,
+which covers only the most important and global search criteria.
+
+
+
+
+\subsection{System Goal}
+While the goal of the system was always the development of a flight search engine which would 
+always return the cheapest set of flights, upon having a complete system it was noticable 
+that in some cases, these set of cheapest flights could be dismissed by the user,
+for having some other bad attributes. That is, a flight could be very cheap, but at the expense 
+of having a very high flight duration.
+
+To tackle this problem, we propose multiple objective functions which cover different goals.
+On one hand, we can define an objective function for the minimization of the total cost,
+and upon constructing the TSP problem, we consider the flight cost as the cost matrix entries.
+On the other hand, a similar approach can be done to minimize the total flight duration.
+Intead of constructing a cost matrix with the flight cost, this is done with the flight duration.
+Finally, the same approach is considered for the minimization of the \textit{entropy} of the trip.
+We borrow this concept, entropy, to describe the weighted summ of the flight cost and duration.
+Selecting the set of flights which have the lowest entropy leads to the increase 
+in the \textit{efficiency} of the proposed solution.
+
+Having defined three objective functions, any user request will be responded to with a list 
+of three different set of flights, which correspond to the cheapest, fastests, and most efficient solutions found.
+
+
+
+\subsection{Data Collection and Storage}
+As noted several times, solving a user defined request requires the access to real flight data. 
+During the development of this work, two different forms of doing this where tested:
+API access and web scraping.
+Having access to a flight API is the standart choice, it is fast, customazible and efficient.
+However, the number of available free API's is very low,
+and overall, the results presented by each may vary considerably.
+More than this, the problem is that some API's limit the content they offer,
+not including, for example, low cost airlines. This problem was faced specifically with Google Flights Api.
+To tackle this problem, and to actually find the cheapest flights,
+an alternative was considered, web scraping.
+
+Web scraping, or screen scraping, is the act of visiting a page and copying its content.
+This enables the parsing of the page, and the exctraction of usefull information,
+which can than be stored into a database, or other form of storage, in order to be accessed.
+Thus, web scraping can be used to collect information about the necessary flights,
+however, as it was later verified, it is a very complex and specific process.
+Furthermore, it is also considerable slow, because most websites use javascript
+to produce their information, and this usually requires some access to their database,
+which is in general very slow.
+
+Considering the advantages and disadvantages of each system,
+it was decided that the developed system would use public API's to access flight data,
+because it is much faster and more efficient.
+
+User requests are self contained, that is, the data necessary to process them is gathered,
+used, and than discarded. It would be possible to store each collected flight into a database, for later consultation.
+However, this data would have an extremely short \textit{expiration date}, or,
+in other words, the cost of a particular flight might vary at any moment.
+Thus, it can not be proved that the previously stored data is still accurate and up to date.
+Because of this, it was opted to not implement a database.
+This choice might be adapted at any point, and should be considered if the system actually scales 
+to a point in which there are multiple equal queries each day.
+
+
+
+\subsection{Optimization System}
+Regarding the optimization system, the goal was always the development of a time efficient algorithm.
+Producing a complete multi city search is a complex problem, which can take a considerable time.
+However, waiting for a considerable time is not an option for most users.
+Thus, it is important to produce a solution as soon as possible, and try to improve the solution 
+in the subsequent moments. This lead to the system proposed in figure \ref{fig:optimization_system}.
+
+
+
+\subsection{User Interface}
+Upon the construction of the client side application, which handles the logic of collecting 
+user requests, aswell as the rendering of the user interface,
+it was important to choose a design which would fit both mobile and desktop users.
+There are several market study reports which show that the mobile market segment 
+is, and will continue to, experience a growth in its size, textbf{cite}.
+Thus, the design of the user interface had to be prepared for the multitude of user devices,
+or in other words, it had to be \textit{responsive}, textbf{cite}.
+
+
+
+
+

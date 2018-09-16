@@ -1,0 +1,43 @@
+This subsection introduces the syntax of the implemented API protocol.
+The objective of this protocol is to be simple and clear,
+and enable an easy interpretation of the user request.
+
+Every user request may be formullated as a Flying Tourist Problem 
+instance, as proposed in \ref{sec:ftp_design}.
+Thus, each request is characterized by a limited number of attributes (origin, start date, etc.).
+This means that the identification of a specific resource can 
+be achieved by including each of these attributes in the uniform resource identifier.
+
+Each request starts with the API endpoint, the specification of the resource
+type, '/flights', followed by the necessary atributes to describe the requeest. These atributes
+are grouped using a '\&' symbol, and do not require a specific order.
+Table \ref{table:api_symbols} specifies the possible request attributes,
+together with the keyword necessary to identify it,
+and the details and datatype of each.
+
+\begin{table}[]
+  \centering
+  \caption{This table specified the (keywords, value) pairs, which must be specified in order 
+  to uniquely identify a resource.}
+  \setlength{\tabcolsep}{3mm}
+  \label{table:api_symbols}
+  \begin{tabular}{llll}
+  \hline
+  \\[-0.75em]
+  Name         & Symbol     & Keyword                                                       & Details                                                                                                                                                                                   \\
+  \\[-0.75em]
+  \hline
+  \\[-0.75em]
+  start city   & $v_0$       & flyFrom=                                                      & Requires a city name, or an ICAO code.                                                                                                                                                    \\
+  \\[-0.75em]
+  return city  & $v_{n+1}$ & returnTo=                                                     & Requires a city name, or an ICAO code.                                                                                                                                                    \\
+  \\[-0.75em]
+  destinations & $V$          & cities=                                                       & \begin{tabular}[c]{@{}l@{}}Defines the cities to be visited. \\ Accepts multiple values, sepparated by comma.\\ Each city is specified by a city name or an ICAO code.\end{tabular}       \\
+    \\[-0.75em]
+  durations    & $D$          & duration=                                                     & \begin{tabular}[c]{@{}l@{}}Defines the duration of stay, in days, for each city.\\ Each value must be a positive integer.\\ Must be the same length as the number of cities.\end{tabular} \\
+    \\[-0.75em]
+  start date   & $T_0$       & \begin{tabular}[c]{@{}l@{}}minDate =\\ maxDate =\end{tabular} & \begin{tabular}[c]{@{}l@{}}minDate specifies the earliest start date $T_{0i}$,\\ while maxDateidentifies  the max $T_{0f}$. \\ Each date follows the dd/mm/yyyy format.\end{tabular}  \\
+    \\[-0.75em]
+    \hline
+  \end{tabular}
+  \end{table}
