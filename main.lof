@@ -29,21 +29,22 @@
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Block diagram of the state cycle of the Client Side Application.\relax }}{66}{figure.caption.34}
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Building blocks of an application built using React And Redux\relax }}{67}{figure.caption.35}
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Asynchronous javascript request.\relax }}{69}{figure.caption.37}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Print screen of the User Interface, as is, displaying the request of a single flight between Lisbon and Beijing, over the span of a month. Three results are presented, the cheapest (313\IeC {\texteuro }/55:10h), fastest (667\IeC {\texteuro }/11:35h), and most efficient (368\IeC {\texteuro }/11:35h) flight.\relax }}{71}{figure.caption.38}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Structure of the Server Side Application/API.\relax }}{73}{figure.caption.39}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Communication with third-party API's, using HTTP protocol, and a serial requesting scheme.\relax }}{75}{figure.caption.41}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Communication with third-party API's, using HTTP protocol, and concurrent requesting scheme to take advantage of the waiting times.\relax }}{76}{figure.caption.42}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Steps to generate a random solution to a user request.\relax }}{77}{figure.caption.43}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Block diagram of the Any Colony Optimization metaheuristic.\relax }}{78}{figure.caption.44}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Block diagram of the construction procedure undertaken by each ant.\relax }}{79}{figure.caption.45}
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Block diagram of the Simmulated Annealing metaheuristic.\relax }}{81}{figure.caption.46}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Screenshot of the developed application rendered in a desktop device.\relax }}{71}{figure.caption.38}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Screenshot of the developed application rendered in a mobile device.\relax }}{72}{figure.caption.39}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Structure of the Server Side Application/API.\relax }}{74}{figure.caption.40}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Communication with third-party API's, using HTTP protocol, and a serial requesting scheme.\relax }}{76}{figure.caption.42}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Communication with third-party API's, using HTTP protocol, and concurrent requesting scheme to take advantage of the waiting times.\relax }}{77}{figure.caption.43}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Steps to generate a random solution to a user request.\relax }}{78}{figure.caption.44}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Block diagram of the Any Colony Optimization metaheuristic.\relax }}{79}{figure.caption.45}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Block diagram of the construction procedure undertaken by each ant.\relax }}{80}{figure.caption.46}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Block diagram of the Simmulated Annealing metaheuristic.\relax }}{82}{figure.caption.47}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Experimental Results}{83}{chapter.6}
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Time spent communication with the Kiwi API, as to obtain the necessary flight data, as a function of the number of nodes, and length of the start-period.\relax }}{87}{figure.caption.49}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Comparison of the solution cost, of the nearest neighbor and metaheuristic, relative to the initial solution produced, for a single start date.\relax }}{87}{figure.caption.50}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Comparison of the variation of the total flight cost and duration, for two different objective functions, minimizing the total cost and entropy.\relax }}{88}{figure.caption.51}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Comparison of the solution cost, of the nearest neighbor and metaheuristic, relative to the initial solution produced, for a start-period of 31 days.\relax }}{88}{figure.caption.52}
+\contentsline {xchapter}{Experimental Results}{85}{chapter.6}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Time spent communication with the Kiwi API, as to obtain the necessary flight data, as a function of the number of nodes, and length of the start-period.\relax }}{89}{figure.caption.50}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Comparison of the solution cost, of the nearest neighbor and metaheuristic, relative to the initial solution produced, for a single start date.\relax }}{89}{figure.caption.51}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Comparison of the variation of the total flight cost and duration, for two different objective functions, minimizing the total cost and entropy.\relax }}{90}{figure.caption.52}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Comparison of the solution cost, of the nearest neighbor and metaheuristic, relative to the initial solution produced, for a start-period of 31 days.\relax }}{90}{figure.caption.53}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Code of Project}{93}{appendix.A}
+\contentsline {xchapter}{Code of Project}{95}{appendix.A}
 \addvspace {10\p@ }
-\contentsline {xchapter}{A Large Table}{101}{appendix.B}
+\contentsline {xchapter}{A Large Table}{103}{appendix.B}

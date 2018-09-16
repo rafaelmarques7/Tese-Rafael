@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.9.15)  16 SEP 2018 15:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.9.15)  16 SEP 2018 17:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2604,17 +2604,26 @@ LaTeX Warning: Reference `sec:api_protocol' on page 69 undefined on input line
 LaTeX Warning: Reference `fig:UI_views' on page 70 undefined on input line 2.
 
 
-LaTeX Warning: Reference `fig:user_interface_example' on page 70 undefined on i
-nput line 18.
+LaTeX Warning: Reference `fig:desktop_app' on page 70 undefined on input line 1
+5.
 
-<./Figures/system_implementation/user_interface_example.png, id=615, 1038.12843
-pt x 639.13782pt>
-File: ./Figures/system_implementation/user_interface_example.png Graphic file (
-type png)
-<use ./Figures/system_implementation/user_interface_example.png>
-Package pdftex.def Info: ./Figures/system_implementation/user_interface_example
-.png  used on input line 24.
-(pdftex.def)             Requested size: 455.24408pt x 280.27553pt.
+
+LaTeX Warning: Reference `fig:mobile_app' on page 70 undefined on input line 15
+.
+
+<./imgs/bfly_desktop.jpg, id=615, 2472.23625pt x 1352.05125pt>
+File: ./imgs/bfly_desktop.jpg Graphic file (type jpg)
+<use ./imgs/bfly_desktop.jpg>
+Package pdftex.def Info: ./imgs/bfly_desktop.jpg  used on input line 26.
+(pdftex.def)             Requested size: 455.24408pt x 248.97025pt.
+<./imgs/bfly_mobile.jpg, id=616, 559.08875pt x 1002.74625pt>
+File: ./imgs/bfly_mobile.jpg Graphic file (type jpg)
+<use ./imgs/bfly_mobile.jpg>
+Package pdftex.def Info: ./imgs/bfly_mobile.jpg  used on input line 33.
+(pdftex.def)             Requested size: 455.24408pt x 816.51952pt.
+
+LaTeX Warning: Float too large for page by 200.17796pt on input line 36.
+
 )) (./Chapters/6.SI/SSA/main.tex (./Chapters/6.SI/SSA/intro.tex
 
 LaTeX Warning: Reference `sec:api_protocol' on page 70 undefined on input line 
@@ -2641,12 +2650,16 @@ e 10.
 LaTeX Warning: Reference `sec:dms_implementation' on page 70 undefined on input
  line 7.
 
-[70] [71 <./Figures/system_implementation/user_interface_example.png>]
 
-LaTeX Warning: Reference `fig:api_structure' on page 72 undefined on input line
+Underfull \vbox (badness 6380) has occurred while \output is active []
+
+ [70]
+[71 <./imgs/bfly_desktop.jpg>] [72 <./imgs/bfly_mobile.jpg>]
+
+LaTeX Warning: Reference `fig:api_structure' on page 73 undefined on input line
  48.
 
-<./Figures/system_implementation/api_structure.png, id=627, 718.18312pt x 431.3
+<./Figures/system_implementation/api_structure.png, id=633, 718.18312pt x 431.3
 6156pt>
 File: ./Figures/system_implementation/api_structure.png Graphic file (type png)
 
@@ -2655,9 +2668,6 @@ Package pdftex.def Info: ./Figures/system_implementation/api_structure.png  use
 d on input line 59.
 (pdftex.def)             Requested size: 455.24408pt x 273.43764pt.
 ) (./Chapters/6.SI/SSA/protocol.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [72]
 
 LaTeX Warning: Reference `sec:ftp_design' on page 73 undefined on input line 6.
 
@@ -2675,15 +2685,13 @@ LaTeX Warning: No positions in optional float specifier.
 LaTeX Warning: Reference `sec:dms_design' on page 73 undefined on input line 3.
 
 
-[73 <./Figures/system_implementation/api_structure.png>]
-Underfull \vbox (badness 1946) has occurred while \output is active []
-
- [74]
+[73] [74 <./Figures/system_implementation/api_structure.png>]
 
 LaTeX Warning: Reference `fig:serial_api' on page 75 undefined on input line 47
 .
 
-<./Figures/system_implementation/serial_api.png, id=653, 1044.90375pt x 585.186
+[75]
+<./Figures/system_implementation/serial_api.png, id=659, 1044.90375pt x 585.186
 25pt>
 File: ./Figures/system_implementation/serial_api.png Graphic file (type png)
 <use ./Figures/system_implementation/serial_api.png>
@@ -2691,14 +2699,15 @@ Package pdftex.def Info: ./Figures/system_implementation/serial_api.png  used o
 n input line 54.
 (pdftex.def)             Requested size: 455.24408pt x 254.95578pt.
 
-LaTeX Warning: Reference `fig:serial_api' on page 75 undefined on input line 59
+
+LaTeX Warning: Reference `fig:serial_api' on page 76 undefined on input line 59
 .
 
 
-LaTeX Warning: Reference `fig:concurrent_api' on page 75 undefined on input lin
+LaTeX Warning: Reference `fig:concurrent_api' on page 76 undefined on input lin
 e 64.
 
-<./Figures/system_implementation/concurrent_api.png, id=654, 1315.91624pt x 553
+<./Figures/system_implementation/concurrent_api.png, id=660, 1315.91624pt x 553
 .06625pt>
 File: ./Figures/system_implementation/concurrent_api.png Graphic file (type png
 )
@@ -2707,26 +2716,29 @@ Package pdftex.def Info: ./Figures/system_implementation/concurrent_api.png  us
 ed on input line 75.
 (pdftex.def)             Requested size: 455.24408pt x 191.33128pt.
 
-LaTeX Warning: Reference `fig:serial_api' on page 75 undefined on input line 81
+LaTeX Warning: Reference `fig:serial_api' on page 76 undefined on input line 81
 .
 
 
-LaTeX Warning: Reference `fig:concurrent_api' on page 75 undefined on input lin
+LaTeX Warning: Reference `fig:concurrent_api' on page 76 undefined on input lin
 e 81.
 
-[75 <./Figures/system_implementation/serial_api.png>]))
-(./Chapters/6.SI/OS/main.tex (./Chapters/6.SI/OS/intro.tex
+)) (./Chapters/6.SI/OS/main.tex (./Chapters/6.SI/OS/intro.tex
 
 LaTeX Warning: Reference `sec:optimization_design' on page 76 undefined on inpu
 t line 1.
 
-) (./Chapters/6.SI/OS/init.tex
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: Reference `fig:random_solution' on page 76 undefined on input li
+ [76 <./Figures/system_implementation/serial_api.png>] (./Chapters/6.SI/OS/init
+.tex
+
+LaTeX Warning: Reference `fig:random_solution' on page 77 undefined on input li
 ne 5.
 
-[76 <./Figures/system_implementation/concurrent_api.png>]
-<./Figures/system_implementation/random_solution.png, id=668, 1032.10594pt x 44
+[77 <./Figures/system_implementation/concurrent_api.png>]
+<./Figures/system_implementation/random_solution.png, id=674, 1032.10594pt x 44
 1.90094pt>
 File: ./Figures/system_implementation/random_solution.png Graphic file (type pn
 g)
@@ -2736,15 +2748,14 @@ sed on input line 37.
 (pdftex.def)             Requested size: 455.24408pt x 194.91576pt.
 
 
-LaTeX Warning: Reference `fig:random_solution' on page 77 undefined on input li
+LaTeX Warning: Reference `fig:random_solution' on page 78 undefined on input li
 ne 45.
 
 ) (./Chapters/6.SI/OS/aco.tex
 
-LaTeX Warning: Reference `fig:aco_block_diagram' on page 77 undefined on input 
+LaTeX Warning: Reference `fig:aco_block_diagram' on page 78 undefined on input 
 line 1.
 
-[77 <./Figures/system_implementation/random_solution.png>]
 <./Figures/system_implementation/aco_base.png, id=675, 1086.0575pt x 495.8525pt
 >
 File: ./Figures/system_implementation/aco_base.png Graphic file (type png)
@@ -2753,19 +2764,19 @@ Package pdftex.def Info: ./Figures/system_implementation/aco_base.png  used on
 input line 10.
 (pdftex.def)             Requested size: 455.24408pt x 207.84805pt.
 
-
 LaTeX Warning: Citation `aco_2' on page 78 undefined on input line 16.
 
 
 LaTeX Warning: Reference `eq:pheromone_init' on page 78 undefined on input line
  17.
 
+[78 <./Figures/system_implementation/random_solution.png>]
 
-LaTeX Warning: Reference `fig:aco_construction' on page 78 undefined on input l
+LaTeX Warning: Reference `fig:aco_construction' on page 79 undefined on input l
 ine 29.
 
 
-LaTeX Warning: Reference `eq:selection_rule' on page 78 undefined on input line
+LaTeX Warning: Reference `eq:selection_rule' on page 79 undefined on input line
  37.
 
 File: ./Figures/system_implementation/aco_construction.png Graphic file (type p
@@ -2775,17 +2786,13 @@ Package pdftex.def Info: ./Figures/system_implementation/aco_construction.png
 used on input line 43.
 (pdftex.def)             Requested size: 455.24408pt x 250.64317pt.
 
-LaTeX Warning: Reference `eq:exploitation' on page 78 undefined on input line 5
+LaTeX Warning: Reference `eq:exploitation' on page 79 undefined on input line 5
 2.
 
 
-LaTeX Warning: Reference `eq:exploration' on page 78 undefined on input line 53
+LaTeX Warning: Reference `eq:exploration' on page 79 undefined on input line 53
 .
 
-
-Underfull \vbox (badness 5985) has occurred while \output is active []
-
- [78 <./Figures/system_implementation/aco_base.png>]
 
 LaTeX Warning: Reference `eq:exploitation' on page 79 undefined on input line 5
 8.
@@ -2794,19 +2801,20 @@ LaTeX Warning: Reference `eq:exploitation' on page 79 undefined on input line 5
 LaTeX Warning: Reference `eq:exploration' on page 79 undefined on input line 61
 .
 
-
-Underfull \vbox (badness 1259) has occurred while \output is active []
-
- [79]
+[79 <./Figures/system_implementation/aco_base.png>]
 
 LaTeX Warning: Reference `eq:global_update' on page 80 undefined on input line 
 96.
 
 
-LaTeX Warning: Reference `eq:global_update' on page 80 undefined on input line 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [80]
+
+LaTeX Warning: Reference `eq:global_update' on page 81 undefined on input line 
 114.
 
-) (./Chapters/6.SI/OS/sa.tex [80]
+) (./Chapters/6.SI/OS/sa.tex
 
 LaTeX Warning: Reference `fig:LBSA' on page 81 undefined on input line 21.
 
@@ -2815,57 +2823,59 @@ File: ./Figures/system_implementation/LBSA.png Graphic file (type png)
 Package pdftex.def Info: ./Figures/system_implementation/LBSA.png  used on inpu
 t line 30.
 (pdftex.def)             Requested size: 455.24408pt x 168.88707pt.
-
-LaTeX Warning: Citation `multi_agent_SA' on page 81 undefined on input line 36.
-
-
-
-LaTeX Warning: Citation `list_based_SA' on page 81 undefined on input line 42.
-
-
-LaTeX Warning: Citation `multi_agent_SA' on page 81 undefined on input line 47.
-
-
-
-LaTeX Warning: Citation `list_based_SA' on page 81 undefined on input line 48.
-
-
-LaTeX Warning: Reference `fig:LBSA' on page 81 undefined on input line 50.
-
 [81]
 
-LaTeX Warning: Reference `eq:metropolis_acceptance' on page 82 undefined on inp
+LaTeX Warning: Citation `multi_agent_SA' on page 82 undefined on input line 36.
+
+
+
+LaTeX Warning: Citation `list_based_SA' on page 82 undefined on input line 42.
+
+
+LaTeX Warning: Citation `multi_agent_SA' on page 82 undefined on input line 47.
+
+
+
+LaTeX Warning: Citation `list_based_SA' on page 82 undefined on input line 48.
+
+
+LaTeX Warning: Reference `fig:LBSA' on page 82 undefined on input line 50.
+
+[82]
+
+LaTeX Warning: Reference `eq:metropolis_acceptance' on page 83 undefined on inp
 ut line 93.
 
-))) [82] (./Chapters/7.ER/er.tex
+))) [83] [84
+
+] (./Chapters/7.ER/er.tex
 Chapter 6.
 \openout5 = `main.mtc'.
 
 \openout5 = `main.mtc'.
 
-(./main.mtc6) [83
-
+(./main.mtc6) [85
 
 ]
 
-LaTeX Warning: Citation `TDTSP_construction' on page 84 undefined on input line
+LaTeX Warning: Citation `TDTSP_construction' on page 86 undefined on input line
  16.
 
 
-LaTeX Warning: Reference `tab:tsp_results' on page 84 undefined on input line 1
+LaTeX Warning: Reference `tab:tsp_results' on page 86 undefined on input line 1
 8.
 
 
-LaTeX Warning: Reference `tab:tdtsp_results' on page 84 undefined on input line
+LaTeX Warning: Reference `tab:tdtsp_results' on page 86 undefined on input line
  18.
 
 
-LaTeX Warning: Reference `tab:tsp_results' on page 84 undefined on input line 2
+LaTeX Warning: Reference `tab:tsp_results' on page 86 undefined on input line 2
 0.
 
-[84]
+[86]
 
-LaTeX Warning: Reference `tab:tdtsp_results' on page 85 undefined on input line
+LaTeX Warning: Reference `tab:tdtsp_results' on page 87 undefined on input line
  24.
 
 
@@ -2873,62 +2883,62 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 55.
 
 
-LaTeX Warning: Reference `sec:optimization' on page 85 undefined on input line 
+LaTeX Warning: Reference `sec:optimization' on page 87 undefined on input line 
 83.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [85]
+ [87]
 
-LaTeX Warning: Reference `tab:utility_0' on page 86 undefined on input line 87.
-
-
-
-LaTeX Warning: Reference `eq:obj_cost' on page 86 undefined on input line 87.
+LaTeX Warning: Reference `tab:utility_0' on page 88 undefined on input line 87.
 
 
-LaTeX Warning: Reference `eq:obj_entropy' on page 86 undefined on input line 87
+
+LaTeX Warning: Reference `eq:obj_cost' on page 88 undefined on input line 87.
+
+
+LaTeX Warning: Reference `eq:obj_entropy' on page 88 undefined on input line 87
 .
 
 
-LaTeX Warning: Reference `fig:kiwi_response_time' on page 86 undefined on input
+LaTeX Warning: Reference `fig:kiwi_response_time' on page 88 undefined on input
  line 89.
 
-[86]
-<./imgs/kiwi_response_time.png, id=741, 360.59718pt x 220.57407pt>
+[88]
+<./imgs/kiwi_response_time.png, id=751, 360.59718pt x 220.57407pt>
 File: ./imgs/kiwi_response_time.png Graphic file (type png)
 <use ./imgs/kiwi_response_time.png>
 Package pdftex.def Info: ./imgs/kiwi_response_time.png  used on input line 93.
 (pdftex.def)             Requested size: 256.0753pt x 142.27086pt.
 
 
-LaTeX Warning: Reference `tab:utility_0' on page 87 undefined on input line 98.
+LaTeX Warning: Reference `tab:utility_0' on page 89 undefined on input line 98.
 
 
 
-LaTeX Warning: Reference `fig:prices_0' on page 87 undefined on input line 98.
+LaTeX Warning: Reference `fig:prices_0' on page 89 undefined on input line 98.
 
-<./imgs/improvement_0.png, id=742, 407.27156pt x 259.7203pt>
+<./imgs/improvement_0.png, id=752, 407.27156pt x 259.7203pt>
 File: ./imgs/improvement_0.png Graphic file (type png)
 <use ./imgs/improvement_0.png>
 Package pdftex.def Info: ./imgs/improvement_0.png  used on input line 102.
 (pdftex.def)             Requested size: 256.08527pt x 142.26404pt.
-<./imgs/cost_vs_time.png, id=743, 382.42876pt x 263.48438pt>
+<./imgs/cost_vs_time.png, id=753, 382.42876pt x 263.48438pt>
 File: ./imgs/cost_vs_time.png Graphic file (type png)
 <use ./imgs/cost_vs_time.png>
 Package pdftex.def Info: ./imgs/cost_vs_time.png  used on input line 110.
 (pdftex.def)             Requested size: 256.08588pt x 142.2714pt.
 
-LaTeX Warning: Reference `fig:cost_vs_time' on page 87 undefined on input line 
+LaTeX Warning: Reference `fig:cost_vs_time' on page 89 undefined on input line 
 115.
 
-[87 <./imgs/kiwi_response_time.png> <./imgs/improvement_0.png>]
+[89 <./imgs/kiwi_response_time.png> <./imgs/improvement_0.png>]
 
-LaTeX Warning: Reference `fig:prices_31' on page 88 undefined on input line 118
+LaTeX Warning: Reference `fig:prices_31' on page 90 undefined on input line 118
 .
 
-<./imgs/improvement_31.png, id=750, 407.27156pt x 259.7203pt>
+<./imgs/improvement_31.png, id=760, 407.27156pt x 259.7203pt>
 File: ./imgs/improvement_31.png Graphic file (type png)
 <use ./imgs/improvement_31.png>
 Package pdftex.def Info: ./imgs/improvement_31.png  used on input line 122.
@@ -2937,10 +2947,10 @@ Package pdftex.def Info: ./imgs/improvement_31.png  used on input line 122.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 131.
 
-) [88 <./imgs/cost_vs_time.png> <./imgs/improvement_31.png>] [89] [90
+) [90 <./imgs/cost_vs_time.png> <./imgs/improvement_31.png>] [91] [92
 
 ]
-(./Chapters/8.CC/cc.tex) [91] [92
+(./Chapters/8.CC/cc.tex) [93] [94
 
 ]
 No file main.bbl.
@@ -2959,11 +2969,11 @@ File: omlphv.fd
 )
 LaTeX Font Info:    Font shape `OML/phv/m/n' in size <9> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 11.
- [93
+ [95
 
 
 ]
-(./tables_and_code/example.asm.txt [94])
+(./tables_and_code/example.asm.txt [96])
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 44.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
@@ -2990,14 +3000,14 @@ LaTeX Font Info:    Try loading font information for TS1+ptm on input line 50.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [95]
+) [97]
 (./tables_and_code/function.m)
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <9> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 71.
- [96]
+ [98]
 LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 104
 .
 
@@ -3006,11 +3016,11 @@ File: ts1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [97]
-[98] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+ [99]
+[100] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
-)) [99]
-[100
+)) [101]
+[102
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{appendix.1})
  has been already used, duplicate ignored
@@ -3031,18 +3041,18 @@ LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <8> not available
 
 LaTeX Warning: Reference `table:table1' on page 1 undefined on input line 15.
 
-[101
+[103
 
 ]
 
 LaTeX Warning: Reference `tab:lon_table' on page 1 undefined on input line 19.
 
-[102] [103]
+[104] [105]
 
 Package longtable Warning: Column widths have changed
 (longtable)                in table B.2 on input line 101.
 
-) [104]
+) [106]
 \Changes@OutFile=\write12
 \openout12 = `main.soc'.
 
@@ -3094,11 +3104,11 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) ) 
 Here is how much of TeX's memory you used:
- 35307 strings out of 492982
- 626669 string characters out of 6134896
- 807713 words of memory out of 5000000
- 37097 multiletter control sequences out of 15000+600000
- 54681 words of font info for 112 fonts, out of 8000000 for 9000
+ 35317 strings out of 492982
+ 626679 string characters out of 6134896
+ 807772 words of memory out of 5000000
+ 37103 multiletter control sequences out of 15000+600000
+ 54368 words of font info for 111 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,18n,116p,1147b,2534s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/tex
@@ -3127,10 +3137,10 @@ t/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
 c/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (122 pages, 1580216 bytes).
+Output written on main.pdf (124 pages, 3256958 bytes).
 PDF statistics:
- 1268 PDF objects out of 1440 (max. 8388607)
- 1059 compressed objects within 11 object streams
- 567 named destinations out of 1000 (max. 500000)
- 173 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1278 PDF objects out of 1440 (max. 8388607)
+ 1066 compressed objects within 11 object streams
+ 570 named destinations out of 1000 (max. 500000)
+ 178 words of extra memory for PDF output out of 10000 (max. 10000000)
 
