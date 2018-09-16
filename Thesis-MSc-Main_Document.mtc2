@@ -1,0 +1,28 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.1}Combinatorial Optimization and Routing Problems}{\reset@font\mtcSfont 12}{section.2.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.1.1}Combinatorial Optimization and Computational Complexity}{\reset@font\mtcSSfont 12}{subsection.2.1.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.1.2}The Traveling Salesman Problem}{\reset@font\mtcSSfont 13}{subsection.2.1.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.1.2.A}Problem definition}{\reset@font\mtcSSSfont 15}{subsubsection.2.1.2.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.1.2.B}Common TSP variations}{\reset@font\mtcSSSfont 15}{subsubsection.2.1.2.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.1.2.C}Time Dependent TSP}{\reset@font\mtcSSSfont 17}{subsubsection.2.1.2.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.1.2.D}TSP with time-windows}{\reset@font\mtcSSSfont 18}{subsubsection.2.1.2.4}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.1.2.E}Multi objective TSP}{\reset@font\mtcSSSfont 20}{subsubsection.2.1.2.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.1.3}Vehicle Routing Problem}{\reset@font\mtcSSfont 21}{subsection.2.1.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.1.3.A}Problem definition}{\reset@font\mtcSSSfont 21}{subsubsection.2.1.3.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.1.3.B}Time-dependent VRP}{\reset@font\mtcSSSfont 22}{subsubsection.2.1.3.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.1.3.C}Multi-objective VRP}{\reset@font\mtcSSSfont 23}{subsubsection.2.1.3.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.2}Algorithmic overview}{\reset@font\mtcSfont 23}{section.2.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.1}Exact algorithms}{\reset@font\mtcSSfont 24}{subsection.2.2.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.2.1.A}Integer Linear Programming}{\reset@font\mtcSSSfont 24}{subsubsection.2.2.1.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.2.1.B}Branch and Bound}{\reset@font\mtcSSSfont 25}{subsubsection.2.2.1.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.2}Heuristic algorithms}{\reset@font\mtcSSfont 26}{subsection.2.2.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.2.2.A}Held-Karp Lower Bound}{\reset@font\mtcSSSfont 27}{subsubsection.2.2.2.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.2.2.B}Tour construction}{\reset@font\mtcSSSfont 27}{subsubsection.2.2.2.2}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode \numberline {A~--}Nearest neighbour}{\reset@font\mtcPfont 27}{paragraph.2.2.2.2.1}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode \numberline {B~--}Greedy heuristic}{\reset@font\mtcPfont 28}{paragraph.2.2.2.2.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.2.2.C}Tour improvement}{\reset@font\mtcSSSfont 28}{subsubsection.2.2.2.3}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode \numberline {A~--}2 and 3 opt tours}{\reset@font\mtcPfont 28}{paragraph.2.2.2.3.1}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode \numberline {B~--}k opt tour}{\reset@font\mtcPfont 29}{paragraph.2.2.2.3.2}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode \numberline {C~--}Lin-Kernighan heuristic}{\reset@font\mtcPfont 29}{paragraph.2.2.2.3.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.3}Meta-Heuristic algorithms}{\reset@font\mtcSSfont 30}{subsection.2.2.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.2.3.A}Ant Colony Optimization}{\reset@font\mtcSSSfont 31}{subsubsection.2.2.3.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.2.3.B}Simulated Annealing}{\reset@font\mtcSSSfont 33}{subsubsection.2.2.3.2}}

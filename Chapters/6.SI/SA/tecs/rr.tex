@@ -1,0 +1,34 @@
+\textit{React} \cite{react} is a JavaScript library for building and rendering User Interfaces.
+React is based on some core principles which dictate the architecture of every UI built using this library,
+which include the concepts of \textit{components}, \textit{state}, \textit{JSX} and \textit{Virtual-DOM} \cite{react_redux_article}.
+
+Any User Interface built using React is the result of the \textit{render} method invoked by each of its \textit{components}.
+The content that is actually presented by a component is the result of its source code, written in \textit{JSX},
+which is a combination of JavaScript and HTML to, dynamically, produce valid HTML elements.
+Usually, each of these elements depend on the \textit{state} of the application, at each moment.
+Thus, every time the application state changes, the User Interface is updated.
+Since re-rendering the entire DOM is very expensive, React uses the so called Virtual-DOM
+to re-render only those components which are necessary.
+At every state change, the DOM is compared to the virtual-DOM,
+and only a branch of the DOM is updated.
+
+As applications grow bigger, it becomes increasingly difficult to manage the state of each component,
+as there are natural dependencies amongst components. Currently, the natural response to bypass 
+this difficulty is to use a JavaScript library called \textit{Redux} \cite{redux}, even though
+there are other solutions developed for this effect.
+Redux is a state container, which is often said to be predictable, because it forces 
+the usage of immutable data types. This means that every state change is easily identifiable,
+which is very convenient for React, due to its Virtual-DOM nature.
+
+Furthermore, Redux is said to be a predictable state container because 
+every state change requires the dispatching of a particular \textit{action}, which triggers a function 
+that manipulates the state, called \textit{reducer}. Thus, Redux applications
+may implement a "history" of the state, because there is information available about every action 
+that were executed to reach the current state. 
+
+During the development of this application, React and Redux were used together 
+to build the client side application. This means that React is responsible
+for rendering the User Interface, while Redux manages the state,
+updating it on user actions, and interacts with the client side application
+using simple HTTP protocol.
+

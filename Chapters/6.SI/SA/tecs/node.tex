@@ -1,0 +1,22 @@
+
+\textit{Node.js} \cite{nodejs} is an open-source and cross-platform JavScript run-time environment,
+which executes JavaScript code on the server-side \cite{node_article}. Node enables the development of fast and scalable web servers using Javascript only,
+by utilizing an asynchronous event driven architecture.
+Thus, Node.js enables the unification of web development around a single 
+programming language, which may be used both on the client and the server side.
+Node.js includes the possibility to use third-party packages, or modules, which can be used for the management 
+of networking, file system I/O, data streams, cryptography and much more. These modules are managed and acessible 
+through the Node Package Manager, \textit{npm}.
+
+Upon the creation of the first browsers, JavaScript was utilized as a scripting language, that was used to modify, at run time, the Document Object Model (DOM)
+of a webpage, enabling the creation of the first dynamic webpages. Today, due to Node.js, this scripting language 
+is not restricted to the browser, and can be used in the server to create dynamic web pages, even before the page is served to the client \cite{node_book}.
+
+Node.js was created by Ryan Dahl in 2009, and upon its presentation in the European Javascript Conference,
+it utilizes an asynchronous event loop, a low-level Input/Output API, and Google's V8 Javascript engine.
+This last technology, the Google's V8 engine, is a fundatamental part of the Node.js stack, because it allows the compilation 
+of javascript source code into native machine code, instead of interpreting in real time, as occurs in the browser.
+
+In the development of this work, Node.js is utilized as a way of creating a webserver and serving the User Interface.
+Upon a client connection request, the node webserver responds with a javascript bundle file, which containts all the necessary information
+for the browser to render, manage and update the UI upon interaction with the user. 

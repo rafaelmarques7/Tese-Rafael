@@ -8,31 +8,35 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: ./Thesis-MSc-Bibliography.bib
-Unbalanced braces---line 1052 of file ./Thesis-MSc-Bibliography.bib
+Repeated entry---line 907 of file ./Thesis-MSc-Bibliography.bib
+ : @misc{react
+ :            ,
+I'm skipping whatever remains of this entry
+Unbalanced braces---line 1053 of file ./Thesis-MSc-Bibliography.bib
  :    title = "The Traveling Salesman Problem and its variations
  :                                                              }",
 I'm skipping whatever remains of this entry
-Unbalanced braces---line 1059 of file ./Thesis-MSc-Bibliography.bib
+Unbalanced braces---line 1060 of file ./Thesis-MSc-Bibliography.bib
  :    title = "The Traveling Salesman problem: applications, formulations and varitions
  :                                                                                     }",
 I'm skipping whatever remains of this entry
-Repeated entry---line 1207 of file ./Thesis-MSc-Bibliography.bib
+Repeated entry---line 1208 of file ./Thesis-MSc-Bibliography.bib
  : @article{cite_21
  :                 ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1542 of file ./Thesis-MSc-Bibliography.bib
+Repeated entry---line 1543 of file ./Thesis-MSc-Bibliography.bib
  : @article{heuristics_tsp
  :                        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1549 of file ./Thesis-MSc-Bibliography.bib
+Repeated entry---line 1550 of file ./Thesis-MSc-Bibliography.bib
  : @article{local_search_book
  :                           },
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "tsptw_soloman"
+Warning--I didn't find a database entry for "redux"
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
-Warning--empty journal in tourism_tec
 Warning--empty journal in OTA_industry_report
 Warning--empty title in cite_1
 Warning--empty journal in cite_1
@@ -60,47 +64,56 @@ Warning--empty author in atsp_to_tsp_2
 Warning--empty title in atsp_to_tsp_2
 Warning--empty journal in atsp_to_tsp_2
 Warning--empty year in atsp_to_tsp_2
+Warning--empty author in multi_agent_SA
+Warning--empty title in multi_agent_SA
+Warning--empty journal in multi_agent_SA
+Warning--empty year in multi_agent_SA
+Warning--empty author in list_based_SA
+Warning--empty title in list_based_SA
+Warning--empty journal in list_based_SA
+Warning--empty year in list_based_SA
+Warning--empty journal in node_article
 
 Done.
-You've used 79 entries,
+You've used 96 entries,
             4087 wiz_defined-function locations,
-            1163 strings with 18790 characters,
-and the built_in function-call counts, 31007 in all, are:
-= -- 2401
-> -- 662
-< -- 27
-+ -- 317
-- -- 148
-* -- 1298
-:= -- 5532
-add.period$ -- 146
-call.type$ -- 79
-change.case$ -- 72
-chr.to.int$ -- 57
-cite$ -- 107
-duplicate$ -- 2794
-empty$ -- 2933
-format.name$ -- 193
-if$ -- 6911
+            1244 strings with 20875 characters,
+and the built_in function-call counts, 38877 in all, are:
+= -- 3007
+> -- 798
+< -- 64
++ -- 389
+- -- 173
+* -- 1619
+:= -- 6803
+add.period$ -- 176
+call.type$ -- 96
+change.case$ -- 86
+chr.to.int$ -- 147
+cite$ -- 132
+duplicate$ -- 3434
+empty$ -- 3675
+format.name$ -- 222
+if$ -- 8720
 int.to.chr$ -- 0
-int.to.str$ -- 79
-missing$ -- 490
-newline$ -- 264
-num.names$ -- 73
-pop$ -- 1379
+int.to.str$ -- 96
+missing$ -- 610
+newline$ -- 319
+num.names$ -- 88
+pop$ -- 1699
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 2394
+skip$ -- 3007
 stack$ -- 0
-substring$ -- 204
-swap$ -- 1521
-text.length$ -- 8
+substring$ -- 413
+swap$ -- 1961
+text.length$ -- 15
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 79
-warning$ -- 28
-while$ -- 83
-width$ -- 81
-write$ -- 639
-(There were 5 error messages)
+type$ -- 96
+warning$ -- 36
+while$ -- 112
+width$ -- 98
+write$ -- 778
+(There were 6 error messages)

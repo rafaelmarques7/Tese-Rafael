@@ -39,5 +39,45 @@
 \contentsline {section}{\numberline {3.1}Flying Tourist Problem}{37}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Relation to the TSP}{38}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}Graph construction}{39}{subsection.3.1.2}
-\contentsline {chapter}{\numberline {A}Code of Project}{41}{appendix.A}
-\contentsline {chapter}{\numberline {B}A Large Table}{49}{appendix.B}
+\contentsline {section}{\numberline {3.2}Optimization System}{41}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Initial Response}{41}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Ant Colony Optimization}{42}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Simmulated Annealing}{45}{subsection.3.2.3}
+\contentsline {chapter}{\numberline {4}System Design}{49}{chapter.4}
+\contentsline {section}{\numberline {4.1}System Architecture}{50}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Client Side Application}{51}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Server Side Application}{53}{subsection.4.1.2}
+\contentsline {subsubsection}{\numberline {4.1.2.A}Data Management System}{53}{subsubsection.4.1.2.1}
+\contentsline {subsubsection}{\numberline {4.1.2.B}Optimization System}{56}{subsubsection.4.1.2.2}
+\contentsline {section}{\numberline {4.2}Design Choices}{58}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Problem Formulation}{58}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}System Goal}{58}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Data Collection and Storage}{59}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Optimization System}{60}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}User Interface}{60}{subsection.4.2.5}
+\contentsline {chapter}{\numberline {5}System Implementation}{61}{chapter.5}
+\contentsline {section}{\numberline {5.1}System Architecture}{62}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Underlying technologies}{62}{subsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.1.A}Heroku}{62}{subsubsection.5.1.1.1}
+\contentsline {subsubsection}{\numberline {5.1.1.B}Node.js}{63}{subsubsection.5.1.1.2}
+\contentsline {subsubsection}{\numberline {5.1.1.C}Django}{64}{subsubsection.5.1.1.3}
+\contentsline {subsubsection}{\numberline {5.1.1.D}React and Redux}{65}{subsubsection.5.1.1.4}
+\contentsline {section}{\numberline {5.2}Client Side Application}{65}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}User Input}{67}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Communication with API}{68}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}User Interface}{70}{subsection.5.2.3}
+\contentsline {section}{\numberline {5.3}Server Side Application}{70}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}API architecture}{70}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Api protocol}{73}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Data Management System}{73}{subsection.5.3.3}
+\contentsline {section}{\numberline {5.4}Optimization System}{76}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Initial Response}{76}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Ant Colony Optimization}{77}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}Simmulated Annealing}{80}{subsection.5.4.3}
+\contentsline {chapter}{\numberline {6}Experimental Results}{83}{chapter.6}
+\contentsline {section}{\numberline {6.1}Experimental Results}{84}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Optimization system}{84}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Utility Test}{86}{subsection.6.1.2}
+\contentsline {section}{\numberline {6.2}Conclusions}{91}{section.6.2}
+\contentsline {chapter}{\numberline {A}Code of Project}{93}{appendix.A}
+\contentsline {chapter}{\numberline {B}A Large Table}{101}{appendix.B}

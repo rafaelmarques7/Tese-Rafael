@@ -1,0 +1,21 @@
+{
+    "files.exclude": {
+        "*.aux": true,
+        "*.bbl": false,
+        "*.blg": true,
+        "*.fdb*": true,
+        "*.fls": true,
+        "*.gz": true,
+        "*.loa": true,
+        "*.lof": true,
+        "*.lol": true,
+        "*.lot": true,
+        "*.maf": true,
+        "*.mlf*": true,
+        "*.mlt*": true,
+        "*.mtc*": true,
+        "*.out": true,
+        "*.soc": true,
+        "*.toc": true
+    }
+}
