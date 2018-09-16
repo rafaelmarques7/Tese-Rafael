@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.9.15)  16 SEP 2018 15:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.9.15)  16 SEP 2018 15:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2213,7 +2213,7 @@ ine 62.
 Underfull \vbox (badness 3058) has occurred while \output is active []
 
  [37]
-<./imgs/multipartite_axis.png, id=377, 1017.8025pt x 386.94562pt>
+<./imgs/multipartite_axis.png, id=379, 1017.8025pt x 386.94562pt>
 File: ./imgs/multipartite_axis.png Graphic file (type png)
 <use ./imgs/multipartite_axis.png>
 Package pdftex.def Info: ./imgs/multipartite_axis.png  used on input line 71.
@@ -2237,7 +2237,7 @@ t line 1.
 LaTeX Warning: Reference `fig:random_solution' on page 41 undefined on input li
 ne 5.
 
-<Figures/system_implementation/random_solution.png, id=400, 1032.10594pt x 441.
+<Figures/system_implementation/random_solution.png, id=402, 1032.10594pt x 441.
 90094pt>
 File: Figures/system_implementation/random_solution.png Graphic file (type png)
 
@@ -2260,7 +2260,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [41
 
 ]
-<Figures/system_implementation/aco_base.png, id=408, 1086.0575pt x 495.8525pt>
+<Figures/system_implementation/aco_base.png, id=409, 1086.0575pt x 495.8525pt>
 File: Figures/system_implementation/aco_base.png Graphic file (type png)
 <use Figures/system_implementation/aco_base.png>
 Package pdftex.def Info: Figures/system_implementation/aco_base.png  used on in
@@ -2284,7 +2284,7 @@ ine 34.
 LaTeX Warning: Reference `eq:selection_rule' on page 43 undefined on input line
  42.
 
-<./Figures/system_implementation/aco_construction.png, id=417, 714.67pt x 393.4
+<./Figures/system_implementation/aco_construction.png, id=418, 714.67pt x 393.4
 7pt>
 File: ./Figures/system_implementation/aco_construction.png Graphic file (type p
 ng)
@@ -2321,7 +2321,7 @@ LaTeX Warning: Reference `eq:global_update' on page 44 undefined on input line
 
 LaTeX Warning: Reference `fig:LBSA' on page 45 undefined on input line 19.
 
-<./Figures/system_implementation/LBSA.png, id=434, 906.38625pt x 336.25626pt>
+<./Figures/system_implementation/LBSA.png, id=435, 906.38625pt x 336.25626pt>
 File: ./Figures/system_implementation/LBSA.png Graphic file (type png)
 <use ./Figures/system_implementation/LBSA.png>
 Package pdftex.def Info: ./Figures/system_implementation/LBSA.png  used on inpu
@@ -2357,9 +2357,11 @@ Underfull \vbox (badness 2884) has occurred while \output is active []
 
 ] (./Chapters/5.SD/sd.tex
 Chapter 4.
-Package minitoc Info: I0006
-(minitoc)             main.mtc4 is empty on input line 1.
-[49
+\openout5 = `main.mtc'.
+
+\openout5 = `main.mtc'.
+
+(./main.mtc4) [49
 
 ] (./Chapters/5.SD/intro.tex) (./Chapters/5.SD/SA/main.tex
 (./Chapters/5.SD/SA/sa.tex
@@ -2367,7 +2369,7 @@ Package minitoc Info: I0006
 LaTeX Warning: Reference `fig:system_architecture_design' on page 50 undefined 
 on input line 4.
 
-<./Figures/system_design/system_architecture_design.png, id=467, 956.57375pt x 
+<./Figures/system_design/system_architecture_design.png, id=472, 956.57375pt x 
 333.245pt>
 File: ./Figures/system_design/system_architecture_design.png Graphic file (type
  png)
@@ -2387,7 +2389,7 @@ li-ca-tions is done via Asyn-chronous Javascript
 LaTeX Warning: Reference `fig:UI_design' on page 52 undefined on input line 66.
 
 
-<./Figures/system_design/UI_design.png, id=483, 900.36375pt x 426.59375pt>
+<./Figures/system_design/UI_design.png, id=487, 900.36375pt x 426.59375pt>
 File: ./Figures/system_design/UI_design.png Graphic file (type png)
 <use ./Figures/system_design/UI_design.png>
 Package pdftex.def Info: ./Figures/system_design/UI_design.png  used on input l
@@ -2406,7 +2408,7 @@ LaTeX Warning: Reference `fig:multipartite_times' on page 53 undefined on input
  line 39.
 
 [53]
-<./Figures/system_design/flights_times.png, id=498, 898.10532pt x 345.54094pt>
+<./Figures/system_design/flights_times.png, id=502, 898.10532pt x 345.54094pt>
 File: ./Figures/system_design/flights_times.png Graphic file (type png)
 <use ./Figures/system_design/flights_times.png>
 Package pdftex.def Info: ./Figures/system_design/flights_times.png  used on inp
@@ -2417,7 +2419,7 @@ ut line 46.
 LaTeX Warning: Reference `fig:kiwi_response' on page 55 undefined on input line
  100.
 
-<./Figures/system_design/kiwi_response.png, id=505, 1106.63437pt x 370.38374pt>
+<./Figures/system_design/kiwi_response.png, id=509, 1106.63437pt x 370.38374pt>
 
 File: ./Figures/system_design/kiwi_response.png Graphic file (type png)
 <use ./Figures/system_design/kiwi_response.png>
@@ -2429,7 +2431,7 @@ LaTeX Warning: Reference `fig:scraping_example' on page 55 undefined on input l
 ine 125.
 
 [55 <./Figures/system_design/kiwi_response.png>]
-<./Figures/system_design/gflights_simplified_marked.png, id=513, 896.59969pt x 
+<./Figures/system_design/gflights_simplified_marked.png, id=517, 896.59969pt x 
 399.74344pt>
 File: ./Figures/system_design/gflights_simplified_marked.png Graphic file (type
  png)
@@ -2444,7 +2446,7 @@ lified_marked.png>]
 LaTeX Warning: Reference `fig:optimization_system' on page 57 undefined on inpu
 t line 42.
 
-<./Figures/system_design/utility.png, id=520, 784.9325pt x 302.12875pt>
+<./Figures/system_design/utility.png, id=524, 784.9325pt x 302.12875pt>
 File: ./Figures/system_design/utility.png Graphic file (type png)
 <use ./Figures/system_design/utility.png>
 Package pdftex.def Info: ./Figures/system_design/utility.png  used on input lin
@@ -2460,9 +2462,11 @@ t line 105.
 
 [59])) [60] (./Chapters/6.SI/si.tex
 Chapter 5.
-Package minitoc Info: I0006
-(minitoc)             main.mtc5 is empty on input line 1.
-[61
+\openout5 = `main.mtc'.
+
+\openout5 = `main.mtc'.
+
+(./main.mtc5) [61
 
 
 ] (./Chapters/6.SI/SA/main.tex (./Chapters/6.SI/SA/sa_2.tex
@@ -2470,7 +2474,7 @@ Package minitoc Info: I0006
 LaTeX Warning: Reference `fig:system_architecture' on page 62 undefined on inpu
 t line 5.
 
-<./Figures/system_implementation/system_architecture_implementation.png, id=552
+<./Figures/system_implementation/system_architecture_implementation.png, id=563
 , 719.68875pt x 422.32782pt>
 File: ./Figures/system_implementation/system_architecture_implementation.png Gr
 aphic file (type png)
@@ -2545,7 +2549,7 @@ LaTeX Warning: Reference `fig:app_state_cycle' on page 65 undefined on input li
 ne 13.
 
 [65]
-<./Figures/system_implementation/state_flow.png, id=577, 1110.1475pt x 461.725p
+<./Figures/system_implementation/state_flow.png, id=586, 1110.1475pt x 461.725p
 t>
 File: ./Figures/system_implementation/state_flow.png Graphic file (type png)
 <use ./Figures/system_implementation/state_flow.png>
@@ -2558,7 +2562,7 @@ LaTeX Warning: Reference `fig:react_redux_app' on page 66 undefined on input li
 ne 47.
 
 [66 <./Figures/system_implementation/state_flow.png>]
-<./Figures/system_implementation/react_redux_app.png, id=584, 745.78625pt x 524
+<./Figures/system_implementation/react_redux_app.png, id=593, 745.78625pt x 524
 .96124pt>
 File: ./Figures/system_implementation/react_redux_app.png Graphic file (type pn
 g)
@@ -2582,7 +2586,7 @@ LaTeX Warning: No positions in optional float specifier.
 LaTeX Warning: Reference `fig:ajax_request' on page 69 undefined on input line 
 21.
 
-<./Figures/system_implementation/async_request.png, id=599, 735.74875pt x 344.2
+<./Figures/system_implementation/async_request.png, id=608, 735.74875pt x 344.2
 8625pt>
 File: ./Figures/system_implementation/async_request.png Graphic file (type png)
 
@@ -2603,7 +2607,7 @@ LaTeX Warning: Reference `fig:UI_views' on page 70 undefined on input line 2.
 LaTeX Warning: Reference `fig:user_interface_example' on page 70 undefined on i
 nput line 18.
 
-<./Figures/system_implementation/user_interface_example.png, id=606, 1038.12843
+<./Figures/system_implementation/user_interface_example.png, id=615, 1038.12843
 pt x 639.13782pt>
 File: ./Figures/system_implementation/user_interface_example.png Graphic file (
 type png)
@@ -2642,7 +2646,7 @@ LaTeX Warning: Reference `sec:dms_implementation' on page 70 undefined on input
 LaTeX Warning: Reference `fig:api_structure' on page 72 undefined on input line
  48.
 
-<./Figures/system_implementation/api_structure.png, id=619, 718.18312pt x 431.3
+<./Figures/system_implementation/api_structure.png, id=627, 718.18312pt x 431.3
 6156pt>
 File: ./Figures/system_implementation/api_structure.png Graphic file (type png)
 
@@ -2679,7 +2683,7 @@ Underfull \vbox (badness 1946) has occurred while \output is active []
 LaTeX Warning: Reference `fig:serial_api' on page 75 undefined on input line 47
 .
 
-<./Figures/system_implementation/serial_api.png, id=645, 1044.90375pt x 585.186
+<./Figures/system_implementation/serial_api.png, id=653, 1044.90375pt x 585.186
 25pt>
 File: ./Figures/system_implementation/serial_api.png Graphic file (type png)
 <use ./Figures/system_implementation/serial_api.png>
@@ -2694,7 +2698,7 @@ LaTeX Warning: Reference `fig:serial_api' on page 75 undefined on input line 59
 LaTeX Warning: Reference `fig:concurrent_api' on page 75 undefined on input lin
 e 64.
 
-<./Figures/system_implementation/concurrent_api.png, id=646, 1315.91624pt x 553
+<./Figures/system_implementation/concurrent_api.png, id=654, 1315.91624pt x 553
 .06625pt>
 File: ./Figures/system_implementation/concurrent_api.png Graphic file (type png
 )
@@ -2722,7 +2726,7 @@ LaTeX Warning: Reference `fig:random_solution' on page 76 undefined on input li
 ne 5.
 
 [76 <./Figures/system_implementation/concurrent_api.png>]
-<./Figures/system_implementation/random_solution.png, id=661, 1032.10594pt x 44
+<./Figures/system_implementation/random_solution.png, id=668, 1032.10594pt x 44
 1.90094pt>
 File: ./Figures/system_implementation/random_solution.png Graphic file (type pn
 g)
@@ -2741,7 +2745,7 @@ LaTeX Warning: Reference `fig:aco_block_diagram' on page 77 undefined on input
 line 1.
 
 [77 <./Figures/system_implementation/random_solution.png>]
-<./Figures/system_implementation/aco_base.png, id=668, 1086.0575pt x 495.8525pt
+<./Figures/system_implementation/aco_base.png, id=675, 1086.0575pt x 495.8525pt
 >
 File: ./Figures/system_implementation/aco_base.png Graphic file (type png)
 <use ./Figures/system_implementation/aco_base.png>
@@ -2892,7 +2896,7 @@ LaTeX Warning: Reference `fig:kiwi_response_time' on page 86 undefined on input
  line 89.
 
 [86]
-<./imgs/kiwi_response_time.png, id=738, 360.59718pt x 220.57407pt>
+<./imgs/kiwi_response_time.png, id=741, 360.59718pt x 220.57407pt>
 File: ./imgs/kiwi_response_time.png Graphic file (type png)
 <use ./imgs/kiwi_response_time.png>
 Package pdftex.def Info: ./imgs/kiwi_response_time.png  used on input line 93.
@@ -2905,12 +2909,12 @@ LaTeX Warning: Reference `tab:utility_0' on page 87 undefined on input line 98.
 
 LaTeX Warning: Reference `fig:prices_0' on page 87 undefined on input line 98.
 
-<./imgs/improvement_0.png, id=739, 407.27156pt x 259.7203pt>
+<./imgs/improvement_0.png, id=742, 407.27156pt x 259.7203pt>
 File: ./imgs/improvement_0.png Graphic file (type png)
 <use ./imgs/improvement_0.png>
 Package pdftex.def Info: ./imgs/improvement_0.png  used on input line 102.
 (pdftex.def)             Requested size: 256.08527pt x 142.26404pt.
-<./imgs/cost_vs_time.png, id=740, 382.42876pt x 263.48438pt>
+<./imgs/cost_vs_time.png, id=743, 382.42876pt x 263.48438pt>
 File: ./imgs/cost_vs_time.png Graphic file (type png)
 <use ./imgs/cost_vs_time.png>
 Package pdftex.def Info: ./imgs/cost_vs_time.png  used on input line 110.
@@ -2924,7 +2928,7 @@ LaTeX Warning: Reference `fig:cost_vs_time' on page 87 undefined on input line
 LaTeX Warning: Reference `fig:prices_31' on page 88 undefined on input line 118
 .
 
-<./imgs/improvement_31.png, id=747, 407.27156pt x 259.7203pt>
+<./imgs/improvement_31.png, id=750, 407.27156pt x 259.7203pt>
 File: ./imgs/improvement_31.png Graphic file (type png)
 <use ./imgs/improvement_31.png>
 Package pdftex.def Info: ./imgs/improvement_31.png  used on input line 122.
@@ -3090,49 +3094,43 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) ) 
 Here is how much of TeX's memory you used:
- 35305 strings out of 492982
- 626651 string characters out of 6134896
- 807730 words of memory out of 5000000
+ 35307 strings out of 492982
+ 626669 string characters out of 6134896
+ 807713 words of memory out of 5000000
  37097 multiletter control sequences out of 15000+600000
  54681 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,18n,116p,1147b,2534s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{section.6.4} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.6.3} has been referenced but does not exist
-, replaced by a fixed one
-
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/texlive
-/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmitt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-tt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-</usr/share/texmf/fonts/type1/public/cm-super/sftt0900.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/urw/bookman/ubkd8a.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
-/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uh
-vbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (122 pages, 1579493 bytes).
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/tex
+live/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmitt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt
+9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.
+pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt0900.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/urw/bookman/ubkd8a.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helveti
+c/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on main.pdf (122 pages, 1580216 bytes).
 PDF statistics:
- 1265 PDF objects out of 1440 (max. 8388607)
- 1056 compressed objects within 11 object streams
- 569 named destinations out of 1000 (max. 500000)
+ 1268 PDF objects out of 1440 (max. 8388607)
+ 1059 compressed objects within 11 object streams
+ 567 named destinations out of 1000 (max. 500000)
  173 words of extra memory for PDF output out of 10000 (max. 10000000)
 
