@@ -11,19 +11,26 @@ The User Interface is designed to be mobile friendly, by being responsive to the
 device size. This is achieved using the Bootstrap grid system, 
 a website design paradigm in which the user screen is divided into 12 columns,
 and each block of the user interface may specify a variable number of columns, depending on the screen size.
-The results of this implementation is illustrated in figure \textbf{insert mobile vs desktop figure here}
-%\ref{fig:desktop_vs_mobile_app},
-where the mobile and desktop versions are put side a side for comparison.
 
-Figure \ref{fig:user_interface_example} is a screenshot of the current version 
-of developed application.
+Figure \ref{fig:desktop_app} and \ref{fig:mobile_app} show the current versions of the developed applications.
+The first image illustrates the application in a desktop device and the second in a mobile.
+It is worth noting that these two screenshots correspond to the same application,
+and that the design differences between both images are a result of the responsiveness of the application.
+The responsive design is responsible for resizing the application elements according to the device size.
+This responsiveness also includes toggles in the \textit{Request} and \textit{Response} views, as to generate more space 
+to the map view. If this was not the case, it would become impossible to view the map in the mobile version.  
 
 
 \begin{figure}[htpb]
   \centering
-  \includegraphics[width=\textwidth]{./Figures/system_implementation/user_interface_example.png}
-  \caption{Print screen of the User Interface, as is, displaying the request 
-  of a single flight between Lisbon and Beijing, over the span of a month. Three results 
-  are presented, the cheapest (313€/55:10h), fastest (667€/11:35h), and most efficient (368€/11:35h) flight.}
-  \label{fig:user_interface_example}  
+  \includegraphics[width=\textwidth]{./imgs/bfly_desktop.jpg}
+  \caption{Screenshot of the developed application rendered in a desktop device.}
+  \label{fig:desktop_app}  
+\end{figure}
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=\textwidth]{./imgs/bfly_mobile.jpg}
+  \caption{Screenshot of the developed application rendered in a mobile device.}
+  \label{fig:mobile_app}  
 \end{figure}
