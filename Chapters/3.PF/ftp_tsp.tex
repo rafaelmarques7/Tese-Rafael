@@ -1,0 +1,33 @@
+\section{Relation to the Traveling Salesman}
+\label{sec:ftp_tsp}
+
+The Traveling Salesman is the problem of, given a list of cities, finding the best route to visit them all, according to some objective function. In its turn, the Flying Tourist Problem proposed in section \ref{sec:ftp} intends to find the best route, schedule, and set of flights to visit a given list of cities. This section will explore some of these characteristics which distinguish the FTP from the TSP.
+
+It is possible to reduce the Flying Tourist Problem into the Traveling Salesman, a series of reductions, presented below, have to be performed. 
+
+\begin{enumerate}
+      \item $v_{n+1} = v_0$;
+      \item $T_0 = 0$;
+      \item $TW(i) = [0, +\infty[$, $\forall i \in V$;
+      \item $D(i) = 1$, $\forall i \in V$;
+    \item $c_{ij}^{t} = c_{ij}$, $\forall i, j \in V$, $\forall t$.
+\end{enumerate}
+
+Constraint $1)$ operates over the depot, forcing the initial and final node to be the same. While this constraint is not forced on the FTP, because a user might not necessarily want to finish the trip where it was initiated, the TSP considers a single depot. 
+
+Constraint $2)$ is responsible for limiting the start-period to a single time-unit. In a real-world flight search application, this constraint is extremely undesirable, as it reduces the overall quality of the search.
+
+Constraint $3)$ removes the time-windows constrains imposed to each city. This mean that any city might be visited during any time period.
+
+Constraint $4)$ forces each city to be visited during exactly one time-unit. Once again, this constraint is extremely undesirable in a flight search application, since in most cases, users do not want to spend only one night in a destination.
+
+Finally, constraint $5)$ removes the time-dependencies of the cost matrix. It should be noted that the characteristics of commercial flights contradict this constraint.
+
+Applying constrains (1-4) to the proposed Flying Tourist Problem leads to the time-dependent Traveling Salesman Problem, as defined in section \ref{sec:TDTSP_ILP}.
+
+Constraints (1-4) together with (5) reduce the proposed FTP into the asymmetric Traveling Salesman Problem. In order to reduce it to the classical symmetric TSP, it would be necessary to apply an additional constraint which would force the symmetry of the cost matrix.
+
+Given that the Flying Tourist Problem occurs as a generalization of the Traveling salesman, and given that the latter belongs to the class of NP-hard problems \cite{np_completeness}, than so does the former one.
+
+
+
