@@ -12,6 +12,9 @@ and it containts all the relevant data regarding the current available informati
 in this case, is summarized by the data collected from the user, and any data collected from third-party API's.
 The complete state cycle of the developed application is summarized in figure \ref{fig:app_state_cycle}.
 
+\todo{You can make a better diagram by transforming it into a machine state diagram. There is the state, on top, which is always written to and accesed, and on the bottom is an event loop (JS), alwayys listening to triggers. These triggers are, on the first hand, user input. A user constructs a request, constrantly updating the state, in particular, the requests, and finally decides to submit it. Then, a second kind of trigger is dispatched, a request to the server asking for a specific resource. Because this takes some time, the app state loop is asyncrhonous, and the response to the user request is processed only when it arives. 
+This finaly causes a change in the app state, which causes it to rerender. TLDR: Event loop, state, i/o, requests/resource, async.}
+
 \begin{figure}[htpb]
   \centering
   \includegraphics[width=\textwidth]{./Figures/system_implementation/state_flow.png}

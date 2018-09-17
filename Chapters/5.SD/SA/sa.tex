@@ -1,3 +1,5 @@
+\todo{Dont start so heavy. Introduce the system first. Explain it after. Illustrate in the end}
+
 The proposed system consists of a web application, composed of both a client, and server side application,
 which are mutual exclusive but dependent upon another.
 The basic structure and data flow of the proposed application is 
@@ -16,7 +18,9 @@ be explained with further detail.
 The client side application (CSA) is designed to interact with the user,
 enabling the construction of requests (number 1 in the figure), 
 and the presentation of solutions to those requests (number 6).
-(The details of this design and implementation are covered in section x and y, respectively.)
+\todo{The details of this design and implementation are covered in section x and y, respectively.)}
+
+\todo{Add a line saying that step 4) optimization, is not necessary in some requests. For example, single and round flights can be trivially solved by aplying some filter criteria. However, for multi city requests, and as the number of cities to visit increase, this problemas becomes harder to solve. Thus, we need to move it to the server. As a consequence, the complexity of the client application is reduced, because it does not hnadle optimization, and its only goal becomes to be an I/O port, where the input comes from the user, and the output from the server.  }
 
 Due to the nature of the constructed requests, which are Np-hard for unconstrained multi city requests,
 the optimization process associated to it is computationally heavy.
