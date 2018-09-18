@@ -1,5 +1,10 @@
 # My Thesis Document
 
+Revisao:
+
+  * o capitulo 3) esta pronto a ser revisto.
+
+
 ### ToDo's
 
 
