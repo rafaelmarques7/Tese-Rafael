@@ -58,15 +58,14 @@ Revisao:
 
 * Chapter 3 - Problem formulation
   * verify if this chapter name is appropriate
-  * explain each constraint
-  * extend graph construction with illustrative image (take figure 5.3 and remove it from there)  
-
+  
 * Chapter 4 - Optimization system 
-  * 4.1 - initial response - this probably should be moved somehwere. This is not a good way to start this chapter
-  * maybe divide this section into heuristic/metaheuristic algorithms
   * justify why we will be using these two. 
   * maybe justify why optimum algorithms are not used. Cite google OR module + ILP TDTSP = slow to 7 cities.
   * rethink these images. they are crap. maybe even consider removing them.
+  * if we still have space, add 2-opt to the heuristic optimization algorithms
+  * review Simulated Annealing
+  * **add the relevant citations whenever necessary**
 
 * Chapter 5 - System Design
   * add introduction
