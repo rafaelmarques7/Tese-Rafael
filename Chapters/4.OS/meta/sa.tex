@@ -1,13 +1,33 @@
 \subsection{Simulated Annealing}
 \label{sec:sa}
 
-The developed Simulated Annealing algorithm receives, as input, the weight matrix of the problem instance, together with other parameters regarding the depot nodes and the waiting periods. Furthermore, the Simulated Annealing also requires an initial valid solution. The pseudo-random construction procedure described in section \ref{sec:pseudo_random} is used to generate this solution. Another valid option to generate this initial solution would be to apply the nearest neighbour heuristic as described in section \ref{sec:nn}.
+The developed Simulated Annealing algorithm receives, as input, a weight matrix with the information of the solution components of the problem. It must also receive other relevant parameters for the solution construction process, as the initial and final node and the set of waiting periods $D$. This specific information about the instance under optimization is crucial, as it enables the validation of a solution and the calculation of the objective function value.
 
-The Simulated Annealing metaheuristic relies on two iterative cycles: i) the outer cycle, responsible for managing the state/temperature; and ii) the inner cycle, also called Markov chain, responsible for generating candidate solutions. At each iteration step, the inner Markov chain is responsible for generating a new candidate solution $y$, according to an appropriate neighbourhood function and a proper validation step, using a predefined acceptance criteria. Then, the outer cycle updates the state temperature based on a predefined cooling schedule.
+The general procedure of the Simulated Annealing metaheuristic is as follows. Given an initial solution ($x$), at each step of the inner cycle (also called Markov chain), a new candidate solution ($y$) is constructed based on a neighbourhood function, which is usually problem specific. Depending on the quality of the new solution, and the current temperature of the algorithm, this solution may or may not be accepted. This process of constructing and conditionally accepting a new solution occurs a fixed number of times per outer cycle - this number if referred to as the Markov chain length. Having completed one Markov chain, the temperature of the state is decreased, according to a predefined cooling schedule.
 
-The neighbourhood function selected for the generation of new candidate solutions is the 2-opt swap procedure. Hence, at each iteration step of the Markov chain, it selects two random nodes and swaps the corresponding path. Since this swapping procedure may change the dates at which each node is visited, it is necessary to adjust the dates and calculate the objective function value of the new solution.
+Given the above described procedure, the Simulated Annealing is a metaheuristic which requires:
+\begin{enumerate}
+    \item an initial solution;
+    \item a neighbourhood function - used to construct candidate solutions; 
+    \item an acceptance criteria - used to conditionally accept the candidate solutions;
+    \item a cooling schedule - to decreasing the temperature of the state;
+\end{enumerate}
 
-The acceptance criteria used by the developed SA algorithms is the Metropolis acceptance criteria \cite{metropolis}, presented in Eq.~\ref{eq:metropolis}. This criterion dictates that: (i) if a candidate solution $y$ is \textit{better} than the current solution $x$, it is always accepted; (ii) if the solution is worse, it may, or may not be accepted. The probability by which a worse solution is accepted depends upon: a) the difference in the objective function values $\Delta_f$ of the two solutions; b) the current temperature of the system. As $\Delta_f$ increases, and as the temperature decreases, the probability of accepting a worse solution is reduced. With such an approach, the Metropolis acceptance criteria allows up-hill moves, which enable the algorithm to escape from local minimum. Notwithstanding, as the temperature reaches very low values, the algorithm becomes increasingly greedy.
+
+The Simulated Annealing is a local search metaheuristic, which conditionally accepts uphill moves, allowing it to escape from local minimum. As any local search algorithm, it requires an initial solution.  It is possible to construct this initial solution by applying the pseudo-random construction procedure (section \ref{sec:pseudo_random}), or using the nearest neighbour (section \ref{sec:nn}). In general, the quality of the initial solution does not affect the quality of the best solution found by the algorithm.
+
+The neighbourhood function selected for the generation of new candidate solutions is the 2-opt swap procedure. Hence, at each iteration step of the Markov chain, it selects two random nodes and swaps the corresponding path. It is also necessary to take into account both the initial and final nodes in order to produce a valid solution. Since this swapping procedure may change the dates at which each node is visited, which consequently changes the solution arcs, it is necessary to adjust the flight dates and calculate the objective function value of the candidate solution.
+
+%The acceptance criteria used by the developed Simulated Annealing algorithms is the Metropolis acceptance criteria \cite{metropolis}, presented in Eq.~\ref{eq:metropolis}. This criterion dictates that: (i) if a candidate solution $y$ is \textit{better} than the current solution $x$, it is always accepted; (ii) if the solution is worse, it may, or may not be accepted. The probability by which a worse solution is accepted depends upon: a) the difference in the objective function values $\Delta_f$ of the two solutions; b) the current temperature of the system. As $\Delta_f$ increases, and as the temperature decreases, the probability of accepting a worse solution is reduced. With such an approach, the Metropolis acceptance criteria allows up-hill moves, which enable the algorithm to escape from local minimum. Notwithstanding, as the temperature reaches very low values, the algorithm becomes increasingly greedy.
+
+The acceptance criteria is a function which determines the probability of accepting a candidate solution, which is compared to a pseudo-random value generated at run-time, and dictates if a candidate solution is, or is not, accepted. The developed Simulated Annealing algorithms uses the Metropolis acceptance criteria \cite{metropolis}: 
+\begin{enumerate}
+    \item if a candidate solution $y$ is \textit{better} than the current solution $x$, it is always accepted;
+    \item if a candidate solution is worse, it may, or may not be accepted;
+    
+\end{enumerate}
+
+The probability by which a worse solution is accepted depends upon the difference in the objective function values $\Delta_f$ of the two solutions and the current temperature of the system (Eq.~\ref{eq:metropolis}). As $\Delta_f$ increases, and as the temperature decreases, the probability of accepting a worse solution is reduced. With such an approach, the Metropolis acceptance criteria allows up-hill moves, which enable the algorithm to escape from local minimum. Notwithstanding, as the temperature reaches very low values, the algorithm becomes increasingly greedy.
 
 % METROPOLIS ACCEPTANCE RULE
 \begin{equation}
@@ -15,7 +35,7 @@ The acceptance criteria used by the developed SA algorithms is the Metropolis ac
   p =  \left \{
   \begin{aligned}
     & 1, && \text{if}\ f(y) \leq f(x),\\
-    & e^{-\frac{f(y)-f(x)}{t}},&& \text{otherwise}
+    & e^{-\frac{\Delta_f}{t}},&& \text{otherwise}
   \end{aligned} \right. 
 \end{equation}
 
@@ -28,7 +48,7 @@ The developed SA optimization uses a geometric cooling schedule. It starts with 
      t_{k+1} = \lambda * t_{k}
 \end{equation}
 
-The $t_0$, $t_f$ and $\lambda$ terms must be calculated beforehand based on the probability of accepting a worse solution during the first iteration ($p_0$) and during the last iteration ($p_f$), and on the total number of outer iterations ($k$). The defined algorithm establishes $p_0$ as $0.98$ and $p_f$ as a positive close to zero value. The total number of iterations is set according to the time available for the optimization process. 
+The cooling schedule parameters $t_0$, $t_f$ and $\lambda$ must be calculated beforehand based on the probability of accepting a worse solution during the first iteration ($p_0$) and during the last iteration ($p_f$), and on the total number of outer iterations ($k$). The defined algorithm establishes $p_0$ as $0.98$ and $p_f$ as a positive value close to zero. The total number of iterations is set according to the time available for the optimization process, and the length of the Markov chain ($M$) is set to the number of nodes $m$.
 
 % In this work, the implemented Simulated Annealing algorithm uses a geometric cooling schedule, with parameter $\lambda$, and a simple 2-opt technique for the neighborhood function. The initial temperature $t_0$, is set in such a way that the initial probability $p_0$ of accepting a worse solution is 0.98. In its turn, the final temperature $t_f$ is such that the probability $p_f$ decreases to $10^{-300}$. By setting $p_0$ and $p_f$, and given that a geometric cooling schedule implies that $t_{k+1} = \lambda * t_{k}$, where $k$ is the iteration counter, it is possible to use the Metropolis acceptance criteria to define the initial and final temperatures. Note that this requires that the algorithm performs a fixed number of iterations, defines apriori. 
 
@@ -45,8 +65,6 @@ To calculate the value of $t_0$ and $t_f$, the algorithm starts by generating so
 \end{equation}
 
 % Having a complete cooling schedule and neighborhood function, the Simulated Annealing has almost all parameters required. The only thing missing is information about the length of the inner cycle, the Markov chain. That is, the metaheuristic implements two cycle, where the most inner cycle, the Markov chain, is responsible for generating new solutions, and the outer cycle is responsible for controlling the temperature. The number of the iterations of the inner cycle is given by $m$, and of the outer cycle by $k$. It is common to specify both values apriori, and to define $m$ as a function of the length of the neighborhood structure. In this work, $m$ is set to be equal to the number of nodes.
-
-The length of the Markov chain ($M$) is set to the number of nodes $m$.
 
 %Finally, it is necessary to define the length of the Markov chain. Following the suggestions of the literature, the length of the Markov chain, $m$ is set to be equal to the number of nodes. \todo{Vou tentar melhorar este} 
 
