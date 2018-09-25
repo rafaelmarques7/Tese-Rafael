@@ -7,6 +7,7 @@ Furthermore, this construction procedure is also relevant, because some optimiza
 The method introduced below will be hereinafter called pseudo-random construction procedure, and requires an instance of the Flying Tourist Problem $G=(Vc,A,T_0,D,TW)$ where there are no restrictions regarding the time-windows, that is $TW(i) = [0, +\infty[$, $\forall i \in V$. Note that this procedure is both adequate for single and round flights, as well as FTP instances with many nodes to visit. The procedure can be summarized as follows:
 
 \begin{enumerate}
+\itemsep0em 
     \item set an initial empty solution: $s=()$;
     \item set the current time to one of the possible start dates: $t \in T_0=[T_{0i}, T_{0f}]$;
     \item set the current node to the start node: $v_c = v_0$;
@@ -17,5 +18,5 @@ The method introduced below will be hereinafter called pseudo-random constructio
     \item increment the time according to the duration of visit of the selected node: $t=t+d(v_i)$;
     \item update the current node: $v_c=v_i$;
     \item go to step 4);
-    \item extend the solution with the final arc $a_{v_c, v_{n=1}}^t$;
+    \item extend the solution with the final arc $a_{v_c, v_{n+1}}^t$;
 \end{enumerate}
