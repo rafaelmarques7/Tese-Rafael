@@ -1,5 +1,13 @@
+\todo{Thats not the goal of the CSA. The goal is to be a flight search engine. }
+\todo{The CSA is designed to serve as I/O}
+
+
+The proposed system intends to serve as a flight search engine and, in particular, to find the best schedule, route and set of flights for a given multi-city trip.
+However, the application which directly interacts with the user is not a search engine, but an input/output port. On one hand, it interacts with the user enabling them to query the desired itinerary. on the other, it communicates with the server to obtain useful results to those queries. 
+
+
 The goal of the Client Side Application (CSA) is two interact with the user.
-Due to the work being developed, the CSA must:
+Due to the work being developed, the CSA must satisfy these minimum requirements:
 
 \begin{enumerate}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
   \item enable the construction of user selected requests;
@@ -41,6 +49,7 @@ Thus, upon presenting the solution, each flight must include, at least, the foll
   \item the number of layover flights;
 \end{itemize}
 
+\todo{Empty paragraph}
 At this point, it is well defined what constitutes the user Input/Output,
 and that the Client Side Application handles only the logic of collecting user requests,
 and of preseting solutions to these requests. In its turn, the processing of the request 
@@ -54,6 +63,8 @@ While the Request and Response views are essential to the overall function of th
 the Map view is not. However, a map, which could display the routes of the selected flights, aswell as other relevant information,
 would certainly contribute to a better and more complete user experience.
 
+\todo{This entire paragraph must be replaced. The new must be pragmatic and objective. Just this, Goal: adjust the design of the webpage according to the device rendering it. }
+\todo{Remove adjectives like interesting. If you want to adjectify, argument why it is important (and not interesting!) to have that.}
 It is also important to dicuss the design of a \textit{response} User Interface,
 that is, a UI which adjust the size of the presented content according to the characteristic of the users device.
 Today, the browsing of the internet occurs on a multitude of devices, which include mobile, desktop and tablet devices.
@@ -62,6 +73,7 @@ There are some mobile devices which have 3 inches screen, while others may have 
 the size of the screen increases considerably as we move towards laptop and desktop screens.
 Thus, upon rendering a webpage, it is important to know the size of the decive being used,
 and adjust and resize the displayed content accordingly.
+
 
 With this in mind, the proposed User Interface should follow the design illustrated in figure \ref{fig:UI_design}.
 Notice that there are 3 views, the Response, Request, which are essential and thus are always present,

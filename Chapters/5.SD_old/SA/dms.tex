@@ -14,13 +14,13 @@ flights which fit this discription, and every one of these flights has several a
 which differentiate themselves. For exemply, every flight has a particular cost,
 flight duration, departure and arrival time, airline, bag limit or even 
 layover flights.
-
 Due to the vaste attributes which define every flight,
 it is impossible to known which particular flight is the most adequate to a specific user,
 because users often have different selection criteria.
-Due to this, upon the construction of the multipartite graph,
-it makes sense to have a list of possible flights, for every arc in $A$,
-instead of just one.
+
+Upon the construction of the multipartite graph,
+it is convenient to have a set of multiple flights for every arc in $A$,
+instead of just a single one.
 This enables the selection of a specific flight according to the objective function being minimized.
 For example, if the goal is to minimize the total fligh cost,
 it makes sense to select those flights which present the lowest cost, 
@@ -30,63 +30,8 @@ a \textit{family} of arcs, which share key characteristics, as the origin, desti
 but which may vary regarding the other attributes, as flight cost and duration.
 
 
-Following the definition of the Flying Tourist Problem, and the notation proposed by J.C.Picard,
-a request may be defined as a multipartite graph, divided into $k$ layers,
-and where every node in a layer is fully connected to every other node in the subsequent layer.
-The total number of layers, which correspond to time span between the earliest date in which the trip might start,
-and latest date in which it might finish, is given by equation \ref{eq:k_number_layers}.
-The arcs which connect those nodes are divided into three groups: \textit{initial}, \textit{transition} and \textit{final} arcs.
-Figure \ref{fig:multipartite_times} illustrates the time periods associated to each arc type,
-according to the Flying Tourist Problem definition, with a multiple time start period,
-and a non empty list of cities to be visited.
-
-\todo{Move this image to section 3.2 - graph construction}
-
-\begin{figure}[htpb]
-  \centering
-  \includegraphics[width=\textwidth]{./Figures/system_design/flights_times.png}
-  \caption{Illustration of the distribution in time of the initial, final and transition arcs.}
-  \label{fig:multipartite_times} 
-\end{figure}
-
-
-\begin{equation}
-\label{eq:k_number_layers}
-  k = T_{fb} - T_{0a} + 1 = t_s + summ(D) + 1
-\end{equation}
-
-The initial arcs correspond to those who might initiate the trip,
-and thus must start at city $v_0$ at a time $t \in T_0 = [T_{0m}, T_{0M}]$
-and visit every city in $V \cup {v_{n+1}}$.
-There are a total of $k_1 = T_{0M} - T_{0m} + 1 = t_s + 1$ layers for the initial arcs.
-
-In its turn, the transition arcs are those which connect the $N$ cities 
-of the list of cities to be visited $V$.
-The earliest transition arc occurs at a time no sooner than $t_1 = T_{0a} + min(D)$,
-where $min(D)$ corresponds to the lowest entry of the set of durations.
-That is, if the trip starts at time $T_{0a}$, which is the earliest start date,
-and if the minimum duration associatedto a city is $min(D)$, 
-than the second flight might occur at a time no sooner than $t_1 = T_{0a} + min(D)$.
-Following a similar approach, the latest transition flight can 
-occur no latter than $t_2 = T_{0b} + summ(D) - min(D)$, where $summ(D)$ corresponds 
-to the summ of all entries belonging to $D$.
-Thus, there are a total of $k_2 = t_2-t_1+1$ transition layers.
-
-On the other hand, the final arcs are those which might conclude the trip,
-and thus must return to city $v_{n+1}$,
-from a city in $V \cup \{v_0\}$. The final layer extends from 
-$T_{fa}$ to $T_{fb}$, where $T_{fa}$ = $T_{0a} + summ(D)$ and $T_{fb}$ = $T_{0b} + summ(D)$.
-There are a total of $k_3 = T_{fb} - T_{fa} + 1 = t_s + 1 $ final layers.
-Comparing to the number of initial layers, one can conclude that there are as many 
-initial layers, as there are final layers. 
-
-In conclusion, the goal of the Data Management System is to enable the construction 
-of the lists of flights which are necessary to proccess some user request.
-By now, it should be clear which particular set of flights are necessary.
-However, nothing was yet said about how to actually obtain the required information.
-
-To have access to real flight data, the most simplest and efficient way is to 
-find a publicly available flight data API. There are several choices regarding to this,
+To have access to real flight data, the simplest and most efficient way is to 
+use a publicly available flight API. There are several choice,
 and it was a subject of a lot of research.
 In summary, the available API's are classified as \textit{free}, \textit{limited} and \textit{unacessible}.
 A free API is one which charges no charge for any query, nor limits the number of daily queries.
@@ -109,6 +54,23 @@ and that each flight has multiple attributes, as the price, duration, country et
   that multiple flights are returned, each with its own attributes.}
   \label{fig:kiwi_response}  
 \end{figure}
+
+\todo{
+_____________________
+    From this point on forward, the 
+    structure of the subsection must be rethinked. 
+    Is there anything useful to say?
+    We could rampage a lot, like proposing the ultimate structure (api + crawler + Db), 
+    but that is not import. The important is essentials. 
+    Important is 
+        1) We considered multiple sources of data. WHY? bc of the impact it has on the solution
+        2) What we decided to use - API. WHY? speed, efficiency, simplicity, durability
+        *3) What would be the ultimate design goal be? WHY? Illustrate. Explain
+    If we go for the previous structure, it becomes at least not bad,
+    and we can put the webscraper shit in annex and still have material to present.
+
+}
+
 
 One of the most important conclusions of testing different API's,
 is that different API's provide very different results.

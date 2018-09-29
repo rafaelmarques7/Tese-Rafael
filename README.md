@@ -71,7 +71,7 @@ Revisao:
   * add introduction
   * review 5.1.2A - Data Management System
   * images from this subsection might be moved to annex
-  * 5.1.2.b Optimization system - this makes sense to have here, but only if we just talk about the strategy. no implementation detals, just overall goals. fast algorithms. fast initial response because of user. after this optimize as much as possible.
+  * 5.1.2.b Optimization system - this makes sense to have here, but only if we just talk about the strategy. no implementation detals, just overall goals. fast algorithms. fast initial response because of user. after this optimize as much as possible. talk about goal benchmarks here.
   * figure 5.6 remove NN and MH connection.
   * 5.2 Design choices - if we are lacking space, this should be removed. The important parts should be moved to the relevant sections (if this is the case, Data collection and storage should be discussed in the DMS subsection)
 

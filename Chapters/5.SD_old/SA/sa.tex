@@ -1,4 +1,7 @@
-\todo{Dont start so heavy. Introduce the system first. Explain it after. Illustrate in the end}
+\todo{Structure: 1) Problem + Solution 2) The system + diagram 3) Separation of concerns + Communication HTTP/AJAX 4) CSA 5) SSA 6) Response + OS }
+\todo{Before starting explaining what the architecture is, explain the problem and how we solve it.}
+ 
+ \todo{Dont start so heavy. Introduce the system first. Explain it after. Illustrate in the end}
 
 The proposed system consists of a web application, composed of both a client, and server side application,
 which are mutual exclusive but dependent upon another.
@@ -16,22 +19,30 @@ be explained with further detail.
 
 
 The client side application (CSA) is designed to interact with the user,
-enabling the construction of requests (number 1 in the figure), 
+enabling the construction of requests (number 1 in the figure) \todo{What are these requests? or Where is it explained}, 
 and the presentation of solutions to those requests (number 6).
 \todo{The details of this design and implementation are covered in section x and y, respectively.)}
 
+
+\todo{The separation of concerns between the CSA and the SSA must be discussed in its own paragraph. It must explain why its useful, and what are the main goals associated to it.}
+
 \todo{Add a line saying that step 4) optimization, is not necessary in some requests. For example, single and round flights can be trivially solved by aplying some filter criteria. However, for multi city requests, and as the number of cities to visit increase, this problemas becomes harder to solve. Thus, we need to move it to the server. As a consequence, the complexity of the client application is reduced, because it does not hnadle optimization, and its only goal becomes to be an I/O port, where the input comes from the user, and the output from the server.  }
 
-Due to the nature of the constructed requests, which are Np-hard for unconstrained multi city requests,
+Due to the nature of the constructed requests \todo{Simplify and add value: 1) Request parallel FTP 2) FTP = NPHard 3) Low entrance barrier, but high difficulty for bigger instances 4}, which are Np-hard for unconstrained multi city requests,
 the optimization process associated to it is computationally heavy.
 Thus, the response to a request is not processed by the client side application,
-but rather by an application which runs on the server. 
+but rather by an application which runs on the server.
+\todo{Another reason for transporting to Server is that having the complete set of arcs to a big request becomes impossible, due to the giant ammount of memory consumption. On the other hand, storing a n array of flights, is pretty trivial. }
+
+
+\todo{This paragraph is a single sentence. Review the subject with more depth. }
 
 The communication between the client and the server applications  
 is done via Asynchronous Javascript and XML (AJAX),
 which means that upon submiting the request (number 2 in the figure),
 the client can continue to interact with the application 
 while the response is being prepared.
+
 
 The server side application is responsible for producing a 
 response to the user constructed requests.

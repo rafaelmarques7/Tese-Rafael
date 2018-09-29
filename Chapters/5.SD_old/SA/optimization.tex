@@ -1,13 +1,14 @@
 
 
-The goal of the optimization system is to produce a solution to a user defined request.
-When a user defines a request, as shown before, the arcs which connect those nodes are not defined, 
+The goal of the optimization system is to produce a solution to a user request.
+Upon defining an itinerary and translating it to a Flying Tourist Problem instance, the arcs which connect the nodes are not defined, 
 and thus, no solution can be produced.
 After collecting the information regarding these arcs, it is possible to run 
 an optimization algorithm which produces the best set of flights for the specific request,
 according to some objective function.
+\todo{This should be its own paragraph, and introduce the pagraphs to follow: construction of multiple solutions, using various heuristics, due to the response time goals}
 However, depending on the specific request, the time necessary to collect 
-the required flights, or the time necessary to produce a high quality solution may be very high,
+the required flights, or the time necessary to produce a high quality solution, may be very high,
 due to high number of necessary flights, aswell as the computational complexity associated to this problem.
 
 Because of the latency inherint to complex requests,
