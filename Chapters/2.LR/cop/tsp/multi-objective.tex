@@ -1,51 +1,36 @@
-\subsubsection{Multi objective TSP}
+\subsubsection{Multi-objective TSP}
 \label{sec:multi-objective-tsp}
 
-The multi objective Traveling Salesman problem is a generalization 
-of the classic TSP, and is part of much broader class of problems, 
-the multi objective combinatorial optimization problems, \cite{multi_objective_cop},
-and, in particular, multi objective vehicle routing problems, \cite{multi_objective_vrp}.
+The multi-objective Traveling Salesman problem is a generalization of the classic TSP, and is part of much broader class of problems, comprehending the multi objective combinatorial optimization problems \cite{multi_objective_cop} and, in particular, the multi objective vehicle routing problems \cite{multi_objective_vrp}.
 
-The Multi objective TSP is defined as follows \cite{moea_for_motsp}:
+The multi objective TSP is defined as follows \cite{moea_for_motsp}:
 
-Given a list of $n$ cities and a set D = $(D_1, D_2, ..., D_k)$ of $n*n$ weight matrix,
-the objective is to minimize $f(\pi) = (f_1(\pi), f_2(\pi), ..., f_k(\pi))$,
-with $f_i(\pi) = (\sum_{j=1}^{n-1} d_{\pi(j),\pi(j+1)}^i) + d_{\pi(n), \pi(1)}^i$,
-where $\pi$ is a permutation over the set (1, 2, ..., n). 
+Given a list of $n$ cities and a set D = $(D_1, D_2, ..., D_k)$ of $n*n$ weight matrices, the objective is to minimize $f(\pi) = (f_1(\pi), f_2(\pi), ..., f_k(\pi))$, with $f_i(\pi) = (\sum_{j=1}^{n-1} d_{\pi(j),\pi(j+1)}^i) + d_{\pi(n), \pi(1)}^i$, where $\pi$ is a permutation over the set (1, 2, ..., n). 
 
-Note that when $ D = (D_1)$, this corresponds to single-objective TSP.
-Note also that the above formulation considers that all objective functions calculate the weight 
-of the hamiltionian cycle, according to the respective weight matrix.
+Note that when $ D = (D_1)$, this corresponds to the single-objective TSP. Note also that the above formulation considers that all objective functions calculate the weight of the Hamiltonian cycle, according to the respective weight matrix.
 
-The quality of the results of the multi objective TSP are usually measured 
-according to its performance accross the Pareto criteria, defined as follows \cite{pareto}:
+The quality of the results of the multi objective TSP are usually measured  according to its performance across the Pareto criteria, defined as follows \cite{pareto}:
+
 
 \textbf{Pareto dominance}
 
-A vector $\vec{u} = (u_1, ..., u_k)$ is said to dominate $\vec{v} = (v_1, ..., v_k)$,
-deonted by $\vec{u} \preceq \vec{v}$, if and only if $\vec{u}$ is partially less than $\vec{v}$,
-i.e. $\forall i \in \{1, ..., k\} u_i \leq v_i \land \exists i \in {1,...,k}: u_i < v_i$.
+A vector $\vec{u} = (u_1, ..., u_k)$ is said to dominate $\vec{v} = (v_1, ..., v_k)$, denoted by $\vec{u} \preceq \vec{v}$, if and only if $\vec{u}$ is partially less than $\vec{v}$, i.e. $\forall$ $i$ $\in$ $\{1, ..., k\}$ $u_i$ $\leq$ $v_i$ $\land$ $\exists$ $i$ $\in$ ${1,...,k}:$ $u_i$ $<$ $v_i$.
+
 
 \textbf{Pareto Optimality}
 
-Pareto optimality is defined asa concept of allocation optimality. An allocation 
-is not pareto optimal if there is at least one alternative allocation which produces improvements 
+Pareto optimality is defined as a concept of allocation optimality. An allocation is not Pareto optimal if there is at least one alternative allocation which produces improvements.
 
-A solution $x \in \Omega$ is said to be Pareto optimal with respect to $\Omega$
-iff. there is no $x^{'} \in \Omega$ for which $\vec{v}=F(x^{'})=(f_1(x^{'}), ...,f_k(x^{'}))$ 
-dominates $\vec{u}=F(x)=(f_1(x), ...,f_k(x))$.
+A solution $x \in \Omega$ is said to be Pareto optimal with respect to $\Omega$ if, and only if, there is no $x^{'} \in \Omega$ for which $\vec{v}=F(x^{'})=(f_1(x^{'}), ...,f_k(x^{'}))$ dominates $\vec{u}=F(x)=(f_1(x), ...,f_k(x))$.
+
 
 \textbf{Pareto Optimal Set}
 
-For a given MOP $F(x)$, the Paretto optimal set $(P*)$ is defined as :
-$P* = \{ x \in \Omega | \not \exists x^{'} \in \Omega : F(x^{'}) \preceq F(x) \}  $
+For a given multi-objective problem $F(x)$, the Pareto optimal set $(P*)$ is defined as :
+
+$P* = \{ x \in \Omega | \neg \exists x^{'} \in \Omega : F(x^{'}) \preceq F(x) \}$
 
 
-Althoug the above mentioned problem refers to the multi-objective TSP,
-without loss of generality, the multi-objective optimization can be performed on a time-dependent TSP.
-There is very few direct research about multi objective Time dependent TSP,
-but one can cite \cite{multi_objective_machine_sequencing},
-which proposes a multi-objective tabu search for single machine scheduling problems 
-with sequence-dependent setup times.
+Although the above mentioned problem refers to the multi-objective TSP, without loss of generality, the multi-objective optimization can be performed on a time-dependent TSP. There is very few direct research about multi objective time dependent TSP, but one can cite \cite{multi_objective_machine_sequencing}, which proposes a multi-objective tabu search for single machine scheduling problems with sequence-dependent setup times.
 
 

@@ -1,26 +1,15 @@
 \subsubsection{Problem definition}
+\label{sec:vrp_classic}
 
-Following the definition proposed by \cite{VRP_exact_heuristic},
-let $G$ = $(V,A)$ be a graph, where $V={1, ..., n}$ is a set of vertices,
-representing nodes/customers/cities, with the depot located at vertex 1,
-and $A$ is the set of arcs fully connecting the nodes. Each arc $(i,j)$, $i$ $\neq$ $j$,
-is associated with a non negative weight, $c_{ij}$. Depending on the context 
-of the work, this weight might represent the distance between nodes, the travel time,
-or even the travel cost. It is assumed that a fleet of $m$ vehicles is available.
-The Vehicle Routing Problems consists in finding the set of optimal routes such that:
+Following the definition proposed by Laporte \cite{vrp_exact}, let $G$ = $(V,A)$ be a graph, where $V={1, ..., n}$ is a set of vertices, representing nodes/customers/cities, with the depot located at vertex 1, and $A$ is the set of arcs fully connecting the nodes. Each arc $(i,j)$, $i$ $\neq$ $j$, is associated with a non negative weight, $c_{ij}$. Depending on the context of the work, this weight might represent the distance between nodes, the travel time, or even the travel cost. It is assumed that a fleet of $m$ vehicles is available. The Vehicle Routing Problems consists in finding the set of optimal routes such that:
 
 \begin{enumerate}
-  \item each city in $V\backslash\{1\}$ is visited exactly once, by exacly one vehicle;
+  \item each city in $V\backslash\{1\}$ is visited exactly once, by exactly one vehicle;
   \item all routes start and finish at the depot;
   \item some constraints must be satisfied;
 \end{enumerate}
 
-The most common constraints associated to the 4) include: capacity restrictions associated with each vehicle; 
-limit on the number of nodes that each route might visit; total time restrictions; time-windows
-in which each node must be visited; precendence relations between nodes. 
+The most common constraints associated to 3) include: capacity restrictions associated with each vehicle; limit on the number of nodes that each route might visit; total time restrictions; time-windows in which each node must be visited; precedence relations between nodes. 
 
-The goal of the Vehicle Routing Problem usually consists in finding an optimal set of routes,
-as to minimize the total cost, where the cost depends on the total distance covered, and the fixed costs associated to each vehicle. 
-However, depending on the problem under study, the goal may be different, as to  minimize the total travel time, 
-minimize the total number of vehicles, or even both at the same time \cite{TDVRP_multi_objective_aco}.
+The goal of the Vehicle Routing Problem usually consists in finding an optimal set of routes, as to minimize the total cost, where the cost depends on the total distance covered, and the fixed costs associated to each vehicle.  However, depending on the problem under study, the goal may be different, as to  minimize the total travel time, minimize the total number of vehicles, or even both at the same time \cite{TDVRP_multi_objective_aco}.
 

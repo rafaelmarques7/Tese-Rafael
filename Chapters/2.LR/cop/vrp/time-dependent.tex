@@ -2,49 +2,17 @@
 \label{sec:time-dependent-vrp}
 
 
-The Vehicle Routing Problem is a very wide class of optimization problems, whose precise problem definition usually depends
-on the characteristics of the problem under considerations. Thus, introducing time-dependencies 
-on the problem also depend on the specifics of the situation. There are several athors which consider 
-time-dependent travel costs, \cite{tdvrp_costs}, and the objective is to minimize the total costs,
-while others introduce time-dependent travel times, \cite{tdvrp_1},
-and the objective is to minimize the total travel time. There are also those 
-who consider that the objective function is a function of both travel time and travel costs,
-and at least one of these (travel time, travel cost) is time-dependent, \cite{tdvrptw_1}.
-The definition here proposed follows this last time-dependent variation.
+The Vehicle Routing Problem is a very wide class of optimization problems, whose precise problem definition usually depends on the characteristics of the problem under consideration. Thus, introducing time-dependencies on the problem also depends on the specificities of the situation. There are several authors which consider time-dependent travel costs, \cite{tdvrp_costs}, and the objective is to minimize the total costs, while others introduce time-dependent travel times, \cite{tdvrp_1}, and the objective is to minimize the total travel time. There are also those who consider that the objective function is a function of both travel time and travel costs, and at least one of these (travel time, travel cost) is time-dependent, \cite{tdvrptw_1}.
+The definition herein proposed follow this last time-dependent variation.
 
-The time-dependent VRP is defined, following the work of \cite{tdvrptw_1}, as follows.
-Let $G=(V,A)$ be a graph where $A=\{(v_i, v_j): i \neq j \wedge i,j \in V\}$
-is the set of arcs, and $V = (v_0, ..., v_{n+1})$ is the set of vertex
-Vertices $v_{0}$ and $v_{n+1}$ denote the depot at which the vehicles are based.
-It is considered that each vehicle has an uniform capacity of $q_{max}$.
-It is also expected that each vertex in $i \in V$ has an associated demand $q_i \geq 0$,
-a service time $g_i \geq 0$, and the depot has $q_0 = 0$ and $g_0 = 0$.
-The set of vertex $ C = (v_1, ..., v_{n})$ specified the set of $n$ customers.
-The arrival time of a vehicle at customer $i$, $i \in C$, is denoted by $a_i$,
-and its departure time $b_i$. Each arc $(v_i, v_j)$ has an associated distance $d_{ij} \geq 0$,
-and a travel time $t_{ij}(b_i) \geq 0$. Note that the travel time is a function 
-of the departure time from costumer $i$.
-The set of available vehicles is denoted by $K$. 
-Consider that the cost per unit of route \textit{duration} is denoted by $c_{t}$,
-and the cost per unit of route \textit{distance} is denoted by $c_{d}$. 
+Following the work of \cite{tdvrptw_1}, the time-dependent VRP is defined as follows. Let $G=(V,A)$ be a graph where $A=\{(v_i, v_j): i \neq j \wedge i,j \in V\}$ is the set of arcs, and $V = (v_0, ..., v_{n+1})$ is the set of vertex. Vertices $v_{0}$ and $v_{n+1}$ denote the depot at which the vehicles are based. It is considered that each vehicle has an uniform capacity of $q_{max}$. It is also expected that each vertex in $i \in V$ has an associated demand $q_i \geq 0$,a service time $g_i \geq 0$, with the depot having $q_0 = 0$ and $g_0 = 0$. The set of vertex $ C = (v_1, ..., v_{n})$ specify the set of $n$ customers. The arrival time of a vehicle at customer $i$, $i \in C$, is denoted by $a_i$, and its departure time $b_i$. Each arc $(v_i, v_j)$ has an associated distance $d_{ij} \geq 0$, and a travel time $t_{ij}(b_i) \geq 0$. Note that the travel time is a function 
+of the departure time from costumer $i$. The set of available vehicles is denoted by $K$. Consider that the cost per unit of route \textit{duration} is denoted by $c_{t}$, and the cost per unit of route \textit{distance} is denoted by $c_{d}$. 
 
-In this formulation, there are two goals for the time-dependent VRP. The first corresponds
-to the minimization of the total number of vehicles used. The second corresponds
-to the minimization of the total cost, which is a function of both distance and travel time.
+In this formulation, there are two goals for the time-dependent VRP. The first corresponds to the minimization of the total number of vehicles used. The second corresponds to the minimization of the total cost, which is a function of both distance and travel time.
 
-There complete definition of the problem follows a mixed integer programming approach,
-with a total of 11 constraints. These will not be covered in detail here, as the VRP is not 
-the primary object of study of this work, that being the TSP. Thus,
-it is important to define in which circustances the TDVRP can be transformed into the TDTSP.
-This is possible by considering only one vehicle, with infinite capacity,
-and by adapting the objective function according to the problem under consideration.
+The complete definition of the problem follows a mixed integer programming approach, with a total of 11 constraints. These will not be covered in detail here, as the VRP is not the primary object of study of this work. Thus, it is important to define in which circumstances the TDVRP can be transformed into the TDTSP. This is possible by considering only one vehicle, with infinite capacity, and by adapting the objective function according to the problem under consideration.
 
-We conclude this section with the final remark that the above presented definition of the 
-time-dependent VRP corresponds to a static version of the time-dependent case.
-There is a lot of research around the dynamic case, in which the problem is updated
-during the execution of the program. This has major applications in the routing industry,
-and it is often refered to as \textit{real-time} Vehicle Routing. 
-For more information regarding this problem, we refer to \cite{real_time_vrp} \cite{dynamic_vrp}.
+We conclude this section with the final remark that the above presented definition of the time-dependent VRP corresponds to a static version of the time-dependent case. There is a lot of research around the dynamic case, in which the problem is updated during the execution of the program. This has major applications in the routing industry,and it is often referred to as \textit{real-time} Vehicle Routing. For more information regarding this problem, we refer to \cite{real_time_vrp} \cite{dynamic_vrp}.
 
 
 

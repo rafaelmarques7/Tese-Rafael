@@ -1,88 +1,31 @@
 \subsubsection{Integer Linear Programming}
 \label{sec:TDTSP_ILP}
 
-\textbf{ILP for the TDTSP}
+The Traveling Salesman Problem, defined over the graph $G=(V,A)$, may be formulated as an integer linear programming problem \cite{tsp_exact_review}, by associating one binary decision variable $x_{ij}$ to every arc $a_{ij}$. Let $c_{ij}$ represent the weight of the arc $a_{i,j}$. When a decision variable has a value of 1, the corresponding arc belongs to the solution. The ILP formulation for the TSP is as follows:
 
-The TSP be formulated as an integer programming problem, (see Laburthe 1998). The decision variables are
-$x_{ij}$, which take values of one and zero, followig the following rule.
+\begin{align}
+  \min  &\hspace{0.5em} \sum_{i \ne j}c_{ij}x_{ij} \label{eq:ILP_objective} \\
+  \mathrm{s.t.}   &\hspace{0.5em} \sum_{j} x_{ij}, \hspace{3mm} i = 1, \ldots, n, \label{eq:ILP_constraint_1}\\
+  & \hspace{0.5em} \sum_{i} x_{ij} = 1, \hspace{3mm} j = 1, \ldots, n, \label{eq:ILP_constraint_2}\\
+  & \hspace{0.5em} \sum_{i,j \in S} x_{ij} \leq |S|-1, \hspace{3mm} S \subset V, 2 \leq |S| \leq n-2 \label{eq:ILP_constraint_3}\\
+  & \hspace{0.5em} x_{ij} \in \{0, 1\}, \hspace{3mm} i, j = 1, \ldots, n, i \ne j. \label{eq:ILP_constraint_4}
+\end{align}
 
-\begin{equation}
-\label{eq:bynary_x}
-\mathcal{}
-x_{ij} =
-\begin{cases}
-1, $    if the tour contains arc (i,j)$\\
-0, $    otherwise$
-\end{cases}
-\end{equation}
-
-Let $c_{ij}$ represent the weight of the arc $(i,j)$. The objective of the TSP is described by equation $\ref{eq:ILP_objective}$. Equations $\ref{eq:ILP_constraint_1}$ and $\ref{eq:ILP_constraint_2}$ represent constrains over the variables, particularly, that a tour must enter and leave each node exactly once. However, this does not completly define the characteristics of a Hamiltonian cycle. To eliminate the possibility of subtours, that is, of having some node more than once in a solution, it is necessary to introduce the sub-tour elimination constraint. This is expressed in equation $\ref{eq:ILP_sub_tour_constraint}$. Without this constrain, the formulation of the problem reduces to the classical Asignment Problem, that can be solved in polynomial time, $\mathcal{O}(n^{3})$.
-
-\begin{equation}
-	\label{eq:ILP_objective}
-	min \sum_{ij}c_{ij}x_{ij}
-\end{equation}
-
-\begin{equation}
-	\label{eq:ILP_constraint_1}
-	\forall i, \sum_{j} x_{ij} = 1
-\end{equation}
-
-\begin{equation}
-	\label{eq:ILP_constraint_2}
-	\forall j, \sum_{i} x_{ij} = 1
-\end{equation}
-
-\begin{equation}
-\label{eq:ILP_sub_tour_constraint}
-\forall S \subset N, S \ne \O, \sum_{i \in S} \sum_{j \notin S} xij \geq 2
-\end{equation}
+The objective function of the TSP is described by equation $\ref{eq:ILP_objective}$. Equations $\ref{eq:ILP_constraint_1}$ and $\ref{eq:ILP_constraint_2}$ represent constrains over the variables, particularly, that a tour must enter and leave, respectively, each node exactly once. However, this does not completely define the characteristics of a Hamiltonian cycle. To eliminate the possibility of subtours, it is necessary to introduce the sub-tour elimination constraint, expressed in equation $\ref{eq:ILP_constraint_3}$, . The final constraint, equation \ref{eq:ILP_constraint_4} forces the decision variables to binary values.
 
 
+% _______________________________________________________________________________
+% _______________________________________________________________________________
 
+In its turn, the time-dependent Traveling Salesman Problem may be formulated as an integer linear programming problem, by associating one binary decision variable $x_{ijt}$ to every arc $a_{ijt}$. Let $c_{ijt}$ represent the weight of the arc $a_{i,jt}$. A decision variable $x_{ijt}$ takes a value of 1 when the arc $a_{ijt}$, which represents the transition from node $i$ to node $j$ at time $t$, belongs to the solution. Following is the ILP formulation for the TDTSP:
 
+\begin{align}
+  \min  &\hspace{0.5em} \sum_{i}\sum_{j}\sum_{t} c_{ijt}x_{ijt} \label{eq:objective_TDTSP_ILP} \\
+  \mathrm{s.t.}   &\hspace{0.5em} \sum_{j}\sum_{t}x_{ijt} = 1 , \hspace{3mm} i = 1, \ldots, n, \label{eq:TDTSP_ILP_constraint_1}\\
+  & \hspace{0.5em} \sum_{i}\sum_{t}x_{ijt} = 1, \hspace{3mm} j = 1, \ldots, n, \label{eq:TDTSP_ILP_constraint_2}\\
+    & \hspace{0.5em} \sum_{i}\sum_{j}x_{ijt} = 1, \hspace{3mm} t = 1, \ldots, n, \label{eq:TDTSP_ILP_constraint_3}\\
+  & \hspace{0.5em} \sum_{j = 1}^{n}\sum_{t=2}^{n}tx_{ijt} - \sum_{j = 1}^{n}\sum_{t=1}^{n}tx_{ijt}  = 1, \hspace{3mm} \quad i = 1, ... ,n \label{eq:TDTSP_ILP_constraint_4}\\
+  & \hspace{0.5em} x_{ijt} \in \{0, 1\}, \hspace{3mm} i, j, t = 1, \ldots, n, i \ne j. \label{eq:TDTSP_ILP_constraint_5}
+\end{align}
 
-\textbf{ILP for the TDTSP}
-
-The TDTSP can be formulated as integer linear programming problem, by using bynary decision variables, $x_{ijt}$. These variables take a value of zero or one, according to the rule of equation $\ref{eq:ILP_TDTSP_x}$.
-
-\begin{equation}
-\label{eq:ILP_TDTSP_x}
-	x_{ijt} =
-	\begin{cases}
-		1, $if city j and i are visited in the time period t and t-1, repectively$ \\
-	    0, $otherwise$
-	\end{cases}
-\end{equation}
-
-The objective function is presented in equation $\ref{eq:objective_TDTSP_ILP}$. Equations $\ref{eq:TDTSP_ILP_constraint_1}$, $\ref{eq:TDTSP_ILP_constraint_2}$ and $\ref{eq:TDTSP_ILP_constraint_3}$ represent constraints over the decision variable. Particularly, they state that each city must be entereded exactly once, left exactly once, and visited in exactly one time period, respectively. As occurs with the classical TSP, the ILP formulation needs to formulate a constraint to eliminate the possible formation of sub tours. This is presented in equation $\ref{eq:TDTSP_ILP_subtour_constraint}$. Finaly, equation $\ref{eq:constrain_10}$ guarantees that the decision variable takes binary values.
-
-\begin{equation}
-\label{eq:objective_TDTSP_ILP}
-	min \quad \sum_{i}\sum_{j}\sum_{t} C_{ijt}x_{ijt}
-\end{equation}
-
-\begin{equation}
-\label{eq:TDTSP_ILP_constraint_1}
-	\quad \sum_{j}\sum_{t}x_{ijt} = 1 \quad i = 1, ... ,n
-\end{equation}
-
-\begin{equation}
-\label{eq:TDTSP_ILP_constraint_2}
-	\quad \sum_{i}\sum_{t}x_{ijt} = 1 \quad j = 1, ... ,n
-\end{equation}
-
-\begin{equation}
-\label{eq:TDTSP_ILP_constraint_3}
-	\quad \sum_{i}\sum_{j}x_{ijt} = 1 \quad t = 1, ... ,n
-\end{equation}
-
-\begin{equation}
-\label{eq:TDTSP_ILP_subtour_constraint}
-	\quad \sum_{j = 1}^{n}\sum_{t=2}^{n}tx_{ijt} - \sum_{j = 1}^{n}\sum_{t=1}^{n}tx_{ijt}  = 1 \quad i = 1, ... ,n
-\end{equation}
-
-\begin{equation} \label{eq:constrain_10}
-\quad x_{ijt} \in {0, 1} \quad i,j, t \in {i,...,n}
-\end{equation}
-
+The objective function is presented in equation $\ref{eq:objective_TDTSP_ILP}$. Equations $\ref{eq:TDTSP_ILP_constraint_1}$, $\ref{eq:TDTSP_ILP_constraint_2}$ and $\ref{eq:TDTSP_ILP_constraint_3}$ represent constraints over the decision variable. Particularly, they state that each city must be entered exactly once, left exactly once, and visited in exactly one time period, respectively. As occurs with the classical TSP, the ILP formulation needs to formulate a constraint to eliminate the possible formation of subtours. This is presented in equation $\ref{eq:TDTSP_ILP_subtour_constraint}$. Finally, equation $\ref{eq:constrain_10}$ guarantees that the decision variable takes binary values.

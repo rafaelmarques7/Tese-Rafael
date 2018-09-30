@@ -1,75 +1,28 @@
 \subsubsection{TSP with time-windows}
 \label{sec:time-windows-tsp}
 
-The Traveling Salesman Problem with Time Windows (TSPTW) is a generalization of the TSP,
-in which the objective is to find a minimum cost hamiltionian cycle which visits
-every city in its requested time window. This problem has important applications
-in the field of routing and scheduling, and is particularly relevant for the Vehicle Routing Problem,
-as it may occur as a real world constraint imposed by customers, whose operation hours 
-are limited to a time window, \cite{vrptw_exact}. Being a generalization of the TSP, the TSPTW is also NP-complete, \cite{tsptw_exact}.
-This section introduce two definitions, one for the asymetric TSP with time-windows,
-and a second one for the time-dependent variation of this problem.
+The Traveling Salesman Problem with Time Windows (TSPTW) is a generalization of the TSP, in which the objective is to find a minimum cost Hamiltonian cycle which visits every city in its requested time window. This problem has important applications in the field of routing and scheduling. It is also particularly relevant for the Vehicle Routing Problem, as these constrains may be imposed by customers, whose operation hours  are limited to a time window \cite{vrptw_exact}. Being a generalization of the TSP, the TSPTW is also NP-complete, \cite{tsptw_exact}. This section introduces two definitions, one for the asymmetric TSP with time-windows \cite{tsptw_polyhedra}, and a second one for the time-dependent variation \cite{tsptw_exact} of this problem.
 
-Below we present a formal definition of the assymetric traveling salesman problem with time windows (ATSPTW),
-based on \cite{tsptw_polyhedra}.
-Consider a complete digraph $G = (V, A)$, where $V$ is the set of $n = |N|$ nodes,
-and $A$ the set of arcs, each associated with a nonnegative arc cost, $c_{i,j}$,
-and nonnegative \textit{setup times}, $t_{ij}$ associated to each arc $(i, j) \in A$.
-The nodes correspond to jobs to be processed (as described in the single-machine sequencing problem),
-and arcs correspond to job transitions, where the setup times, $t_{ij}$, defines
-the changeover time needed to proccess node $j$ right after node $i$.
-Each node $i \in A$ has an associated \textit{processing time} $p_{i} \geq 0$,
-a \textit{release date} $r_{i} \geq 0$ and a \textit{deadline} $d_{i} \geq 0$,
-where the release date and deadline denote, respectively, the earliest and latest possible starting 
-time for the processing of node $i$. 
-The \textit{minimal time delay} for processing node $j$ immediatly after node $i$ is given by $v_{ij} = p_{i} + t_{ij}$.
-The interval $[r_{i}, d_{i}]$ is called the \textit{time window} for node $i$.
-The time-window is said to be relaxed if $r_{i} = 0$ and $ d_{i} \rightarrow +\infty$.
-On the contrary, a time-window is called active if $r_{i} > 0$ and $ d_{i} < +\infty$.
-It is possible to reach a node $i \in A$ at a time $t \in \mathcal{Z}^+ \cup \{0\}$, sooner than its release date $a_{i}$.
-In this case, it will be undergo a waiting time $a_i-t$, before leaving node $i$ at time $a_{i}$.
+Consider a complete digraph $G = (V, A)$, where $V$ is the set of $n = |N|$ nodes, and $A$ the set of arcs, each associated with a non-negative arc cost, $c_{i,j}$, and non-negative \textit{setup times}, $t_{ij}$ associated to each arc $(i, j) \in A$. The nodes correspond to jobs to be processed (as described in the single-machine sequencing problem), and arcs correspond to job transitions, where the setup times, $t_{ij}$, define the changeover time needed to process node $j$ immedtialy after node $i$. Each node $i \in A$ has an associated \textit{processing time} $p_{i} \geq 0$, a \textit{release date} $r_{i} \geq 0$ and a \textit{deadline} $d_{i} \geq 0$, where the release date and deadline denote, respectively, the earliest and latest possible starting time for the processing of node $i$.  The \textit{minimal time delay} for processing node $j$ immediately after node $i$ is given by $v_{ij} = p_{i} + t_{ij}$. The interval $[r_{i}, d_{i}]$ is called the \textit{time window} for node $i$. The time-window is said to be relaxed if $r_{i} = 0$ and $ d_{i} \rightarrow +\infty$. On the contrary, a time-window is called active if $r_{i} > 0$ and $ d_{i} < +\infty$. It is possible to reach a node $i \in A$ at a time $t \in \mathcal{Z}^+ \cup \{0\}$, sooner than its release date $a_{i}$. In this case, it will undergo a waiting time $a_i-t$, before leaving node $i$ at time $a_{i}$.
 
-When dealing with routing problems with time-windows, it is often necessary to define 
-if the time-windows are \textit{hard} or \textit{soft} constraints.
-Hard time windows consider that a node $i \in A$ can not be visited after its 
-deadline $d_{i}$. On the contrary, considering soft constraints,
-the node $i$ might be visited after the deadline $d_{i}$,
-but in this case a penalty occurs.
+When dealing with routing problems with time-windows, it is often necessary to define if the time-windows are \textit{hard} or \textit{soft} constraints. Hard time windows consider that a node $i \in A$ can not be visited after its deadline $d_{i}$. On the contrary, when considering soft constraints, the node $i$ might be visited after the deadline $d_{i}$, but, in this case, a penalty occurs.
 
-The objective function of the problem under consideration depends on specific definition of 
-the problem, particularly, according to the time-window constraints.
-Dealing with hard constraints, the objective function is defined by the sum of the costs of each arc 
-belonging to that tour, while using soft constraints, the objective function depends 
-on the specific problem definition and the values associated to the aformentioned penalties.
+The objective function of the problem under consideration depends on the specific definition of the problem, according to its time-window constraints. When dealing with hard constraints, the objective function is defined by the sum of the costs of each arc belonging to that tour, while when using soft constraints, the objective function depends on the specific problem definition and the values associated to the aforementioned penalties.
 
-There are several versions of the TSPTW which introduce time-dependent variations.
-These variations usually focus on time-dependent arc costs, setup times, or processing time.
-This generalization may occur, for example, as a result of considering the traffic effects associated to real world routing problems. 
-Below is the formal definition of the ATSPTW with time-dependent travel times and costs (ATSPTW-TDC),
-as defined in \cite{tsptw_exact}.
+There are several versions of the TSPTW which introduce time-dependent variations. These variations usually focus on time-dependent arc costs, setup times, or processing time. This generalization may occur, for example, as a result of considering the traffic effects associated to real world routing problems. Below is the formal definition of the ATSPTW with time-dependent travel times and costs (ATSPTW-TDC), as defined in \cite{tsptw_exact}.
 
-Let $G= (V,A)$ be a simple directed graph, $V=\{{v_{i}}_{i=0}^{n}\}$ its set of vertices,
-where $v_0$ is the depot vertex. Each vertex $v_i$ has an associated time window $[a_{i}, b_{i}]$,
-verifying that $a_i, b_i \in \mathcal{Z}^+ \cup \{0\}$ and $[a_{i}, b_{i}] \subseteq [a_{0}, b_{0}] \forall i \in \{1,...,n\}$.
-Every time window $[a_{i}, b_{i}]$ has associated $p_i = b_i - a_i$ instants of time $\{a_i + k -1\}_{k=1}^{p_{i}}$.
-For simplicity, we will denote $t_{i}^{k} = a_i + k -1$, and therefore $t_{i}^{k} \in \mathcal{Z}^+ \cup \{0\}$.
-The time and the cost of traversing an arc $(v_i, v_j) \in A$ depend on the instant of time $t_{i}^{k}$ at which the traversing is started.
-Consider $c_{ij}^{t} \geq 0$ and $t_{ij}{^t} \in \mathcal{Z}^+ \cup \{0\}$, respectively, the cost and the time 
-of travesing an arc $(v_i, v_j)$ starting at instant $t_{i}^{k}$.
+Let $G= (V,A)$ be a simple directed graph, $V=\{{v_{i}}_{i=0}^{n}\}$ its set of vertices, where $v_0$ is the depot vertex. Each vertex $v_i$ has an associated time window $[a_{i}, b_{i}]$, verifying that $a_i, b_i \in \mathcal{Z}^+ \cup \{0\}$ and $[a_{i}, b_{i}] \subseteq [a_{0}, b_{0}] \forall i \in \{1,...,n\}$. Every time window $[a_{i}, b_{i}]$ has associated $p_i = b_i - a_i$ instants of time $\{a_i + k -1\}_{k=1}^{p_{i}}$. For simplicity, we will denote $t_{i}^{k} = a_i + k -1$, and therefore $t_{i}^{k} \in \mathcal{Z}^+ \cup \{0\}$. The time and the cost of traversing an arc $(v_i, v_j) \in A$ depend on the instant of time $t_{i}^{k}$ at which the traversing is started. Consider $c_{ij}^{t} \geq 0$ and $t_{ij}{^t} \in \mathcal{Z}^+ \cup \{0\}$, respectively, the cost and the time of traversing an arc $(v_i, v_j)$ starting at instant $t_{i}^{k}$.
 
-The proposed goal in this formulation of the ATSPTW-TDC is to find a Hamiltionan cycle in $G$,
-starting and ending at $v_0$, starting and ending inside the time window $[a_0, b_0]$, such that:
+The proposed goal in this formulation of the ATSPTW-TDC is to find a Hamiltonian cycle in $G$, starting and ending at $v_0$, and respecting the time-window $[a_0, b_0]$, such that:
 
 \begin{itemize}
-  \item Starting the circuit at time $t_{i}^{k} \geq a_0$ involves a waiting time cost $cwt_0(t_{0}^{k}-a_0) \geq 0$ with $cwt_0(0)=0$;
+  \item Starting the circuit at time $t_{i}^{k} \geq a_0$ involves a waiting time cost $cwt_0(t_{0}^{k}-a_0) \geq 0$, with $cwt_0(0)=0$;
   \item The circuit leaves each vertex $v_i \in V$ during its associated time window;
   \item If the circuit arrives at vertex $v_i \in V$ at time $t \in \mathcal{Z}^+$,
   such that $t \leq a_i$, it is allowed a waiting time $a_i-t$ with cost $cwt_i(a_i-t) \geq 0$, with $cwt_i(0)=0$. In this case the circuit leaves vertex $i$ at time $a_i$;
   \item The sum of the costs of traversing arcs and of the waiting time costs is to be minimized.
 \end{itemize}
 
-The authors of the work introduced in \cite{tsptw_exact}, propose an exact algorithm for the previosuly defined ATSPTW-TDC,
-using several graph transformations, which sucessively reduce the problem into an assymetric TSP,
-for which several effecient exact alorithms already exist.
+The authors of the work introduced in \cite{tsptw_exact} propose an exact algorithm for the previously defined ATSPTW-TDC using several graph transformations, which successively reduce the problem into an asymmetric TSP, for which several efficient exact algorithms already exist.
 
 

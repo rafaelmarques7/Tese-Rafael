@@ -1,23 +1,14 @@
 \subsubsection{Common TSP variations}
 \label{sec:tsp_variations}
 
-The majority of the problems which are variations of the classic TSP,
-have the problem structure altered by some differences concerning the characteristics of the arcs or arcs costs,
-as occurs with the assymetric and metric TSP.
-In other cases, the variation of the problem may refer to constraints amongst the variables
-as occurs in the TSP with time windows described in the following subsection,
-or in the objective of the optimization, as occurs with the bottleneck TSP.
-The definitions provided in this section are with respect to those provided by \cite{tsp_book}.
+The majority of the problems that are regarded as variations of the classic TSP have the problem structure altered by some differences concerning the characteristics of the arcs or arcs costs, as occurs with the asymmetric and metric TSP. In other cases, the variation of the problem may refer to constraints among the variables, as occurs in the TSP with time windows, described in the following subsection, or in the objective of the optimization, as occurs with the bottleneck TSP. The definitions provided in this section are with respect to those formalized by \cite{tsp_book}.
 
-\textbf{Assymetric TSP}
 
-In the assymetrical TSP, the cost matrix is not symmetric. That is, there is no constraint
-imposing that $c_{ij} = c_{ji}$, as happens with the classical TSP.
+\textbf{Asymmetric TSP}
 
-The ATSP may be more adequate than the TSP for some specific real world problems.
-For example, when considering a routing problem over a city,
-some roads may not be connected in both ways. In this case, the weight of an arc
-connecting two points is different, depending on the direction of traversal of the arc.
+In the asymmetric TSP (ATSP), the weight matrix associated to the problem is not symmetric. That is, there is no constraint imposing that $c_{ij} = c_{ji}$, $\forall i, j$ $\in$ $N$, $i \ne j$, as happens with the classical TSP.
+
+For some particular real world problems, the ATSP may be more adequately describe the problem than the TSP. For example, when considering a routing problem over a city, some roads may not be connected in both ways. In this case, the weight of an arc connecting two points is different, depending on the direction of traversal of the arc.
 
 
 \textbf{Metric TSP}
@@ -36,44 +27,31 @@ $x = (x_{1}, x_{2}, ..., x_{d})$ and $y = (y_{1}, y_{2}, ..., y_{d})$.
 
 \begin{equation}
 \label{eq:euclidean_dist}
-  \bigg( \sum_{i=1}^{d} (x_{i}-y_{i})^2\bigg)^{1/2}
+  d_{ij} = bigg( \sum_{i=1}^{d} (x_{i}-y_{i})^2\bigg)^{1/2}
 \end{equation}
 
 The euclidean TSP is a variation which is both symmetric and metric.
 
+
 \textbf{Bottleneck TSP}
 
-In the Bottleneck TSP, the objective is to find a valid route which minimizes the cost of the 
-highest cost arc of the tour. According to the characteristic of the graph,
-the Bottleneck TSP may either be symetric, assymetric, metric or time-dependent.
+In the Bottleneck TSP, the objective is to find a valid route which minimizes the cost of the highest cost arc of the tour. According to the characteristic of the graph,
+the Bottleneck TSP may either be symmetric, asymmetric, metric or time-dependent.
+
 
 \textbf{The Messenger Problem}
 
-The Messenger problem, also known as the wondering traveling salesman, is the problem 
-of finding a minimum cost hamiltonian path connecting edges $u$ and $v$ of the graph G.
-It can be seen as a Traveling Salesman Problem in which the tour is not closed, but ends on a specific node,
-different from the initial one. The Messenger problem can be transformed into the TSP,
-by considering a cost of $-M$ for the arc $(v, u)$, where $M$ is a large number.
-If the nodes $u$ and $v$ are not specified, and one wishes to find a minimum cost hamiltonian path in G,
-this can be achieved by a graph transformation, adding one node and connecting it to all other nodes by arcs of cost $-M$.
-The optimal solution to the TSP on this modified graph can be used to produce the optimal solution to the original problem.
+The Messenger problem, also known as the wondering traveling salesman, is the problem of finding a minimum cost Hamiltonian path connecting edges $u$ and $v$ of the graph G. It can be seen as a Traveling Salesman Problem in which the tour is not closed, but ends on a specific node, different from the initial one. The Messenger problem can be transformed into the TSP, by considering a cost of $-M$ for the arc $(v, u)$, where $M$ is a large number. If the nodes $u$ and $v$ are not specified, and one wishes to find a minimum cost Hamiltonian path in G, this can be achieved by a graph transformation, adding one node and connecting it to all other nodes by arcs of cost $-M$. The optimal solution to the TSP on this modified graph can be used to produce the optimal solution to the original problem.
+
 
 \textbf{Generalized TSP}
 
-In the Generalized TSP, the set of nodes is partitioned into $k$ clusters  $V_{1}, V_{2}, ..., V_{k}$,
-and the objective is to find a shortest cycle which passes through exactly one node from each cluster $V_{i}$ for $ 1 \leq i \leq k$.
-If the dimension of each cluster is 1, that is, if $|V_{i}| = 1$ for all $i$, the problem reduces to the TSP.
-There exists effective graph transformation techniques which reduce the GTSP into the TSP.
-The GTSP has interesting applications to the tourism industry. For example, a person may want make a world trip and visit one city in each continent.
-In this case, the problem can be stated as a GTSP instance, in which the clusters are the continents.
+In the Generalized TSP, the set of nodes is partitioned into $k$ clusters  $V_{1}, V_{2}, ..., V_{k}$, and the objective is to find a shortest cycle which passes through exactly one node from each cluster $V_{i}$ for $ 1 \leq i \leq k$. If the dimension of each cluster is 1, that is, if $|V_{i}| = 1$ for all $i$, the problem reduces to the TSP. There exists effective graph transformation techniques which reduce the GTSP into the TSP. The GTSP has interesting applications to the tourism industry. For example, a person may want to make a world trip and visit one city in each continent. In this case, the problem can be stated as a GTSP instance, in which the clusters are the continents.
 
 \textbf{The \textit{m}-salesmen problem}
 
-In the \textit{m}-salesmen problem, there are $m$ salesmen positioned
-in node 1 of $G$. Each salesman visits a subset $X_{i}$ of nodes of G exactly once,
-starting and returning to node 1. The objective is to find 
-a partition $X_{1}$, $X_{2}$, ..., $X_{m}$ of $V-\{1\}$,
-and a route for each salesman such that:
+In the \textit{m}-salesmen problem, there are $m$ salesmen positioned in node 1 of $G$. Each salesman visits a subset $X_{i}$ of nodes of G exactly once, starting and returning to node 1. The objective is to find a partition $X_{1}$, $X_{2}$, ..., $X_{m}$ of $V-\{1\}$, and a route for each salesman such that:
+
 \begin{enumerate}
   \item $|X_{i}| \geq 1$ for each $i$;
   \item $\cup_{i=1}^{m} X_{i}=V-{1}$;
