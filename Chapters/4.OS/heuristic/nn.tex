@@ -1,13 +1,13 @@
 \subsection{Nearest neighbour}
 \label{sec:nn}
 
-The nearest neighbour is a solution construction procedure, which starts with an initial empty solution, and at each step of the algorithm updates the current solution be extending it with a solution component, an arc. Thus, this construction procedure is very similar to the one described in subsection \ref{sec:pseudo_random}. However, while the previous construction procedure selects the next node to visit in a pseudo-random way, the nearest neighbour heuristic takes a different approach, selecting the next node according to some particular objective.
+The nearest neighbour is a solution construction procedure, which starts that an initial empty solution and at each step of the algorithm updates the current solution be extending it with a solution component i.e., an arc. Thus, this construction procedure is very similar to the one described in subsection \ref{sec:pseudo_random}. However, while the previous construction procedure selects the next node to visit in a pseudo-random way, the nearest neighbour heuristic takes a different approach, by selecting the next node according to some particular objective.
 
-During the development of this work, two different nearest neighbour heuristic were used. The first takes into account only the distance between nodes, visiting always the closest node relative to the current one. This is exactly the nearest neighbour procedure applied to the Traveling Salesman Problem. The second approach, instead of considering the distance between nodes, considers the objective function. That is, if the objective is to minimize the total cost, than this heuristic will always select the node according to the minimum cost arc. In its turn, if the objective is to minimize the flight time, or any other criteria, than it is this criteria that is used upon selecting a node to visit, always choosing the node which minimizes the increase in the current objective function. 
+During the development of this work, two different nearest neighbour heuristic were used. The first only takes into account the distance between nodes, visiting always the closest node relative to the current one. This is exactly the nearest neighbour procedure applied to the Traveling Salesman Problem. In the second approach, instead of considering the distance between nodes, it considers the targeted objective function. That is, if the objective is to minimize the total cost, than this heuristic will always select the node according to the minimum cost arc. In its turn, if the objective is to minimize the flight time, or any other criteria, then it is this criteria that is used upon selecting a node to visit, always choosing the node which minimizes the increase in the current objective function. 
 
-In order to distinguish the two nearest neighbour heuristic, we will denote them as \textit{dNN} and \textit{rNN}, that is, \textit{distance} nearest neighbour and  \textit{refined} nearest neighbour, respectively. Note that the first takes into account only the distance between nodes, and not directly the objective function, while the latter only takes into account the objective function, and disregards completely the distance between nodes.
+In order to distinguish the two nearest neighbour heuristic, we will denote them as \textit{dNN} and \textit{rNN}, that is, \textit{distance} nearest neighbour and  \textit{refined} nearest neighbour, respectively. Note that the first only takes into account only the distance between nodes, and not directly the objective function, while the latter takes into account the objective function, and completely disregards the distance between nodes.
 
-The nearest neighbour construction procedure can be adapted from the previously introduced pseudo-random construction procedure by replacing only the construction step number 5). Thus, the distance nearest neighbour considers:
+The nearest neighbour construction procedure can be adapted from the previously introduced pseudo-random construction procedure by simply replacing the construction step number 5). Thus, the distance nearest neighbour considers:
 
 \begin{itemize}
     \item select the next node by choosing the one closest to the current node: \newline
@@ -24,7 +24,7 @@ while the refined nearest neighbour considers:
     $\forall$ $v_j$ $\in$ $V$ $\backslash$ $\{v_i\}$   
 \end{itemize}
 
-It is worth nothing that applying the distance and the refined nearest neighbour heuristics require different levels of information. On one hand, the distance nearest neighbour requires only the distances between each pair of cities. On the other hand, the refined nearest neighbour requires a complete weight matrix regarding the objective function.
+It is worth nothing that the application of the distance and the refined nearest neighbour heuristics require different levels of information. On one hand, the distance nearest neighbour requires the knowledge of the distances between each pair of cities. On the other hand, the refined nearest neighbour requires a complete weight matrix regarding the objective function.
 
 
 

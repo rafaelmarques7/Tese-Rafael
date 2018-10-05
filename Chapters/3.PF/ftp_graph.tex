@@ -1,16 +1,16 @@
 \section{Graph construction}
 \label{sec:ftp_graph}
 
+\todo{Correct image to have T0m and not T0a}
 
-
-As described in section \ref{sec:ftp}, a Flying Tourist Problem instance is completely described by a structure 
+As described in section \ref{sec:ftp}, a FTP instance is completely described by a structure 
 $G =(V_c, A, T_{0}, D, TW)$. Note that the previously referenced structure requires a set of arcs $A$ connecting every pair of nodes belonging to $V_c$. Thus, it is possible to represent this information in a weight matrix, where each of its entries corresponds to a particular arc.
 
-Since the Flying Tourist Problem wishes to address a real-world situation involving commercial flights, upon constructing the weight matrix, it is necessary to take the characteristics of commercial flights into account. For any pair of cities, at any given moment in time, there are several commercial flights which connect these two cities in that particular moment. Given that there is a direct mapping between commercial flights and FTP arcs, than there are multiple arcs for each weight matrix entry. Moreover, a commercial flight connecting two cities does not have a constant price over time. Thus, the value of an arc connecting two cities, varies over time. This means that a weight matrix of a FTP instance is three dimensional, with three variables $i, j, t$, where $i$ is the origin node, $j$ the destination node, and $t$ the moment in time at which the transition occurs.
+Since the presented formulation of the FTP wishes to addresses a real-world situation involving commercial flights, upon constructing the weight matrix, it is necessary to take the characteristics of commercial flights into account. For any pair of cities, at any given moment in time, there are several commercial flights that connect these two cities in that particular moment. Given that there is a direct mapping between commercial flights and FTP arcs, then there are multiple arcs for each weight matrix entry. Moreover, a commercial flight connecting two cities, does not have a constant price over time. Thus, the value of an arc connecting two cities, varies over time. This means that a weight matrix of a FTP instance is three dimensional, with three variables $i, j, t$, where $i$ is the origin node, $j$ the destination node, and $t$ the moment in time at which the transition occurs.
 
-It is possible to consider a weight matrix in which, for every entry, there are multiple values, corresponding to the different possible arcs for that pair of nodes and time. Consequently, accessing a particular arc requires not only the triplet $(i, j, t)$, but also some information about which particular arc to select. 
+In particular, it is possible to consider a weight matrix in which, for every entry, there are multiple values, corresponding to the different possible arcs for that pair of nodes and time. Consequently, accessing a particular arc requires not only the triplet $(i, j, t)$, but also some information about which particular arc to select. 
 
-Given that the dimensions of a FTP weight matrix are considerable, considering a family of arcs for each weight matrix entry is not recommended, since it would increase the weight size even more. Instead, a pragmatic strategy is followed. Upon constructing a weight matrix for the FTP instance, the objective function is taken into account. This means that, instead of considering that there are multiple arcs for the triplet $(i, j, t)$, it is considered that there is only one: that which has the minimum value according to the objective function. For example, if the objective function intends to minimize the total trip cost, upon constructing the weight matrix, for each family of arcs $(i, j, t)$, only the minimum cost arc would be selected. Using this strategy, for each cost matrix entry, there is only one available arc, and it is the one which minimizes the objective function.
+Given that the dimensions of a FTP weight matrix are considerable, considering a family of arcs for each weight matrix entry is not recommended, since it would increase the weight size even more. Instead, a pragmatic strategy is followed. Upon constructing a weight matrix for the FTP instance, the objective function is taken into account. This means that, instead of considering that there are multiple arcs for the triplet $(i, j, t)$, it is considered that there is only one: the one that has the minimum value according to the objective function. For example, if the objective function intends to minimize the total trip cost, upon constructing the weight matrix, for each family of arcs $(i, j, t)$, only the minimum cost arc would be selected. By using this strategy there is only one available arc, for each cost matrix entry, and it is the one which minimizes the objective function.
 
 Another important characteristic of commercial flights is that the price of a flight depends on the direction of the traversal. This means that the weight matrix of the FTP is not necessarily symmetric. Moreover, there is also no guarantee that a commercial flight between two cities exist. In fact, there are many cities which do not have a direct flight connection. Fortunately, many commercial flight providers have this into consideration, and try to establish an indirect connection between any two cities, by adding connecting flights. However, this is not always the case, and thus, it is necessary to initialize each entry of the weight matrix to a very high value, in order to discard these non-existent flights from a possible solution.  
 
@@ -20,7 +20,7 @@ To conclude the analysis of the characteristics of the FTP weight matrix, it is 
 \begin{figure}[htpb]
   \centering
   \includegraphics[width=\textwidth]{./Figures/system_design/flights_times.png}
-  \caption{Illustration of the distribution in time of the initial, final and transition arcs.}
+  \caption{Illustration of the distribution *in time) of the initial, final and transition arcs.}
   \label{fig:arc_families} 
 \end{figure}
 
@@ -30,12 +30,12 @@ connecting $v_0$ to every node in $V$. In its turn, the \textit{final} arcs are 
 the return node, $v_{n+1}$ at $t$ \in [$T_{fm}$, $T_{fM}$], where $T_{fm}$ =
 $T_{0m} + \sum(D)$ and $T_{fM}$ = $T_{0M} + \sum(D)$, and $\sum(D)$
 is the total trip duration. There are a total of $k_i = T_{0M} -
-T_{0m} + 1$ initial and final arc layers. In the example
+T_{0m} + 1$ initial and final arc layers \todo{O professor tinha aqui uma nota que nao entendi}. In the example
 depicted in Figure~\ref{fig:multipartite_sol}, there is a single initial and
 final layer, since there is only one possible start date.
 
 The \textit{transition} arcs are those which fully connect the $N$ nodes
-belonging to $V$. The earliest transition arc occurs at a time no sooner than
+belonging to $V$. In the example presented in figure \ref{fig:arc_families} \todo{Discordo. isto acontece sempre}, the earliest transition arc occurs at a time no sooner than
 $t_1 = T_{0m} + min(D)$, where $min(D)$ corresponds to the lowest value of the
 set of durations. Hence, if the trip starts by traversing an initial arc
 at time $T_{0m}$, the first transition arc must only be traversed $min(D)$

@@ -1,11 +1,11 @@
 \subsubsection{Simulated Annealing}
 \label{sec:sa_lr}
 
-The Simulated Annealing metaheuristic was developed using an analogy between the physical annealing in solids, and finding the minimum cost configuration in combinatorial optimization problems. In the physical world, annealing is the process of heating a metal until the melting point,  and reducing the temperature slowly and in a controlled way. The decrease in temperature results in a particle rearrangement, in which lower energy states are reached. When the heating temperature is very high, and the temperature is decreased very slowly, this will result in the ground state of the solid - its minimum energy state. The analogy between physical world and the combinatorial optimization problems is achieved by considering that the energy of the metal corresponds to the cost of the solution, and the particle rearrangement consists in the selection of a neighbourhood solution \cite{simulated_annealing_1}.
+The Simulated Annealing metaheuristic was developed using an analogy between the physical annealing in solids, and finding the minimum cost configuration in combinatorial optimization problems. In the physical world, annealing is the process of heating a metal until the melting point,  and reducing the temperature slowly and in a controlled way. The decrease of the temperature results in a particle rearrangement, in which lower energy states are reached. When the heating temperature is very high, and the temperature is decreased very slowly, this will result in the ground state of the solid - its minimum energy state. The analogy between physical world and the combinatorial optimization problems is achieved by considering that the energy of the metal corresponds to the cost of the solution, and the particle rearrangement consists in the selection of a neighbourhood solution \cite{simulated_annealing_1}.
 
-The Simulated Annealing algorithms consists in an iterative improvement algorithm, which stochastically accepts up-hill moves. More precisely, the procedure starts with the selection of a feasible solution, together with the initialization of some algorithmic specific parameters, as the temperature, which is utilized as a control variable. After this, the SA enters an iterative process. At the core of this iterative process is a local search heuristic, which is executed a fixed number of times per iteration. After this local search procedure is complete, the temperature is decreased according to the predefined cooling schedule. After this, the local search restarts and the cycle continues, until either the execution time is reached, or the temperature reaches the value of zero.
+Most simulated Annealing algorithms consist in an iterative improvement algorithm, which stochastically accepts up-hill moves. More precisely, the procedure starts with the selection of a feasible solution, together with the initialization of some algorithmic specific parameters, such as the temperature, which is used as a control variable. After this, the SA enters an iterative process (Markov chain). At the core of this iterative process is a local search heuristic, which is executed a fixed number of times per iteration. After this local search procedure is complete, the temperature is decreased according to the predefined cooling schedule. After this, the local search restarts and the cycle continues, until either the execution time is reached, or the temperature reaches the value of zero.
 
-Simulated Annealing differs from other iterative improvement algorithms due to its ability to escape local minima by accepting up-hill moves (as happens also, f.e., with the Tabu Search). More precisely, at each stage of the local search procedure, the difference in the energy level, $\Delta$, between the current state and the newly generated state is calculated. If $\Delta$ is negative, the new state is better than the current one, and it is always accepted. On the contrary, if $\Delta$ is positive, the state is accepted if Metropolis criteria, presented in equation \ref{eq:metropolis} is verified. Otherwise, the new solution rejected. Note that using this criteria, as the temperature approaches zero, the metaheuristic becomes increasingly greedy.
+Simulated Annealing differs from other iterative improvement algorithms due to its ability to escape local minima, by accepting up-hill moves (as happens also, f.e., with the Tabu Search). More precisely, at each stage of the local search procedure, the difference in the energy level ($\Delta$) between the current state and the newly generated state is calculated. If $\Delta$ is negative, the new state is better than the current one, and it is always accepted. On the contrary, if $\Delta$ is positive, the state is accepted if Metropolis criteria, presented in equation \ref{eq:metropolis} is verified. Otherwise, the new solution is rejected. Note that by using this criteria, as the temperature approaches zero, the metaheuristic becomes increasingly greedy.
 
 \begin{equation}
 \label{eq:metropolis}
@@ -25,11 +25,11 @@ Time-dependent scheduling problems can also be solved using this meta-heuristic 
     \State Initialization \Comment{init. sol. $x$, temp. $T_{0}$, iter. counter $n$, rep. counter $R$}
     \While{$(T_{u} > T_{f})$}
     \State set $n$ = 0
-    \While{($n$ <= $R$)}
+    \While{($n$ \leq $R$)}
       generate neighbour solution $y$
     \State  Calculate $\Delta Z_{yx}$
-    \State if ( $\Delta Z_{yx}$ < 0) accept solution 
-    \State  elif (exp(- $\Delta Z_{yx}/T$) > random(0,1)) accept solution
+    \State if ( $\Delta Z_{yx}$ \leq 0) accept solution 
+    \State  elif (exp(- $\Delta Z_{yx}/T$) $>$ random(0,1)) accept solution
     \State  $n$ += 1
     \EndWhile
     \State  $u$ += 1
@@ -40,9 +40,11 @@ Time-dependent scheduling problems can also be solved using this meta-heuristic 
 \end{algorithm}
 
 
-In the first works published about the Simulated Annealing, it was proven that if the temperature is cooled very slowly, the process will converge to the optimal solution. More precisely,  if temperature drops no more quickly than $C/log(n)$, where $C$ is the Boltzmann constant, and $n$ is the number of steps taken so far. This result however is not as relevant as it first seems, because this cooling schedule is \textit{very} slow. Some authors refer that it is faster to do exhaustive search than to follow this cooling schedule, \cite{local_search_book}.
+In the first published works about the Simulated Annealing \cite{sa_convergence}, it was proven that if the temperature is cooled very slowly, the process will converge to the optimal solution. More precisely, if temperature drops no more quickly than $C/log(n)$, where $C$ is a constant and $n$ is the number of steps taken so far \cite{local_search_book}. However, this result is not as relevant as it first seems, because this cooling schedule is \textit{very} slow. Some authors refer that it is faster to do exhaustive search than to follow this cooling schedule \cite{local_search_book}.
 
-The Simulated Annealing metaheuristic requires the definition of a cooling schedule, a neighbourhood function, and the Markov chain length. There are several reports which describe the influence of these modules in the overall performance of the SA procedure \cite{sa_cooling_influence}. 
+%As discussed in Chapter 4, the process can be interpreted in terms of Markov chains and proved to converge to an optimal solution if one insures that the temperature drops no more quickly than C /log n, where C is a constant and n is the number of steps taken so far
+
+Hence, the Simulated Annealing metaheuristic requires the definition of a cooling schedule, a neighbourhood function, and the Markov chain length. There are several reports that describe the influence of these modules in the overall performance of the SA procedure \cite{sa_cooling_influence}. 
 
 
 

@@ -6,3 +6,44 @@ As it was previously referred, the Traveling Salesman may be defined both as com
 The objective of the TSP is to find the minimum cost Hamiltonian cycle, that is a path which visits each node exactly once, and returns to the initial node, closing the path. A generic solution to the TSP is any permutation $\sigma$ over the set of nodes, $N$. The permutation $\sigma$ is also a set, where $\sigma_{i}$, $i$ $\in$ $len(\sigma)$, represents the node in the $i$'th index of the cycle. The cost of a cycle is given by the sum of the weights of each arc by which it is composed, that is $C(\sigma) = \sum_{i=1}^{n} c_{\sigma_{i} \sigma_{i+1}}$, where $\sigma_{n+1} = \sigma_{1}$
 
 The TSP may solve different types of problems by optimizing different parameters. In the classic formulation, the weight between an arc connecting two nodes represent the distance between two cities. However, the weight of an arc can represent different things, particularly, travel time or travel cost. Although changing the parameter may lead the TSP formulation intact, in some cases, it changes the problem. This occurs, for example, when considering that the costs are time-dependent and this will be approached in section $\ref{sec:time-dependent-tsp}$.
+
+Up until now, only the symmetric Traveling Salesman Problem was addressed. However, the Traveling Salesman Problem usually refers to a broader class of problems, which include, but are not limited, to the symmetric case. These problems are often called variations of the symmetric TSP. Below, the most common variations will be presented briefly, by providing a description for the asymmetric, metric, euclidean and the bottleneck TSP, as well as the messenger problem. \todo{Remover, caso o professor considere que estamos a repetir-nos.}Other TSP variations, as the time-dependent one, will be discussed in its own subsection, as they are particularly relevant for the work under development. The definitions here provided are with respect to those formalized by with respect to those formalized by \cite{tsp_book}.
+
+\textbf{Asymmetric TSP}
+
+In the asymmetric TSP (ATSP), the weight matrix associated to the problem is not symmetric. That is, there is no constraint imposing that $c_{ij} = c_{ji}$, $\forall i, j$ $\in$ $N$, $i \ne j$, as happens with the classical TSP.
+
+For some particular real world problems, the ATSP may be more adequately describe the problem than the TSP. For example, when considering a routing problem over a city, some roads may not be connected in both ways. In this case, the weight of an arc connecting two points is different, depending on the direction of traversal of the arc.
+
+
+\textbf{Metric TSP}
+
+The metric TSP is a special case of the TSP, in which the arcs cost,
+in addition to being symmetric, also respect the triangle inequality. That is,
+$c_{ij} \leq c_{ik} + c_{kj}$, $\forall$ $i, j, k \in N$.
+
+
+\textbf{Euclidean TSP}
+
+In the Euclidean TSP, the set of nodes is placed in a $d$-dimensional space,
+and the weight of each arc is given by the euclidean distance. This distances is
+calculated based on equation $\ref{eq:euclidean_dist}$, for two points
+$x = (x_{1}, x_{2}, ..., x_{d})$ and $y = (y_{1}, y_{2}, ..., y_{d})$.
+
+\begin{equation}
+\label{eq:euclidean_dist}
+  d_{ij} = bigg( \sum_{i=1}^{d} (x_{i}-y_{i})^2\bigg)^{1/2}
+\end{equation}
+
+The euclidean TSP is a variation which is both symmetric and metric.
+
+
+\textbf{Bottleneck TSP}
+
+In the Bottleneck TSP, the objective is to find a valid route which minimizes the cost of the highest cost arc of the tour. According to the characteristic of the graph,
+the Bottleneck TSP may either be symmetric, asymmetric, metric or time-dependent.
+
+
+\textbf{The Messenger Problem}
+
+The Messenger problem, also known as the wondering traveling salesman, is the problem of finding a minimum cost Hamiltonian path connecting edges $u$ and $v$ of the graph G. It can be seen as a Traveling Salesman Problem in which the tour is not closed, but ends on a specific node, different from the initial one. The Messenger problem can be transformed into the TSP, by considering a cost of $-M$ for the arc $(v, u)$, where $M$ is a large number. If the nodes $u$ and $v$ are not specified, and one wishes to find a minimum cost Hamiltonian path in G, this can be achieved by a graph transformation, adding one node and connecting it to all other nodes by arcs of cost $-M$. The optimal solution to the TSP on this modified graph can be used to produce the optimal solution to the original problem.

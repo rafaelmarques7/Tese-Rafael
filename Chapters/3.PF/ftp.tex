@@ -4,12 +4,12 @@
 
 Consider a tourist who wishes to take a trip that visits every node (city) $i$
 in the set of nodes $V$, $|V|$ = $N$, with no particular order. The start node
-will be noted as $v_{0}$, while the return node as $v_{n+1}$, and the complete
+will be denoted as $v_{0}$, while the return node as $v_{n+1}$, and the complete
 set of nodes is given by $V_c$ = $V \cup \{v_0\} \cup \{v_{n+1}\}$. The trip
 must start at a time $t \in T_0 = [T_{0m}, T_{0M}]$. Upon visiting a node, the
 tourist will stay there for a duration of $d$ time-units (days). Consider that
 for each node to be visited, there is a range for the value $d$ might take, that
-is $d \in d_i = [d_{im}, d_{iM}]$ and $d_{iM} \geq d_{im} \geq 1$ (nights). The complete
+  d_i \in [d_{im}, d_{iM}]$ and $d_{iM} \geq d_{im} \geq 1$ (nights). The complete
 set of durations associated to each city is given by D, and $|D| = N$.
 Furthermore, to each city $i \in V$, there is an associated time-window $TW$,
 $|TW| = |V| = N$, which defines the set of dates in which the city $i$ may be
@@ -28,7 +28,7 @@ $p_{ij}^{t} \geq 0$.
 
 A valid solution $s$ to the FTP is a set of arcs (commercial flights)
 which start from node $v_0$ during the defined start period, visit every node
-$i$ in $V$ during its defined time-window $TW(i)$, and respected the duration of stay in each node, defined by $D(i)$, before finally returnting to node $v_{n+1}$. The set of
+$i$ in $V$ during its defined time-window $TW(i)$, and respect the duration of stay in each node, defined by $D(i)$, before finally returning to node $v_{n+1}$. The set of
 all valid solutions is given by $S$. The goal of the FTP is to find the global
 minimum $s^* \in S$, with respect to the considered objective function.
 
