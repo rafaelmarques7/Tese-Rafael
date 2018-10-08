@@ -1,24 +1,8 @@
-This subsection specifies the implementation details of the User Interface,
-and should be considered together with figure \ref{fig:UI_views}, \todo{Correct reference}
-which illustrates the design proposed for the application.
-The User Interface consists in a single page application,
-divided into three main views: the \textit{Request}, \textit{Response} and \textit{Map view}.
-Due to the implementation using React, every view is managed by a container,
-which reads the state from the store, calls the rendering of presentational components,
-and may dispatch actions on user input or other events. 
+The User Interface consists in a single page application, divided into three main views: the \textit{Request}, \textit{Response} and \textit{Map view}, as proposed in section \ref{sec:csa_design}. Since the application is developed using React, every view is managed by a container, which reads the state from the store, calls the rendering of presentational components, and may dispatch actions on user input or other events. 
 
-The User Interface is designed to be mobile friendly, by being responsive to the 
-device size. This is achieved using the Bootstrap grid system, 
-a website design paradigm in which the user screen is divided into 12 columns,
-and each block of the user interface may specify a variable number of columns, depending on the screen size.
+The User Interface is designed to be mobile friendly, by being responsive to the  device size. This is achieved using the Bootstrap grid system, a web application design paradigm in which the user screen is divided into 12 columns, and each element of the user interface may specify a variable number of columns, depending on the screen size.
 
-Figure \ref{fig:desktop_app} and \ref{fig:mobile_app} show the current versions of the developed applications.
-The first image illustrates the application in a desktop device and the second in a mobile.
-It is worth noting that these two screenshots correspond to the same application,
-and that the design differences between both images are a result of the responsiveness of the application.
-The responsive design is responsible for resizing the application elements according to the device size.
-This responsiveness also includes toggles in the \textit{Request} and \textit{Response} views, as to generate more space 
-to the map view. If this was not the case, it would become impossible to view the map in the mobile version.  
+Figure \ref{fig:desktop_app} and \ref{fig:mobile_app} illustrate two possible views of the developed application. The first image illustrates the application in a desktop device and the second in a mobile. It is worth noting that these two screenshots correspond to the same application, and that the design differences between both images are a result of the responsiveness of the application. The responsive design is responsible for resizing the application elements according to the device size and also includes toggles in the \textit{Request} and \textit{Response} views, as to generate more space to the map view. 
 
 
 \begin{figure}

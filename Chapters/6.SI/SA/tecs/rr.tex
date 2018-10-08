@@ -1,34 +1,12 @@
-\textit{React} \cite{react} is a JavaScript library for building and rendering User Interfaces.
-React is based on some core principles which dictate the architecture of every UI built using this library,
-which include the concepts of \textit{components}, \textit{state}, \textit{JSX} and \textit{Virtual-DOM} \cite{react_redux_article}.
+\textit{React} is a JavaScript library for the development of user interfaces for web and mobile applications \cite{react}. React is based on some core principles, which include the concepts of \textit{components}, \textit{props} and \textit{state}, a JavaScript language extension called \textit{JSX} and the concept of a  \textit{Virtual-DOM} \cite{react_redux_article},
 
-Any User Interface built using React is the result of the \textit{render} method invoked by each of its \textit{components}.
-The content that is actually presented by a component is the result of its source code, written in \textit{JSX},
-which is a combination of JavaScript and HTML to, dynamically, produce valid HTML elements.
-Usually, each of these elements depend on the \textit{state} of the application, at each moment.
-Thus, every time the application state changes, the User Interface is updated.
-Since re-rendering the entire DOM is very expensive, React uses the so called Virtual-DOM
-to re-render only those components which are necessary.
-At every state change, the DOM is compared to the virtual-DOM,
-and only a branch of the DOM is updated.
+The interfaces rendered by React are built using \textit{components}, which combine the markup of HTML with the dynamic utilities of JavaScript, and the styling of CSS. This is achieved by using \textit{JSX}, which bundles these three technologies under the same file, creating a single independent component. These components may receive input arguments, denoted as \textit{props}, allowing them to be flexible and reusable. Usually, a component is a pure function, rendering always the same content for the same input. Components may also be called by other components, allowing the creation of complex architectures. In general, an application consists of multiple different components.  
 
-As applications grow bigger, it becomes increasingly difficult to manage the state of each component,
-as there are natural dependencies amongst components. Currently, the natural response to bypass 
-this difficulty is to use a JavaScript library called \textit{Redux} \cite{redux}, even though
-there are other solutions developed for this effect.
-Redux is a state container, which is often said to be predictable, because it forces 
-the usage of immutable data types. This means that every state change is easily identifiable,
-which is very convenient for React, due to its Virtual-DOM nature.
+The \textit{state} of an application is a data structure with some relevant information for the construction of the user interface. In a flight search application as the one being developed, the state contains information regarding the user request and the solutions associated to it. In general, components do not access the state directly, but they may receive specific parts of it as props.   
 
-Furthermore, Redux is said to be a predictable state container because 
-every state change requires the dispatching of a particular \textit{action}, which triggers a function 
-that manipulates the state, called \textit{reducer}. Thus, Redux applications
-may implement a "history" of the state, because there is information available about every action 
-that were executed to reach the current state. 
+As applications grow bigger, it becomes increasingly difficult to manage their state. React, by itself, is not well prepared to do so, but it is possible to use third party libraries for this effect. One of these libraries is \textit{Redux} \cite{redux}. Redux is a JavaScript library for the management of the state of an application. It is often called a predictable state container, because it does not allow the state to be changed directly, but instead requires a description of these changes using a plain object, called \textit{action}. Dispatching an action triggers the execution of a function to manipulate the state, called \textit{reducer}. Reducers are always pure functions, producing the same result for the same input. Because of this, the state of the application is deterministic or, in other words, predictable.
 
-During the development of this application, React and Redux were used together 
-to build the client side application. This means that React is responsible
-for rendering the User Interface, while Redux manages the state,
-updating it on user actions, and interacts with the client side application
-using simple HTTP protocol.
+The user interface of a React application is always up to date with the current state. However, it does not re-render the entire page every time the state is updated. Instead, it compares the current DOM structure to a \textit{virtual DOM} introduced by React, and identifies the components that require an update. This enables a fast and effective update of the user interface.
+
+During the development of this application, React and Redux were used together to build the client side application. This means that React is responsible for rendering the user interface, while Redux manages the state and interacts with the SSA using a simple HTTP protocol.
 

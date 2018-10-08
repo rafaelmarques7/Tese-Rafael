@@ -1,19 +1,8 @@
-This subsection introduces the syntax of the implemented API protocol.
-The objective of this protocol is to be simple and clear,
-and enable an easy interpretation of the user request. \todo{Add footnote with link to API and its documentation}
+This subsection introduces the syntax of the implemented API protocol. The objective of this protocol is to be simple and clear, and enable an easy interpretation of the user request. \todo{Add footnote with link to API and its documentation}
 
-Every user request may be formullated as a Flying Tourist Problem 
-instance, as proposed in \ref{sec:ftp_design}.
-Thus, each request is characterized by a limited number of attributes (origin, start date, etc.).
-This means that the identification of a specific resource can 
-be achieved by including each of these attributes in the uniform resource identifier.
+Every user request may be formullated as a Flying Tourist Problem instance, as proposed in \ref{sec:ftp_design}. Thus, each request is characterized by a limited number of attributes (origin, start date, etc.). This means that the identification of a specific resource can be achieved by including each of these attributes in the uniform resource identifier.
 
-Each request starts with the API endpoint, the specification of the resource
-type, '/flights', followed by the necessary atributes to describe the requeest. These atributes
-are grouped using a '\&' symbol, and do not require a specific order.
-Table \ref{table:api_symbols} \todo{Review table} specifies the possible request attributes,
-together with the keyword necessary to identify it,
-and the details and datatype of each.
+Each request starts with the API endpoint, the specification of the resource type, '/flights', followed by the necessary atributes to describe the requeest. These atributes are grouped using a '\&' symbol, and do not require a specific order. Table \ref{table:api_symbols} \todo{Review table} specifies the possible request attributes, together with the keyword necessary to identify it, and the details and datatype of each.
 
 \begin{table}[]
   \centering

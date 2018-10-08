@@ -1,31 +1,12 @@
+Heroku is a cloud platform as a service (PaaS), which allows applications to be built, deployed, monitored and scaled. Customers who use Heroku do not need to worry about implementation details specific to infrastructure and software, such as the hardware and the servers \cite{heroku_what}. In terms of services, Heroku competes directly with other cloud platform services, such as Google's App Engine \cite{google_app} and Amazon's Web Services \cite{amazon_web}. A succinct comparison of the advantages and inconveniences among these different services can be consulted in \cite{cloud_comparison}, while a more comprehensive (although somehow outdated) overview is available at \cite{cloud_article}.
 
-Heroku is a Cloud Platform as a Service (PaaS), which allows applications to be built, deployed, monitored and scaled,
-in an easy and fast way, by bypassing implementation details specific to infrastructure and software, as the hardware and the servers \cite{heroku_what}.
-In terms of services, Heroku competes directly with other cloud platform services, 
-which include, but are not limited to, Google's App Engine \cite{google_app} and Amazon's Web Services \cite{amazon_web}.
-A succinct comparison of the advantages and inconveniences amongst these different services can be consulted in \cite{cloud_comparison},
-while a more comprehensive (although somehow outdated) overview is available at \cite{cloud_article}.
+Heroku provides a detailed explanation of its services and how to use them in order to deploy and manage an application \cite{heroku_how}. Following this overview, an Heroku application can be defined as a \textit{slug} which runs on \textit{dynos}. 
 
-Heroku provides a detailed explanation of its services and how to use them in order to deploy and manage an application,
-available at \cite{heroku_how}. Following this overview, an Heroku application can be defined as a \textit{slug} which runs on \textit{dynos}.
-Clarifying these terms, a \textit{slug} is a bundle of source code, any required dependencies, the programming language runtime,
-and any compiled output of the build system, everyting ready for execution. In its turn, a \textit{dyno} is an isolated, virtualized Unix container,
-that provides the necessary environment to run the application. 
+A \textit{slug} is typically the result of the deployment and bundling of an application. An application is defined by its source code, and in order to run it on Heroku, it is necessary to specify the programming language runtime, its dependencies, and and any compiled output of the built system. An applications can be deployed to Heroku via \textit{git} or using Heroku's own API. Upon deployment, Heroku builds the application, and a ready to be executed slug is produced.
 
-A slug is typically the result of the deployment and bundling of an application. The Heroku client has a particular application defined by its source code,
-and in order to run it on Heroku, he must specify the app's programming language, its dependencies, and a \textit{Procfile} - a file which lists the 
-commands to be executed. These applications can be deployed to Heroku via \textit{git}, or using Heroku's own API. Upon deployment,
-Heroku builds the app, producing the slug, ready to be executed. These are the fundatamental steps to deploy and run an Heroku app,
-but it is much more customizable than this. For example, it is possible to specify add-ons, as databases, and e-mail services.
+A \textit{dyno} is a virtualized UNIX container that provide the necessary environment to run the slug of the application. Hence, it is possible to run applications without costs by using a single cost free \textit{dyno}. As the number of requests to an application increases, a single \textit{dyno} may not be sufficient to serve all users without compromising the connection time. To overcome this, it is possible to \textit{scale} the developed application by increasing the total number of \textit{dyno}. This is particularly useful for the SSA, as the optimization process to the FTP requests require high volumes of RAM memory and CPU usage. \todo{Rever esta frase.}
 
-The produced slug runs on the dynos, and Heroku offers the possibility to run applications in a completly free manner, by providing a single free dyno. 
-This free option has one inconvenience, which is that upon 30 minutes of inactivity, the app "sleeps". This means that the next connection 
-to an inactive and sleeping application will require some extra time. It is possible to overcome this by utilizing a paid dyno. 
-Furthermore, as the application grows and the number of users increase, a single dyno may not be enough 
-to handle all user connections. Thus, it is possible to \textit{scale} the app, by increasing the number of total dynos utilized.
-
-During the development of this work, Heroku is used as the host service for both the client and the server side applications.
-Both of these applications run on a single free dyno, and do not utilize any database or other add-ons. 
+During the development of this work, Heroku is used as the host service for both the client and the server side applications. Both of these applications run on a single free dyno, and do not use any database or other add-ons. It should be noted that the single free dyno has one inconvenient: upon 30 minutes of inactivity, the application will sleep. This means that the next connection to a sleeping application requires some additional time.  
 
 
 % the fundamental functions, in the words of the Cloud Application Platform | Heroku site : 

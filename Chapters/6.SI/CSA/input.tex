@@ -1,41 +1,9 @@
-The Client Side Application intends to solve use requests, and thus, it is necessary 
-to interacting with the user in order to build a complete, valid and accurate request.
-There are 3 types of requests that will be processed by the application,
-the single flight, round flight, and multicity trip.
-A user must initially select the intended type of search,
-and follow this with the completion of a series of forms which collect
-the relevant input. 
+There are three types of requests that will be processed by the application: single flight, round trip and multi-city trip. A user must initially select the desired type of search, and follow this with the completion of a series of forms that collect the relevant input. 
 
-Any request type requires at least an origin and a destination, aswell as a start date.
-There are other search attributes which might be relevant, according to the selected trip type,
-as is the duration associated to each city to be visited.
-
-To every user input is associated an action and a reducer. An action,
-which corresponds to a plain javascript object,
-described by an action type, and other relevant content, as the user input, is dispatched each time 
-the user completes or updates an input form. In its turn, a reducer,
-which is a pure function, is responsible for 
-translating the input, processing it, and updating the application state accordingly.
-
-The implemented application also forces the user to submit the request,
-by clicking on a button which dispatches an action. During the development of the application,
-the possibility of removing this button, and automatically dispatching a request, was considered, but rejected,
-because of the impossiblity of knowing if a certain request is complete or not.
-For example, given a single flight request, knowing if the request is complete 
-is simply a matter of verifying if an origin, destination and departute date exists.
-However, for multicity trips, because there is not apriori information regarding the number of cities,
-the same can not be said. Thus, it must be an user defined action that declares the intention of submitting a request.
-
-Table \ref{table:input_action_reducer} introduces the relevant data that may be collected from the user.
-It also defines the action that is dispatched each time the input is updated,
-and the reducer which is responsible for updating the state of the application.
-Note that the last user input, the \textit{submit}, is processed by an assynchronous action.
-This means that upon submiting the request, a third-party API is called,
-and only upon receiving a response may the reducer be invoked,
-storing the received data, enabling it to be displayed back to the user.
+Every request requires at least an origin and a destination, as well as a start date. There are other search attributes which might be relevant, according to the selected trip type, as the duration associated to each city that will be visited. A complete list of the input that may be collected from the user is presented in table \ref{table:input_action_reducer} (left column). 
 
 
-\begin{table}[]
+\begin{table}[htpb]
   \centering
   \caption{Parallelism between User Input, Actions and Reducers. To each user defined input corresponds an 
   action, declaring the intent of changing the state with some specific data, and a reducer, which actually modifies the state. }
@@ -50,13 +18,18 @@ storing the received data, enabling it to be displayed back to the user.
   \\[-0.75em]
   destination & actDest(dest, index) & setDest(state, action)     \\
   \\[-0.75em]
-  duration    & actDur(dur, index)   & setDest(state, action)     \\
+  duration    & actDur(dur, index)   & setDuration(state, action)     \\
   \\[-0.75em]
-  start date  & actDate(date, index) & setDest(state, action)     \\
+  start date  & actDate(date, index) & setStartDate(state, action)     \\
   \\[-0.75em]
   submit      & actRequest(request)  & setResponse(state, action) \\ \hline
   \end{tabular}
 \end{table}
+
+
+Then, to every user input it is associated an action and a reducer. Table \ref{table:input_action_reducer} also defines the action that is dispatched each time the input is updated (center column), and the corresponding reducer that is responsible for updating the state of the application (right column). Note that the last user input (\textit{submit}) is processed by an asynchronous action. Thus, after the submission of the request, the reducer will be called only upon receiving the response from the SSA, updating the state by storing the received data, and triggering the update of the user interface. 
+
+The developed application forces the user to submit the request, by clicking on a button that dispatches an action. During the development of the application, the possibility of removing this button, and to automatically dispatch a request was considered. However, it was subsequently rejected because of the difficulty to know if a certain request is complete. For example, given a single flight request, knowing if the request is complete is simply a matter of verifying if an origin, destination and departure date exist. For a round-trip, the duration would also be a requirement. However, for multicity requests, unless the user specifies how many cities are to be visited, there is no way of knowing when a request is complete. Furthermore, any change to an already complete request would trigger another new request. Thus, it must be an user defined action to declare the intention of submitting a request.
 
 
 %_________________ INPUT FLOW ______________
