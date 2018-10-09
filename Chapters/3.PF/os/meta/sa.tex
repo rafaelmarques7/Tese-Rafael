@@ -1,4 +1,4 @@
-\subsection{Simulated Annealing}
+\subsubsection{Simulated Annealing procedure}
 \label{sec:sa}
 
 The considered Simulated Annealing algorithm receives, as input, a weight matrix with the information of the solution components of the problem. It must also receive other relevant parameters for the solution construction process, as the initial and final node and the set of waiting periods $D$. This specific information about the instance under optimization is crucial, as it enables the validation of a solution and the calculation of the respective objective function value.
@@ -14,18 +14,13 @@ Given the above described procedure, the Simulated Annealing is a metaheuristic 
 \end{enumerate}
 
 
-As a local search metaheuristic, the Simulated Annealing conditionally requires an initial solution.  It is possible to construct this initial solution by applying the pseudo-random construction procedure (section \ref{sec:pseudo_random}), or by using the nearest neighbour (section \ref{sec:nn}). In general, the quality of the initial solution does not affect the quality of the best solution found by the algorithm. \todo{Apontar para uma imagem do SA mostrando fx a crescer. Se necessario, fazer experiencia}
+As a local search metaheuristic, the Simulated Annealing conditionally requires an initial solution.  It is possible to construct this initial solution by applying the pseudo-random construction procedure (section \ref{sec:pseudo_random}), or by using the nearest neighbour (section \ref{sec:nn}). In general, the quality of the initial solution does not affect the quality of the best solution found by the algorithm \cite{sa_initial_solution}.
 
 The considered neighbourhood function selected for the generation of new candidate solutions is the 2-opt swap procedure. Hence, at each iteration step of the Markov chain, it selects two random nodes and swaps the corresponding path. It is also necessary to take into account both the initial and final nodes in order to produce a valid solution. Since this swapping procedure may change the dates at which each node is visited, which consequently changes the solution arcs, it is necessary to adjust the flight dates and calculate the objective function value of the candidate solution.
 
 %The acceptance criteria used by the developed Simulated Annealing algorithms is the Metropolis acceptance criteria \cite{metropolis}, presented in Eq.~\ref{eq:metropolis}. This criterion dictates that: (i) if a candidate solution $y$ is \textit{better} than the current solution $x$, it is always accepted; (ii) if the solution is worse, it may, or may not be accepted. The probability by which a worse solution is accepted depends upon: a) the difference in the objective function values $\Delta_f$ of the two solutions; b) the current temperature of the system. As $\Delta_f$ increases, and as the temperature decreases, the probability of accepting a worse solution is reduced. With such an approach, the Metropolis acceptance criteria allows up-hill moves, which enable the algorithm to escape from local minimum. Notwithstanding, as the temperature reaches very low values, the algorithm becomes increasingly greedy.
 
-The acceptance criteria is a function that determines the probability of accepting a candidate solution, which is compared to a pseudo-random value generated at run-time, and dictates if a candidate solution is, or is not, accepted. The developed Simulated Annealing algorithms uses the Metropolis acceptance criteria \cite{metropolis}, defined as follows: 
-\begin{enumerate}
-    \item if a candidate solution $y$ is \textit{better} than the current solution $x$, it is always accepted;
-    \item if a candidate solution is worse, it may, or may not be accepted;
-    
-\end{enumerate}
+The acceptance criteria is a function that determines the probability of accepting a candidate solution, which is compared to a pseudo-random value generated at run-time, and dictates if a candidate solution is, or is not, accepted. The developed Simulated Annealing algorithms uses the Metropolis acceptance criteria \cite{metropolis}, presented in equation \ref{eq:metropolis},  which can be summarized as follows: $i)$ if a candidate solution $y$ is \textit{better} than the current solution $x$, it is always accepted; $ii)$ if a candidate solution is worse, it may, or may not be accepted. 
 
 The probability by which a worse solution is accepted depends upon the difference in the objective function values $\Delta_f$ of the two solutions and the current temperature of the system (Eq.~\ref{eq:metropolis}). As $\Delta_f$ increases, and as the temperature decreases, the probability of accepting a worse solution is reduced. With such an approach, the Metropolis acceptance criteria allows up-hill moves, which enable the algorithm to escape from local minimum. Notwithstanding, as the temperature reaches very low values, the algorithm becomes increasingly greedy.
 

@@ -1,4 +1,4 @@
-\section{Relation to the Traveling Salesman}
+\section{Relation to the Traveling Salesman Problem}
 \label{sec:ftp_tsp}
 
 The Traveling Salesman is the problem of, given a list of cities, finding the best route to visit them all, according to some objective function. In its turn, the Flying Tourist Problem proposed in section \ref{sec:ftp} intends to find the best route, schedule, and set of flights to visit a given list of cities. This section will explore some of these characteristics which distinguish the FTP from the TSP.
@@ -23,7 +23,7 @@ Constraint $4)$ forces each city to be visited during exactly one time-unit. Onc
 
 Finally, constraint $5)$ removes the time-dependencies of the cost matrix. It should be noted that the characteristics of commercial flights contradict this constraint.
 
-Applying constrains (1-4) to the proposed FTP leads to the time-dependent Traveling Salesman Problem \todo{Add reference}, as defined in section \ref{sec:TDTSP_ILP}.
+Applying constrains (1-4) to the proposed FTP leads to the time-dependent Traveling Salesman Problem \cite{tdtsp_picard}, as defined in section \ref{sec:TDTSP_ILP}.
 
 Constraints (1-4) together with (5) reduce the proposed FTP into the asymmetric Traveling Salesman Problem. In order to reduce it to the classical symmetric TSP, it would be necessary to apply an additional constraint which would force the symmetry of the cost matrix.
 

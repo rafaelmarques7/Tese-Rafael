@@ -1,10 +1,9 @@
-\subsection{Ant Colony Optimization}
+\subsubsection{Ant Colony Optimization procedure}
 \label{sec:aco}
 
 The considered Ant Colony Optimization (ACO) algorithm receives, as input, a weight matrix with the information regarding all solution components of the problem. It must also receive other relevant parameters for the solution construction process, as the initial and final node and the set of waiting periods $D$. 
 
-\todo{Add reference for the $\tau_0$}
-The initialization of the ACO metaheuristic requires the construction of an initial pheromone matrix. Each entry of this matrix is set to an initial pheromone value, according to Eq.~\ref{eq:tau_zero}, where $n$ is the number of nodes and $C^{nn}$ is the cost of the nearest neighbor heuristic. 
+The initialization of the ACO metaheuristic requires the construction of an initial pheromone matrix. Each entry of this matrix is set to an initial pheromone value, according to Eq.~\ref{eq:tau_zero}, where $n$ is the number of nodes and $C^{nn}$ is the cost of the nearest neighbor heuristic \cite{aco_tsp}. 
 \begin{equation}
 \label{eq:tau_zero}
   \tau_{ij}^{t} = \tau_{0} = \frac{1}{nC^{nn}}

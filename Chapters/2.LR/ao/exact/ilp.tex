@@ -17,7 +17,7 @@ The objective function of the TSP is described by equation $\ref{eq:ILP_objectiv
 % _______________________________________________________________________________
 % _______________________________________________________________________________
 
-In its turn, the time-dependent Traveling Salesman Problem variant may be formulated as an integer linear programming problem by associating one binary decision variable $x_{ijt}$ to every arc $a_{ijt}$. Let $c_{ijt}$ represent the weight of the arc $a_{i,jt}$. A decision variable $x_{ijt}$ takes a value of 1 when the arc $a_{ijt}$, which represents the transition from node $i$ to node $j$ at time $t$, belongs to the solution. Hence, by following a similar ILP formulation for the TDTSP: \todo{Rever esta frase}
+In its turn, the time-dependent Traveling Salesman Problem variant may be formulated as an integer linear programming problem by associating one binary decision variable $x_{ijt}$ to every arc $a_{ijt}$. Let $c_{ijt}$ represent the weight of the arc $a_{i,jt}$. A decision variable $x_{ijt}$ takes a value of 1 when the arc $a_{ijt}$, which represents the transition from node $i$ to node $j$ at time $t$, belongs to the solution. Hence, the ILP formulation for the TDTSP is as follows: 
 
 \begin{align}
   \min  &\hspace{0.5em} \sum_{i}\sum_{j}\sum_{t} c_{ijt}x_{ijt} \label{eq:objective_TDTSP_ILP} \\

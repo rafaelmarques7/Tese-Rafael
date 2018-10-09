@@ -1,10 +1,10 @@
-\subsection{Pseudo-random construction procedure}
+\subsubsection{Pseudo-random construction procedure}
 \label{sec:pseudo_random}
 
 Formally, The method introduced in this subsection is not an optimization algorithm, but rather a solution construction procedure for the Flying Tourist Problem. This procedure is relevant for two reasons. First, it can be used to construct a preliminary solution to a given request in a very fast manner. Naturally, the quality of this solution may be extremely poor, but it is very useful as an initial and fast response to a user request. 
 Furthermore, this construction procedure is also relevant, because some optimization algorithms, like the Simulated Annealing (discussed in section \ref{sec:sa}), require an initial valid and complete solution.
 
-The method introduced below will be hereinafter called pseudo-random construction procedure, and requires an instance of the Flying Tourist Problem $G=(Vc,A,T_0,D,TW)$ where there are no restrictions regarding the time-windows, that is $TW(i) = [0, +\infty[$, $\forall i \in V$. Note that this procedure is both adequate for single and round flights, as well as FTP instances with many nodes to visit. The procedure can be summarized as follows:
+The method introduced below will be hereinafter called pseudo-random construction procedure, and requires an instance of the Flying Tourist Problem $G=(Vc,A,T_0,D,TW)$ where there are no restrictions regarding the time-windows, that is $TW(i) = [0, +\infty[$, $\forall i \in V$. The procedure can be summarized as follows:
 
 \begin{enumerate}
 \itemsep0em 
@@ -21,4 +21,4 @@ The method introduced below will be hereinafter called pseudo-random constructio
     \item extend the solution with the final arc $a_{v_c, v_{n+1}}^t$;
 \end{enumerate}
 
-\todo{Add summary paragraph}
+The proposed pseudo-random construction procedure is expected to be adequate for single-flights and round-trips, as well as small multi-city requests. As the number of cities to visit increases, the quality of the solutions presented by this solutions is expected to fall. In any case, despite the size of the instance under resolution, this procedure is expected to be very fast and able to return a solution to a request in a very short time.
