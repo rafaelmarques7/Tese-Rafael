@@ -3,7 +3,7 @@
 
 The Traveling Salesman is the problem of, given a list of cities, finding the best route to visit them all, according to some objective function. In its turn, the Flying Tourist Problem proposed in section \ref{sec:ftp} intends to find the best route, schedule, and set of flights to visit a given list of cities. This section will explore some of these characteristics which distinguish the FTP from the TSP.
 
-It is possible to reduce the Flying Tourist Problem into the Traveling Salesman, a series of reductions, presented below, have to be performed. 
+It is possible to reduce the Flying Tourist Problem into the Traveling Salesman Problem, by considering the following set of restrictions:
 
 \begin{enumerate}
       \item $v_{n+1} = v_0$;
@@ -13,7 +13,7 @@ It is possible to reduce the Flying Tourist Problem into the Traveling Salesman,
     \item $c_{ij}^{t} = c_{ij}$, $\forall i, j \in V$, $\forall t$.
 \end{enumerate}
 
-Constraint $1)$ operates over the depot, forcing the initial and final node to be the same. While this constraint is not forced on the FTP, because a user might not necessarily want to finish the trip where it was initiated, the TSP considers a single depot. 
+Constraint $1)$ operates over the depot, forcing the initial and final node to be the same. While this constraint is not forced in the FTP, because a user might not necessarily want to finish the trip where it was initiated, the TSP considers a single depot. 
 
 Constraint $2)$ is responsible for limiting the start-period to a single time-unit. In a real-world flight search application, this constraint is extremely undesirable, as it reduces the overall quality of the search.
 

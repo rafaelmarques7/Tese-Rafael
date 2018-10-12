@@ -5,9 +5,9 @@ The considered Simulated Annealing algorithm receives, as input, a weight matrix
 
 The general procedure of the Simulated Annealing metaheuristic is as follows. Given an initial solution ($x$), at each step of the inner cycle (also called Markov chain), a new candidate solution ($y$) is constructed based on a neighbourhood function, which is usually problem specific. Depending on the quality of the new solution, and the current temperature of the algorithm, this solution may or may not be accepted. This process of constructing and conditionally accepting a new solution occurs a fixed number of times per outer cycle - this number is referred to as the Markov chain length. Having completed one Markov chain, the temperature of the state is decreased, according to a predefined cooling schedule.
 
-Given the above described procedure, the Simulated Annealing is a metaheuristic which requires:
-\begin{enumerate}
-    \item an initial solution;
+Given the above described procedure, the Simulated Annealing metaheuristic requires:
+\begin{enumerate}[noitemsep,topsep=5pt,parsep=1pt,partopsep=1pt]
+    \item an initial solution - over which the local search operates;
     \item a neighbourhood function - used to construct candidate solutions; 
     \item an acceptance criteria - used to conditionally accept the candidate solutions;
     \item a cooling schedule - to decrease the temperature of the state.
@@ -20,9 +20,9 @@ The considered neighbourhood function selected for the generation of new candida
 
 %The acceptance criteria used by the developed Simulated Annealing algorithms is the Metropolis acceptance criteria \cite{metropolis}, presented in Eq.~\ref{eq:metropolis}. This criterion dictates that: (i) if a candidate solution $y$ is \textit{better} than the current solution $x$, it is always accepted; (ii) if the solution is worse, it may, or may not be accepted. The probability by which a worse solution is accepted depends upon: a) the difference in the objective function values $\Delta_f$ of the two solutions; b) the current temperature of the system. As $\Delta_f$ increases, and as the temperature decreases, the probability of accepting a worse solution is reduced. With such an approach, the Metropolis acceptance criteria allows up-hill moves, which enable the algorithm to escape from local minimum. Notwithstanding, as the temperature reaches very low values, the algorithm becomes increasingly greedy.
 
-The acceptance criteria is a function that determines the probability of accepting a candidate solution, which is compared to a pseudo-random value generated at run-time, and dictates if a candidate solution is, or is not, accepted. The developed Simulated Annealing algorithms uses the Metropolis acceptance criteria \cite{metropolis}, presented in equation \ref{eq:metropolis},  which can be summarized as follows: $i)$ if a candidate solution $y$ is \textit{better} than the current solution $x$, it is always accepted; $ii)$ if a candidate solution is worse, it may, or may not be accepted. 
+The acceptance criteria is a function that determines the probability of accepting a candidate solution. The developed SA algorithms uses the Metropolis acceptance criteria \cite{metropolis}, presented in equation \ref{eq:metropolis},  which can be summarized as follows: $i)$ if a candidate solution $y$ is \textit{better} than the current solution $x$, it is always accepted; $ii)$ if a candidate solution is worse, it may, or may not, be accepted. 
 
-The probability by which a worse solution is accepted depends upon the difference in the objective function values $\Delta_f$ of the two solutions and the current temperature of the system (Eq.~\ref{eq:metropolis}). As $\Delta_f$ increases, and as the temperature decreases, the probability of accepting a worse solution is reduced. With such an approach, the Metropolis acceptance criteria allows up-hill moves, which enable the algorithm to escape from local minimum. Notwithstanding, as the temperature reaches very low values, the algorithm becomes increasingly greedy.
+The probability by which a worse solution is accepted depends upon the difference in the objective function values ($\Delta_f$) of the two solutions and the current temperature of the system (Eq.~\ref{eq:metropolis}). As $\Delta_f$ increases, and as the temperature decreases, the probability of accepting a worse solution is reduced. With such an approach, the Metropolis acceptance criteria allows up-hill moves, which enable the algorithm to escape from local minimum. Notwithstanding, as the temperature reaches very low values, the algorithm becomes increasingly greedy.
 
 % METROPOLIS ACCEPTANCE RULE
 \begin{equation}

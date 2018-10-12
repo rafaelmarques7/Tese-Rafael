@@ -1,4 +1,4 @@
-The Data Management System (DMS) is designed as to communicate with third-party flight data APIs. It allows the request of flight data in behalf of the CSA. This DMS implements a low-level API wrapper, around the KIWI flight API, and is constructed as a worker/consumer factory to execute concurrent HTTP requests (see figure \ref{fig:dms_implementation}). 
+The Data Management System (DMS) is responsible for the communication with third-party flight data APIs. It allows the request of flight data in behalf of the CSA. This implementation of the DMS is based on a low-level API wrapper, around the KIWI flight API, and it is constructed as a worker/consumer factory to execute concurrent HTTP requests (see figure \ref{fig:dms_implementation}). 
 
 %As discussed in section \ref{sec:dms_design}, it is possible to obtain this flight data in two distint ways, by using a third-party flight data API, or by performing web scraping. Both of these methods were implemented and tested, and the results will be discussed in section \textbf{put the section  of the comparison of API vs webscraping here}. During the development of this work, several API's were tested, and the one which is currently being used is the \textit{Kiwi.com} API, whose details can be found in the followig website: \textit{https://docs.kiwi.com/}. 
 
@@ -9,7 +9,7 @@ Given a list of necessary flights, usually requested by the CSA, the DMS communi
   \item parse the response.
 \end{enumerate}
 
-When communicating with third-party APIs, the bottleneck of the system is usually the time necessary for the server to process the request and produce a response to it. The implemented worker/consumer approach takes advantage of this bottleneck. Instead of waiting for a request to complete, this approach uses the waiting period to spawn more requests. Thus, the waiting period associated to one request is not imposed to the others. Despite this, executing multiple requests will increment the servers workload, increasing the time necessary to respond to one (isolated) request. This approach will be discussed and illustrated in subsection \ref{sec:kiwi_api}.
+When communicating with third-party APIs, the bottleneck of the system is usually the time necessary for the server to process the request and produce a response to it. The implemented worker/consumer approach takes advantage of this bottleneck. Instead of waiting for a request to complete, this approach uses the waiting period to spawn more requests. Thus, the waiting period associated to one request is not imposed to the others. Despite this, executing multiple requests will increment the servers workload, increasing the time necessary to respond to one (isolated) request. This approach will be discussed and its results illustrated in subsection \ref{sec:dms_er}. 
 
 
 %The worker/consumer approach implemented by this DMS is particularly useful to take advantage of the bottleneck of the communica
@@ -35,7 +35,7 @@ When communicating with third-party APIs, the bottleneck of the system is usuall
 %The bottleneck of the serial system illustrated in figure \ref{fig:serial_api}, is the necessary time to receive the response to an HTTP request. In order to take advantage of this bottleneck, a concurrent approach was considered, in which the waiting period of a request is utilized to spwan more requests. This approach is achieved by adopting a \textit{Producer-Consumer} system, illustrated in figure \ref{fig:concurrent_api}. This system spwans at most $n_{max}$ threads (workers), one at a time, to execute a list of jobs, which correspond to making an HTTP request and parsing the response. Using this approach, the bottleneck experienced by each worker is not imposed on any of the other $n_{max} -1$ workers, and thus the time-delay is not cummulative.
 
 
-\begin{figure}[htpb]
+\begin{figure}[h]
   \centering
   \includegraphics[width=\textwidth]{./Figures/system_implementation/dms_factory.jpg}
   \caption{The Data Management System uses concurrent HTTP requests to communicate with third-party flight API's.}

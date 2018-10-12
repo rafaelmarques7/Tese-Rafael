@@ -1,0 +1,13 @@
+This section presents an overview of the performance of the Data Management System. In particular, it
+analysis the efficiency of the implemented DMS as communication system with third party APIs. Figure
+5.1 illustrates the response time of the third-party API, as a function of the number of workers (threads)
+of the DMS system.
+The analysis of this figure shows that if there is a single worker thread, which corresponds to a
+serial approach, completing 100 requests takes, approximately 100 seconds. Thus, there is a 1:1 ratio
+between requests and number and seconds, for the serial approach. At first, doubling the number of
+workers reduces the request time to approximately half. This positive effect from doubling the number of
+threads occurs two more times, until there are a total 8 threads making concurrent requests.
+Despite this, continuing to increase the number of threads does not have the same positive effect
+indefinitely. After reaching a reasonable number of threads, the server through-output stops to increase
+in a linear way. In fact, having 32 or 64 threads leads to almost the same response time. This is because
+the server becomes overloaded, and is not capable of processing all requests in a truly parallel way.
