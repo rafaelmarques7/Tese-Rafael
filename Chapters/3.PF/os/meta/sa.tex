@@ -22,8 +22,6 @@ The considered neighbourhood function selected for the generation of new candida
 
 The acceptance criteria is a function that determines the probability of accepting a candidate solution. The developed SA algorithms uses the Metropolis acceptance criteria \cite{metropolis}, presented in equation \ref{eq:metropolis},  which can be summarized as follows: $i)$ if a candidate solution $y$ is \textit{better} than the current solution $x$, it is always accepted; $ii)$ if a candidate solution is worse, it may, or may not, be accepted. 
 
-The probability by which a worse solution is accepted depends upon the difference in the objective function values ($\Delta_f$) of the two solutions and the current temperature of the system (Eq.~\ref{eq:metropolis}). As $\Delta_f$ increases, and as the temperature decreases, the probability of accepting a worse solution is reduced. With such an approach, the Metropolis acceptance criteria allows up-hill moves, which enable the algorithm to escape from local minimum. Notwithstanding, as the temperature reaches very low values, the algorithm becomes increasingly greedy.
-
 % METROPOLIS ACCEPTANCE RULE
 \begin{equation}
 \label{eq:metropolis}
@@ -33,6 +31,9 @@ The probability by which a worse solution is accepted depends upon the differenc
     & e^{-\frac{\Delta_f}{t}},&& \text{otherwise}
   \end{aligned} \right. 
 \end{equation}
+
+The probability by which a worse solution is accepted depends upon the difference in the objective function values ($\Delta_f$) of the two solutions and the current temperature of the system (Eq.~\ref{eq:metropolis}). As $\Delta_f$ increases, and as the temperature decreases, the probability of accepting a worse solution is reduced. With such an approach, the Metropolis acceptance criteria allows up-hill moves, which enable the algorithm to escape from local minimum. Notwithstanding, as the temperature reaches very low values, the algorithm becomes increasingly greedy.
+
 
 % The developed SA optimization uses a geometric cooling schedule. It starts with an initial temperature $t_0$, and at each outer iteration, the temperature is decreased to $t_{k+1} = \lambda * t_{k}$, where $k$ is the iteration counter of the outer loop and $\lambda$ is the cooling parameter. 
 

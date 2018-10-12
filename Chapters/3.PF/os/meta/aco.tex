@@ -1,7 +1,7 @@
 \subsubsection{Ant Colony Optimization procedure}
 \label{sec:aco}
 
-The considered Ant Colony Optimization (ACO) algorithm receives, as input, a weight matrix with the information regarding all solution components of the problem. It must also receive other relevant parameters for the solution construction process, as the initial and final node and the set of waiting periods $D$. 
+The considered Ant Colony Optimization (ACO) algorithm receives, as input, a weight matrix with the information regarding all solution components of the problem. It also receives other relevant parameters for the solution construction process, as the initial and final node, $v_0$ and $v_f$, the start period $T_0$,  and the set of waiting periods $D$. 
 
 The initialization of the ACO metaheuristic requires the construction of an initial pheromone matrix. Each entry of this matrix is set to an initial pheromone value, according to Eq.~\ref{eq:tau_zero}, where $n$ is the number of nodes and $C^{nn}$ is the cost of the nearest neighbor heuristic \cite{aco_tsp}. 
 \begin{equation}
@@ -15,7 +15,10 @@ After the initialization, and until the termination condition is met, the algori
 
 %The construction process that is undertaken by each ant is as follows. First, the current time is set to a value belonging to the allowable trip start dates, $t \in T_0$, and the current node is set to the start node $v_0$. Each ant enters an iterative cycle until all nodes belonging to $V$ are visited. At every step of this cycle, an ant chooses a solution component by either \textit{exploiting} or \textit{exploring} the search space. The decision of exploiting or exploring depends on the algorithm parameter $Q_0$ and on a pseudo-random value $q$, calculated at run time. The selection of the solution component $j$, which identifies the next city to be visited, is given by Eq.~\ref{eq:selection_rule}. After the selection of each solution component, it is necessary to update the time, incrementing it by the duration relative to the selected city.
 
-The construction process undertaken by each ant is as follows. First, the current time is set to a value belonging to the allowable trip start dates, $t \in T_0$, and the current node is set to the start node $v_0$. Each ant enters an iterative cycle until all nodes belonging to the set of nodes to visit, $V$, are visited exactly once. At every step of this cycle, an ant chooses one of the remaining valid solution components. The selection of a particular solution components depends on multiple factors, as the solution component cost and its pheromone value. After the selection of each solution component, it is necessary to update the current time, by incrementing it  according to the duration of the selected city. By following this iterative construction process, a valid but incomplete solution is found. To complete this solution, it is necessary to add an extra solution component, which closes the route by adding the return node, $v_{n+1}$.
+The construction process undertaken by each ant is as follows. First, the current time is set to a value belonging to the allowable trip start dates, $t \in T_0$, and the current node is set to the start node $v_0$. Each ant enters an iterative cycle until all nodes belonging to the set of nodes to visit, $V$, are visited exactly once. At every step of this cycle, an ant chooses one of the remaining valid solution components. After the selection of a solution component, the current time is updated, according to the duration of the selected city. Furthermore, it is also necessary to apply a local pheromone update (see equation \ref{eq:local_update}), after the selection of each solution component, as to reduce the probability of other ants selecting the same one in the current iteration \cite{aco_tsp}. By following this iterative construction process, a valid but incomplete solution is found. To complete this solution, it is necessary to add an extra solution component, which closes the route by adding the return node, $v_{n+1}$.
+
+
+%The construction process undertaken by each ant is as follows. First, the current time is set to a value belonging to the allowable trip start dates, $t \in T_0$, and the current node is set to the start node $v_0$. Each ant enters an iterative cycle until all nodes belonging to the set of nodes to visit, $V$, are visited exactly once. At every step of this cycle, an ant chooses one of the remaining valid solution components. The selection of a particular solution components depends on multiple factors, as the solution component cost and its pheromone value. After the selection of each solution component, it is necessary to update the current time, by incrementing it  according to the duration of the selected city. By following this iterative construction process, a valid but incomplete solution is found. To complete this solution, it is necessary to add an extra solution component, which closes the route by adding the return node, $v_{n+1}$.
 
 In the construction process described above, each ant selects the next solution component by either \textit{exploiting} or \textit{exploring} the search space. That is, exploitation is the process of selecting the next solution component mostly based on the previous ants' search experience, while exploration intends to diversify the traversed search space. The decision of exploiting or exploring depends on the algorithm parameter $Q_0$ and on a pseudo-random value $q$, calculated at run-time. The selection of the solution component $j$, which identifies the next city to be visited, is given by Eq.~\ref{eq:selection_rule}. 
 
@@ -48,14 +51,17 @@ In the presented equations, $\eta$ is the inverse of the weight matrix value.
 %By following an iterative construction procedure, a valid but incomplete solution is found. To complete this solution, it is necessary to add an extra solution component, which closes the route by adding the return node, $v_{n+1}$.
 
 After each ant finishes its iterative solution construction process, the ACO metaheuristic enters into its pheromone update step. Depending on the chosen ACO algorithm, the pheromone update may vary. This work follows the Ant Colony System (ACS) strategy, whose pheromone update requires both a deposit and an evaporation step. Unlike many other ACO algorithms, the pheromone update applies only to the arcs belonging to the best solution found so far, $S_{bs}$. This results in the update of the pheromone values by means of Eq.~\ref{eq:pheromone_update}, where $(\Delta\tau_{ij}^{t})^{bs}$ is given by $1/C^{bs}$, where $C^{bs}$ represents the objective function value of the best solution.
+
+
+\begin{equation}
+\label{eq:local_update}
+    \tau_{ij}^{t} = (1-\rho)\tau_{ij}^{t} + \rho \tau_{0}
+\end{equation}
+
 \begin{equation}
 \label{eq:pheromone_update}
     \tau_{ij}^{t} = (1-\rho)\tau_{ij}^{t} + \rho (\Delta \tau_{ij}^{t})^{bs}
 \end{equation}
 
 It is common (and often recommended) to combine ACO algorithms with local search heuristics, also denoted \textit{daemon actions}, that try to improve the quality of the constructed solutions, after each of the ants' iterative cycle. However, this was not applied to the proposed optimization, due to the nonexistence of adequate local search procedures for the time-dependent TSP. In fact, even the $k$-opt exchange procedures, widely used in the classical TSP as local search, are not efficient for the time-dependent TSP because it requires, at each step, the computation of the entire trip cost, as opposed to just the cost difference regarding the $k$ arcs, as in the symmetric TSP.
-
-
-
-
 

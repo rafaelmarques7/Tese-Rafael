@@ -44,7 +44,7 @@ On the other hand, while the considered stop-criteria value may be sufficient to
 
 To analyze the advantages of further optimization, all problems were solved once more, by using the same procedure previously described, this time for a total of 300 seconds. The obtained results are presented in Table~\ref{tab:further_opt}, which allow the comparison of the final result as a function of the execution time. Columns RE60 and RE300 present the relative error after 60 and 300 seconds, respectively. As it can be seen, increasing the optimization time leads to an improvement in the final result for both metaheuristics and for almost every benchmark problem. These improvements are more significant for bigger problem instances, and affect the small instances only slightly.
 
-Hence, the observed performance of the implemented metaheuristic algorithms on the asymmetric TSP, for the level of complexity of the targeted \textit{flying tourist} application scenario, showed to be highly promising, leading to final solutions which are either optimal or whose relative error is close to 10\%. \todo{Review paragraph}
+Hence, the observed performance of the implemented metaheuristic algorithms on the asymmetric TSP, for the level of complexity of the targeted \textit{flying tourist} application scenario, showed to be highly promising, leading to final solutions which are either optimal or whose relative error is close to 10\%. 
 
 \begin{table}[t]
 \centering
@@ -93,11 +93,14 @@ Executing the same evaluation strategy on the time-dependent TSP problems leads 
 \end{tabular}
 \end{table}
 
-For small instances (17 nodes), ACO and SA present a small relative error, ranging from 7\% and 11\%. For medium instances (35-53 nodes), the relative error decreases for both algorithms, ranging from 4\% to 7\%, with SA offering better results than ACO. This may occur because the high number of performed iterations in small and medium instances leads to an intensive search space exploration. However, when  bigger problems (124-323 nodes) are considered, the performance of the ACO increases (possibly due to its guided search exploration), reducing the relative error to close to 3\% and surpassing that of the SA.
+For small instances (17 nodes), ACO and SA present a small relative error, ranging from 7\% and 11\%. For medium instances (35-53 nodes), the relative error decreases for both algorithms, ranging from 4\% to 7\%, with SA offering better results than ACO. This may occur because the high number of performed iterations in small and medium instances leads to an intensive search space exploration. However, when  bigger problems (124-323 nodes) are considered, the performance of the ACO increases (possibly due to its guided search exploration), reducing the relative error to close to 3\% and surpassing that of the SA. 
 
 In any case, the performance of these two algorithms on the time-dependent TSP is highly promising, leading to final solutions which are consistently below the 10\% relative error mark. 
 
-A precise interpretation of the factors involved in these results is hard. Still the following conclusions seem plausible. When comparing the time-dependent TSP with the asymmetric TSP we usually expect the former to be more heavily constrained than the latter. In those cases finding the problem itself simplifies finding the overall optimum, as bad solutions are much easier to identify. In particular both ACO and SA seem to explore this property well, as can be inferred by the fact that for the corresponding benchmarks the time dependent version obtains a better relative error rate with less iterations. Moreover we believe that the better relative error rates themselves are also problem induced, meaning that the asymmetric TSP contains big gaps in the objective function, in particular from the optimal value to a close by maximum, whereas the time-dependent TSP contains smaller gaps and a higher concentration of near maximums. \todo{Review paragraph}
+
+\subsection{Discussion}
+
+A precise interpretation of the factors involved in these results is not straightforward. Still, the following conclusions seem plausible. When comparing the time-dependent TSP with the asymmetric TSP, the former is usually expected to be more heavily constrained than the latter. In those cases, finding the problem itself simplifies the search for the overall optimum, as bad solutions are much easier to identify. In particular, both ACO and SA seem to explore this property well, as it can be inferred by the fact that for the corresponding benchmarks the time dependent version obtains a better relative error rate with less iterations. Moreover, the better relative error rates themselves seam to be problem induced, meaning that the asymmetric TSP contains big gaps in the objective function. This happens, in particular, from the optimal value to a close by maximum, whereas the time-dependent TSP contains smaller gaps and a higher concentration of near maximums. 
 
 
 

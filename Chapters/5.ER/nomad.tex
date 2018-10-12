@@ -1,7 +1,7 @@
 \section{Comparison with \textit{Kiwi}'s \textit{Nomad}}
 \label{sec:nomad}
 
-At the present time, \textit{Kiwi}'s \textit{Nomad} is the only (non-disclosed) tool that is capable of addressing the formalized \textit{Flying Tourist Problem} in the form of an unconstrained multi-city routing problem, although limited to only 10 different nodes. To facilitate the comparison of the conceived optimization system with this tool, the definition of the user requests of the proposed FTP (see section \ref{sec:pf}) was kept as similar as possible to \textit{Kiwi}'s \textit{Nomad} interface. The user is asked to specify the departing/arriving city, together with the start date, the set of cities to be visited and the duration of the stay in each city.
+At the present time, \textit{Kiwi}'s \textit{Nomad} is the only (non-disclosed) tool that is capable of addressing the formalized \textit{Flying Tourist Problem} in the form of an unconstrained multi-city routing problem, although limited to only 10 different nodes. To facilitate the comparison of the conceived optimization system with this tool, the definition of the user requests of the proposed FTP (see section \ref{sec:ftp}) was kept as similar as possible to \textit{Kiwi}'s \textit{Nomad} interface. The user is asked to specify the departing/arriving city, together with the start date, the set of cities to be visited and the duration of the stay in each city.
 
 The results provided by both applications were directly compared against each other, according to each considered objective function. The difference in the total flight price and duration (for each query) was also measured and analyzed as a function of the query parameters. The former evaluation will be called \textit{absolute comparison} (subsection \ref{sec:absolute_eval}), while the latter \textit{quantitative evaluation} (subsection \ref{sec:quantitative_eval}).
 
@@ -22,9 +22,15 @@ Both applications respond to each query with three different sets of flights, se
 
 Fig.~\ref{fig:quality_apis} illustrates the obtained comparison, by presenting the total number of times that an application outperformed the other, for each of the three different optimization criteria. It also shows the number of cases in which the responses were very similar.
 
-The analysis of this figure indicates that the developed application presents better solutions for a significant amount of queries. In fact, while the fastest set of flights is only achieved in 42\% of the queries, it presents the cheapest set of flights 95\% of the times and the best recommended result 75\% of the times. \todo{Nota: paragrafo abaixo}
+The analysis of this figure indicates that the developed application presents better solutions for a significant amount of queries. In fact, while the fastest set of flights is only achieved in 42\% of the queries, it presents the cheapest set of flights 95\% of the times and the best recommended result 75\% of the times. 
 
-Caso o professor considere apropriado, posso justificar a baixa taxa de sucesso do "fastest". Isto deve-se a uma ligeira falha na implementacao. Quando fazemos os pedidos dos dados dos voos, eu apenas guardo um subset da resposta, para poupar memoria. No entanto, eu escolho sempre o subset com o preco mais baixo. Logo, os voos mais rapidos perdem-se pelo caminho...
+The developed application presents high quality results for two of the three objective functions, in a consistent way. However, it does not perform particularly well in the minimization of the total flight duration. This occurs because of an implementation detail in the DMS. Upon receiving a list of flights for a query, the DMS selects only a subset of these flights, as to reduce the required amount of memory. This subset always selects the cheapest set of flights. However, in general, if a flight is fast, its price is high. Thus, upon selecting the subset of flights, the most promising solution components for the minimization of the total flight duration are discarded.
+
+
+%The analysis of this figure indicates that the developed application presents better solutions for a significant amount of queries. In fact, is presents the cheapest set of flights in 95\% of the queries, and the best recommended results 75\% of the time.
+
+
+
 
 
 \subsection{Quantitative evaluation}
@@ -51,7 +57,7 @@ To evaluate the difference of the responses provided by both applications, the t
 
 Fig.~\ref{fig:comparison_a} presents the results of the queries performed for a single start date. Its analysis shows that, for a small number of nodes (2 and 3), the developed application recommends flights that are slightly more expensive ($\approx$ 10\% to 19\%) but have a much lower flight duration ($\approx$ 33\%-46\%). For requests with more nodes (5 to 10), the results presented by the developed application have both lower prices ($\approx$ 2\%-18\%) and flight duration ($\approx$ 9\%-24\%).
 
-Figure ~\ref{fig:comparison_b} depicts the obtained results when the length of the start interval was extended to 31 days. With such an extended start period, every recommended set of flights provided by the proposed application has a lower price and duration. The price presents the most significant change: the minimum improvement is 8\%, while the maximum is 29\%.
+Figure ~\ref{fig:comparison_b} \todo{make it a subfigure} depicts the obtained results when the length of the start interval was extended to 31 days. With such an extended start period, every recommended set of flights provided by the proposed application has a lower price and duration. The price presents the most significant change: the minimum improvement is 8\%, while the maximum is 29\%.
 
 Finally, it is worth noting that all the presented experiments only consider up to 10 different cities to be visited by the traveler. The reason why more nodes were not considered arises not from the developed application (which could easily accommodate more cities), but is motivated by a strict limit presented by \textit{Kiwi}'s \textit{Nomad} application, which does not support more than 10 nodes in the planned route.
   

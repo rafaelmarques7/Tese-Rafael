@@ -9,7 +9,7 @@ Given a list of necessary flights, usually requested by the CSA, the DMS communi
   \item parse the response.
 \end{enumerate}
 
-When communicating with third-party APIs, the bottleneck of the system is usually the time necessary for the server to process the request and produce a response to it. The implemented worker/consumer approach takes advantage of this bottleneck. Instead of waiting for a request to complete, this approach uses the waiting period to spawn more requests. Thus, the waiting period associated to one request is not imposed to the others. Despite this, executing multiple requests will increment the servers workload, increasing the time necessary to respond to one (isolated) request. This approach will be discussed and its results illustrated in subsection \ref{sec:dms_er}. 
+When communicating with third-party APIs, the bottleneck of the system is usually the time necessary for the server to process the request and produce a response to it. The implemented worker/consumer approach takes advantage of this bottleneck. Instead of waiting for a request to complete, this approach uses the waiting period to spawn more requests. Thus, the waiting period associated to one request is not imposed to the others. Despite this, executing multiple requests will increment the servers workload, increasing the time necessary to respond to one (isolated) request. This approach will be discussed, and its results illustrated, in subsection \ref{sec:response_time}. 
 
 
 %The worker/consumer approach implemented by this DMS is particularly useful to take advantage of the bottleneck of the communica
