@@ -13,7 +13,7 @@ The execution of these tests involved over 100 different queries, by varying not
 
 Both applications respond to each query with three different sets of flights, serving the following different optimization criteria: the \textit{cheapest}, the \textit{fastest} and the \textit{recommended}. For each query, a winner was determined according to the following criteria. The cheapest set of flights is determined according to the total flight price, while the fastest depends solely on the total flight duration. The recommended set of flights depends on both the price and the duration, and the winner for this criteria must have both lower prices and duration. 
 
-\begin{figure}[!b]
+\begin{figure}[h]
     \centering
     \includegraphics[width=8.5cm]{./imgs/average_result_quality.jpg}
     \caption{Comparison of the results provided by the proposed tool and by \textit{Kiwi}'s \textit{Nomad} application.}
@@ -38,26 +38,38 @@ The developed application presents high quality results for two of the three obj
 
 To evaluate the difference of the responses provided by both applications, the total flight price and duration of the recommended set of flights was also quantitatively measured (see Fig.~\ref{fig:comparison}). The values presented in these graphs refer to the developed application response and were normalized using the \textit{Kiwi}'s \textit{Nomad} response as reference. 
 
+% \begin{figure}[!tbp]
+%   \centering
+%   \begin{minipage}[b]{0.4\textwidth}
+%     \includegraphics[width=\textwidth]{./imgs/normalized_results_es.png}
+%     \caption{Flower one.}
+%   \end{minipage}
+%   \hfill
+%   \begin{minipage}[b]{0.4\textwidth}
+%     \includegraphics[width=\textwidth]{./imgs/normalized_results_es.png}
+%     \caption{Flower two.}
+%   \end{minipage}
+% \end{figure}
 
-\begin{figure}[h!]
+%\todo{E preferivel ter esta imagem lado a lado ou uma em cima da outra}
+
+\begin{figure}[h]
 \centering
-    \begin{subfigure}[a]{0.5\textwidth}
-      \includegraphics[width=1\linewidth]{./imgs/normalized_results_ss.png}
-      \caption{Single start date.}
-      \label{fig:comparison_a} 
-    \end{subfigure}
-    \begin{subfigure}[b]{0.5\textwidth}
-      \includegraphics[width=1\linewidth]{./imgs/normalized_results_es.png}
-      \caption{Extended start period (31 days).}
-      \label{fig:comparison_b}
-    \end{subfigure}
- \caption{Comparison of the recommended flights price and duration, as a function of the number of nodes and the length of start interval. The presented values refer to the proposed application response, and were normalized with respect to \textit{Kiwi}'s \textit{Nomad} response value.}
- \label{fig:comparison}
+  \begin{subfigure}{0.49\linewidth} \centering
+     \includegraphics[scale=0.4]{./imgs/normalized_results_ss.png}
+     \caption{Single start date.}\label{fig:comparison_a}
+  \end{subfigure}
+  \begin{subfigure}{0.49\linewidth} \centering
+     \includegraphics[scale=0.4]{./imgs/normalized_results_es.png}
+     \caption{Extended start period (31 days)}\label{fig:comparison_b}
+  \end{subfigure}
+\caption{Comparison of the recommended flights price and duration, as a function of the number of nodes and the length of start interval. The presented values refer to the proposed application response, and were normalized with respect to \textit{Kiwi}'s \textit{Nomad} response value.}
+\label{fig:comparison}
 \end{figure}
 
-Fig.~\ref{fig:comparison_a} presents the results of the queries performed for a single start date. Its analysis shows that, for a small number of nodes (2 and 3), the developed application recommends flights that are slightly more expensive ($\approx$ 10\% to 19\%) but have a much lower flight duration ($\approx$ 33\%-46\%). For requests with more nodes (5 to 10), the results presented by the developed application have both lower prices ($\approx$ 2\%-18\%) and flight duration ($\approx$ 9\%-24\%).
+Figure \ref{fig:comparison_a} presents the results of the queries performed for a single start date. Its analysis shows that, for a small number of nodes (2 and 3), the developed application recommends flights that are slightly more expensive ($\approx$ 10\% to 19\%) but have a much lower flight duration ($\approx$ 33\%-46\%). For requests with more nodes (5 to 10), the results presented by the developed application have both lower prices ($\approx$ 2\%-18\%) and flight duration ($\approx$ 9\%-24\%).
 
-Figure ~\ref{fig:comparison_b} \todo{make it a subfigure} depicts the obtained results when the length of the start interval was extended to 31 days. With such an extended start period, every recommended set of flights provided by the proposed application has a lower price and duration. The price presents the most significant change: the minimum improvement is 8\%, while the maximum is 29\%.
+Figure \ref{fig:comparison_b} depicts the obtained results when the length of the start interval was extended to 31 days. With such an extended start period, every recommended set of flights provided by the proposed application has a lower price and duration. The price presents the most significant change: the minimum improvement is 8\%, while the maximum is 29\%.
 
 Finally, it is worth noting that all the presented experiments only consider up to 10 different cities to be visited by the traveler. The reason why more nodes were not considered arises not from the developed application (which could easily accommodate more cities), but is motivated by a strict limit presented by \textit{Kiwi}'s \textit{Nomad} application, which does not support more than 10 nodes in the planned route.
   

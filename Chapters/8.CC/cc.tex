@@ -55,20 +55,16 @@
 % _________________________________________________
 \section{Conclusions}
 
-The present work was developed with the intention of simplifying the planning and scheduling of complex trips. In particular, its main goal is to find the best schedule, route and set of flights, for any given flight request. This includes the resolution of the unconstrained multi-city flight routing problem.
+The present work was developed with the aim of simplifying the planning and scheduling of complex trips. In particular, its main goal is to find the best schedule, route and set of flights, for any given flight request. This includes the resolution of the unconstrained multi-city flight routing problem.
 
-Despite the proximity to the Traveling Salesman Problem (TSP), the problem under resolution has several attributes that differentiate it from the TSP and its time-dependent variation. These differences led us to propose a formal definition of the problem, denoted the Flying Tourist Problem (FTP), that better describes the characteristics of the problem under resolution.
+Despite the proximity to the Traveling Salesman Problem (TSP), the problem under resolution has several attributes that distinguish it from the TSP and its time-dependent variation. These differences led to the proposal of a formal definition of the problem, denoted by the Flying Tourist Problem (FTP), that better describes the characteristics of the problem under resolution.
 
-In order to solve the problem in an efficient manner, the present work proposes different optimization strategies that address different goals. The first goal relates to the ability of the system to present an initial solution in a very short time. This is achieved by implementing simple heuristics, such as the nearest neighbour. The second goal considers the ability of the system to produce high quality solutions. To achieve this, this work implements two different meta-heuristic optimization algorithms: the Ant Colony Optimization and the Simulated Annealing. The final goal of the system is to produce different solutions to different objective functions. To achieve this, optimization process multiple times, using different representations of the problem, according to the objective function under consideration.
+In order to solve the problem in an efficient manner, the presented work proposes different optimization strategies that address different goals. The first goal relates to the ability of the system to present an initial solution in a very short time. This is achieved by implementing simple heuristics, such as the nearest neighbour. The second goal considers the ability of the system to produce high quality solutions. To achieve this, this work implements two different meta-heuristic optimization algorithms: the Ant Colony Optimization and the Simulated Annealing. The final goal of the system is to produce different solutions to different objective functions. To achieve this, the optimization system is run multiple times, using different representations of the problem, according to the objective function under consideration.
 
-The present work also considers an analysis of the quality of the solutions constructed by the different optimization algorithms. The analysis of these results show that the developed meta-heuristics present much higher quality solutions than those provided by simpler heuristics, such as the nearest neighbour. This improvement is modest for very small instances (3) nodes, but is significant for instances of medium and large size (5-20 nodes). 
+The presented work also considers an analysis of the quality of the solutions constructed by the different optimization algorithms. The analysis of these results show that the solutions of the developed meta-heuristics present a much higher quality than those provided by simpler heuristics, such as the nearest neighbour. This improvement is modest for very small instances (3 nodes), but it is significant for instances of medium and large sizes (5-20 nodes). 
 
-%The comparison of the efficiency of the different optimization algorithms used in the resolution of FTP requests leads to the conclusion that the implemented meta-heuristics present much higher quality solutions than those provided by more simple heuristics, such as the nearest neighbour. This improvement is modest for very small instances (3) nodes, but is particularly significant for instances of medium and large size (5-20 nodes).
-
-%The second goal of the present work relates to the development of a web application that integrates the developed system in order to solve user defined FTP requests. This application 
-
-The discussion presented above lead to the conclusion that the developed system achieves its main goals. First of all, it is successful in the resolution of unconstrained multi-city flight requests. Second, the developed application is successful in the integration of the proposed solution.
-This, together with the analysis of the success rate of the different optimization algorithms, leads us to the conclusion that the devised system is successful in the resolution of the FTP, and is capable of saving time and money in the planning and scheduling of trips of different sizes and complexities.
+The discussion presented above leads to the conclusion that the developed system completly achieves its main goals. First of all, it is successful in the resolution of unconstrained multi-city flight requests. Second, the developed application is successful in the integration of the proposed solution.
+This, together with the analysis of the success rate of the different optimization algorithms, leads us to the conclusion that the devised system is successful in the resolution of the FTP, and it is capable of saving time and money in the planning and scheduling of trips of different sizes and complexities.
 
 %This, together with the analysis of the success rate of the different optimization algorithms, leads us to the conclusion that the devised system is useful and capable of saving time and money in the planning and scheduling of trips of different sizes and complexities.
 
@@ -96,7 +92,7 @@ The main achievements of the present work can be summarized as follows:
     
     \item 
     % comparison of the efficiency of different optimization algorithms in the resolution of FTP with different   
-    An analysis of the success rate of different optimization algorithms in the resolution of FTP instances with different sizes and parameters.
+    A comprehensive analysis of the success rate of different optimization algorithms in the resolution of FTP instances with different sizes and parameters.
 
 \end{itemize}
 
@@ -122,16 +118,11 @@ The main achievements of the present work can be summarized as follows:
 Given the present work, and considering the goal of developing better search tools for the planning and scheduling of complex trips, there are some interesting extensions and possible improvements to the developed system:
 
 \begin{itemize}
-    %This would extend the flight search with other options, such as bus and railroad services;
+    \item Since the developed optimization system is implemented using the Python3 programming language, there could be significant speedups in the optimization time by rewriting this module in a language like C++, and by using parallel programming techniques to exploit the multiple processors to accelerate this task,
     
-    \item The developed optimization system is implemented using Python3. There could be significant speedups by rewriting this module in a language like C++.
+    \item It is necessary to device a more efficient way to collect the flight data necessary for the resolution of a FTP requests. For big instances, the bottleneck of the system is usually the data collection process, and not the actual optimization.
     
-    \item 
-    %During the resolution of a FTP requests, the bottleneck of the system is usually the  the collection of the necessary flight data
-    It is necessary to device a more efficient way to collect the flight data necessary for the resolution of a FTP requests. For big instances, the bottleneck of the system is usually the data collection process, and not the actual optimization.
-    
-    \item Finally, it would be particularly useful and interesting to extend the developed system by considering different public  transportation systems, such as bus and railroad services, in the resolution of the proposed routing problem. This would extend the search space of the problem, and possibly contribute to the construction of better itineraries, and solutions to the requests.
-    %and possibly introduce new optimal solutions.
+    \item Finally, it would be particularly useful and interesting to extend the developed system by considering different public transportation means, such as bus and railroad services, in the resolution of the proposed routing problem. This would extend the search space of the problem, and possibly contribute to the construction of better itineraries and solutions to the requests.
     
     
 \end{itemize}

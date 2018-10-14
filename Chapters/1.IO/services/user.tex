@@ -1,11 +1,11 @@
 \subsection{User search tools}
 \label{sec:user_st}
 
-This section will focus on providing an overview of the search tools available for users to find and book commercial flights online. Thus, it will provide an overview of the services provided by different meta-search engines, in particular, \textit{Google Flights}, \textit{Booking.com}, \textit{Tripadvisor}, \textit{Cheapflights.com}, \textit{Momondo}, \textit{Expedia}, \textit{Edreams}, \textit{Kayak}, \textit{Kiwi} and \textit{Skyscanner}. This overview will be grouped according to the trip size. Single-flights and round-trips are considered together, and multi-city trip are considered separately.
+This section will focus on providing an overview of the search tools available for users to find and book commercial flights online. Thus, it presents a brief survey of the services provided by different meta-search engines, in particular, \textit{Google Flights}, \textit{Booking.com}, \textit{Tripadvisor}, \textit{Cheapflights.com}, \textit{Momondo}, \textit{Expedia}, \textit{Edreams}, \textit{Kayak}, \textit{Kiwi} and \textit{Skyscanner}. This overview is grouped according to the trip size. Single-flights and round-trips are considered together, and multi-city trip are considered separately.
 
-As to present an overview of the solutions presented by each of the tested applications, the same flight queries were performed on each. In every application, three different queries were performed, one for each type of flight search. First, a single-flight from Lisbon to Amsterdam, on the date 8/6/2018. Second, a round-trip involving the same two cities and start date, but considering a duration of stay of 3 days. Finally, the third query considers three different single-flights: $i)$ from Lisbon to Amsterdam (8/6/2018); $ii)$ from Amsterdam to Berlin (11/6/2018); and $iii)$ from Berlin to Lisbon (14/6/2018).
+As to summarize the characteristics of the solutions presented by each of the tested applications, the same flight queries were performed on each. In every application, three different queries were performed, one for each type of flight search. First, a single-flight from Lisbon to Amsterdam, on the date of 8/6/2018. Second, a round-trip involving the same two cities and start date, but considering a duration of stay of 3 days. Finally, the third query considers three different single-flights: $i)$ from Lisbon to Amsterdam (8/6/2018); $ii)$ from Amsterdam to Berlin (11/6/2018); and $iii)$ from Berlin to Lisbon (14/6/2018).
 
-The results of the single-flight and round-trip queries are presented in table \ref{tab:single_round_flights}. The first column of this table indicates the application in which the query was performed. The second column denotes the ability of that application to provide a search over multiple start-dates, instead of forcing a single one. The third column indicates if the application presents an overview of the prices for different start-dates, usually in the form of a visual aid, as a bar graph. The fourth column indicates if the application responds to the query with different results for different objective functions, as the cheapest, the fastest and the recommended set of flights. In its turn, the fifth column indicates if the application integrates a map in its user interface. Finally, the fifth sixth column indicates the price, in euros, of the single flight query, while the seventh and last column indicates the price of the round-trip query.
+The results of the single-flight and round-trip queries are presented in table \ref{tab:single_round_flights}. The first column of this table indicates the application in which the query was performed. The second column denotes the ability of that application to provide a search over multiple start-dates, instead of forcing a single one. The third column indicates if the application presents an overview of the prices for different start-dates, usually in the form of a visual aid, as a bar graph. The fourth column indicates if the application responds to the query with different results for different objective functions, as the cheapest, the fastest and the recommended set of flights. In its turn, the fifth column indicates if the application integrates a map in its user interface. Finally, the sixth column indicates the price, in euros, of the single flight query, while the seventh and last column indicates the price of the round-trip query.
 
 \begin{table}[]
   \centering
@@ -29,7 +29,7 @@ The results of the single-flight and round-trip queries are presented in table \
   \end{tabular}
 \end{table}
   
-Given the single-flight and round-trip queries described, which were performed on all applications, and its results presented in table \ref{tab:single_round_flights}, it is possible to conclude that: 
+Given the considered single-flight and round-trip queries, which were performed on all applications, and its results presented in table \ref{tab:single_round_flights}, it is possible to conclude that: 
 
 \begin{itemize}[itemsep=0pt, partopsep=0pt]
   \item different applications provide significantly different results: 
@@ -37,10 +37,10 @@ Given the single-flight and round-trip queries described, which were performed o
         \item Single-flight prices vary up to 44\%;
         \item Round-trip prices vary up to 120\%;
     \end{itemize}
-  \item half of the applications provide date range support;
-  \item half of the applications provide multiple results for different objective functions;
+  \item only half of the applications provide date range support;
+  \item only half of the applications provide multiple results for different objective functions;
   \item some applications present an overview of the different prices as a function of time;
-  \item some applications present an interactive map;
+  \item some applications present an interactive map.
 \end{itemize}
 
 % \begin{itemize}
@@ -54,19 +54,19 @@ Given the single-flight and round-trip queries described, which were performed o
 % MULTI CITY
 % ____________________________________________________________________________
 
-In its turn, the results of the multi-city query are presented in table  \ref{tab:multi_flights}. The columns 3-6 of this table present an overview of the search tools available on the respective applications, as previously described. In its turn, the seventh and final column indicates the price, in euros, of the multi-city flight requests. There is also a column (the second one) which indicates the applications ability to perform unconstrained multi-city flight requests. Note that upon the execution of these set of tests, there was no application that provided this tool, but during the development of this work, \textit{Kiwi} launched a service (denoted \textit{Nomad}) which addresses this problem. As far as we know, this is the only application which currently provides such a service.
+The results of the multi-city query are presented in table  \ref{tab:multi_flights}. Columns 3-6 present an overview of the search tools available on the respective applications, as previously described. In its turn, the seventh and final columns indicate the price, in euros, of the multi-city flight requests. There is also a column (the second one) which indicates the applications ability to perform \textit{unconstrained} multi-city flight requests. Note that upon the execution of this set of tests, there was no application that provided this tool, but during the development of this work, \textit{Kiwi} launched a service (denoted \textit{Nomad}) which addresses this problem. As far as we know, this is the only application that provides such a service at the present time.
 
-While the majority of the applications presents a multi-city flight search option, this options usually forces the user to constrain the query to a predefined route and schedule. If the trip requested involves visiting $n$ different cities, then there are $n!$ different routes to visit all cities. If the schedule of the trip considers an extended start period of $d$ days, then there are $n!*d$ combination of different routes and schedules for the trip. By forcing the user to a predefined a route and schedule, the application is effectively searching for only 1 of the $n!*d$ different available solutions to the request. 
+In fact, while the majority of the applications present a multi-city flight search option, this option usually forces the user to constrain the query to a predefined route and schedule. However, if the requested trip involves visiting $n$ different cities, then there are $n!$ different routes to visit all cities. Moreover, if the schedule of the trip considers an extended start period of $d$ days, then there are $n!*d$ combination of different routes and schedules for the trip. Hence, by forcing the user to a predefined route and schedule, the application is effectively searching for only 1 of the $n!*d$ different available solutions to the request. 
 
-Given the multi-city queries described, which were performed on all applications, and its results presented in table \ref{tab:multi_flights}, it is possible to conclude that: 
+Given the considered multi-city queries, which were performed on all applications, and its results presented in table \ref{tab:multi_flights}, it is possible to conclude that: 
 
 \begin{itemize}[itemsep=0pt]
   \item different applications provide significantly different results, with prices varying up to 135\%;
-  \item most applications provide (constrained) multi-city trip search utilities;
+  \item most applications only provide \textit{constrained} multi-city trip search utilities;
   \item only one application provides unconstrained multi-city trip search utilities;
   \item most applications do not present different results for different search criteria;
   \item no application offers the ability to perform multi-city trips on a range of start dates; 
-  \item no applications displays an interactive map;
+  \item no application displays an interactive map to help the user.
 \end{itemize}
 
 \begin{table}[]

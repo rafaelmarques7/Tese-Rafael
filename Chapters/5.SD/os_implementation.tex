@@ -60,13 +60,11 @@ In its turn, the implementation of the SA follows the methodology described in s
 %local search procedure (2-opt move, described in section \ref{sec:local_search}) to the current solution. 
 %To accept this solution, it is necessary to apply the Metropolis acceptance criteria (equation \ref{eq:metropolis}). This two step process, called Markov cycle, is repeated for a predefined number of times (see table \ref{tab:parameters}). Unlike the ACO implementation, in which the the solution construction process is parallel, the developed Markov cycle follows a serial approach. After completing a cycle, the temperature of the system is reduced, by applying equation \ref{eq:cooling}. As the temperature decreases, the algorithm becomes increasingly greedy and converges to a local optimum.
 
-After this initialization step, the SA system starts the optimization cycle, by constructing a new candidate solution $y$ based on the current solution $x$, using a
-2-opt move, as described in section \ref{sec:local_search}
+After this initialization step, the SA system starts the optimization cycle, by constructing a new candidate solution $y$ based on the current solution $x$, using a 2-opt move, as described in section \ref{sec:local_search}.
 %, to the current solution.
 %local search procedure (2-opt move, described in section \ref{sec:local_search}) to the current solution. #
 To accept the candidate solution $y$, it is necessary to apply the Metropolis acceptance criteria (see equation \ref{eq:metropolis}).
-Unlike the ACO implementation, in which the the solution construction process is parallel, the developed Markov cycle follows a serial approach, 
-\textbf{given that the candidate solution $y$ is always constructed based on the current solution $x$. If there were multiple threads constructing solutions at the same time, the current solution would be an uncertain entity.} \todo{Rever negrito!}
+Unlike the ACO implementation, in which the the solution construction process is parallel, the developed Markov cycle follows a serial approach, given that the candidate solution $y$ is always constructed based on the current solution $x$. If there were multiple threads constructing solutions at the same time, the current solution would be an uncertain entity.
 After completing a cycle, the temperature of the system is reduced, by applying equation \ref{eq:cooling}. As the temperature decreases, the algorithm becomes increasingly greedy and converges to a local optimum.
 
 %This two step process, called Markov cycle, is repeated for a predefined number of times (see table \ref{tab:parameters}). Unlike the ACO implementation, in which the the solution construction process is parallel, the developed Markov cycle follows a serial approach. After each cycle, the temperature of the system is reduced, by applying equation \ref{eq:cooling}. As the temperature decreases, the algorithm becomes increasingly greedy and converges to a local optimum.

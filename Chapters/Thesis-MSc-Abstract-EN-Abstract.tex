@@ -12,16 +12,59 @@
 %4) Designing and implementation a web application for it
 %5) Experimental results - optimization system performance, utility of the proposed problem, and comparison to current state of the art.
 
-Despite the existence of numerous flight search applications, most of them lack the ability to properly address multi-city flight requests. The goal of this work is to develop an application that addresses the problem of finding the best route, schedule and set of flights, for any unconstrained multi-city flight request. 
+%- assim, a estrutura seria:
+% a) descrição do "problema" (unconstrained flying search), e da 
+% dificuldade em resolvê-lo
+% b) semelhanças com o TSP
+% c) só aqui dizes que as aplicações online, apesar de oferecerem serviços 
+% básicos de procura, não oferecem (na generalidade) este tipo de serviço, 
+% dada a grande complexidade do problema em questão.
+% d) a partir daqui dizes o que é que fizeste (enumeras, não é necessário 
+% explicar):
+% - formulação do problema FTP
+% - proposta de metodologia para o resolver (base on...)
+% - implementação de um protótipo sob a forma de uma aplicação web
+% e) parágrafo acerca dos resultados. Não deves dizer que os resultados 
+% são "positivos"!!! Isto não diz nada!!! Em vez disso, deves apresentar 
+% resultados quantitativos (com números). Sugiro que olhes para as várias 
+% secções do capítulo dos resultados e que incluas aqui uma frase com o 
+% resultado (número) mais significativo para cada vertente dessa avaliação.
+% f) podes terminar o abstract com uma frase a referir o impacto do teu 
+% trabalho na perspectiva do utilizador
 
-The considered problem belongs to the class of scheduling and routing problems. In particular, it occurs as a generalization of the Traveling Salesman Problem and its time-dependent variation. Thus, an overview of the methodologies implemented in the resolution of these problems may be useful for the definition of an adequate strategy to the resolution of the considered problem. 
+The present work addresses the Flying Tourist Problem, a problem that occurs as a generalization of the Traveling Salesman Problem, and whose goal is to find the best schedule, route and set of flights, for any given unconstrained multi-city flight request. 
+Despite the existence of numerous flight search applications, most of them lack the ability to properly address unconstrained multi-city flight requests, since this problem is intractable. 
+Hence, the goal of this work is to develop a tool that allows an efficient resolution of this problem.
+To accomplish this, the developed work uses different heuristics and meta-heuristic optimization algorithms, including the Ant Colony Optimization and the Simulated Annealing. 
+This allows the construction of solutions in real-time, even for large instances. 
+These developed methods are integrated into a web application prototype, enabling the resolution of user defined requests. 
+This system is evaluated using different criteria: the quality of its optimization system; the utility of the devised problem; and its performance compared to other similar systems. 
+The results show that the developed optimization system consistently presents solutions within 10\% optimality, and that the meta-heuristic optimization strategies present solutions up to 35\% cheaper than those developed by simpler heuristics. 
+Furthermore, upon comparing the developed system to the only known alternative, it was shown that the developed application presents the cheapest and the best recommended solutions, respectively 95\% and 74\% of the times.
+Thus, upon the planning of a complex trip, the developed system allows the user to save time and money.
 
-This work proposes a formal definition for the problem under resolution, and denotes it as the Flying Tourist Problem. In order to solve it, this work uses different heuristics and metaheuristics, including the Ant Colony Optimization and the Simulated Annealing. Using these methods, a solution may be constructed in real-time, even for large problem instances.
+Keywords: Flying Tourist Problem, Traveling Salesman Problem, Ant Colony Optimization, Simulated Annealing, Combinatorial Optimization, Flight Search.
 
-The methods developed for the resolution of this problem are integrated into a web application, making it publicly available.
+%The comparison of the developed system to the only other known service that implements a solution to the problem, shows that the developed application presents the cheapest and the best recommended solution, respectively 95\% and 74\% of the times. 
+%Furthermore, the developed system presents the cheapest and the best recommended solutions, respectively 95\% and 74\% of the times, when compared to the other known service that implements a solution to the problem.
 
-The developed system is evaluated using three different criteria: the quality of its optimization system; the utility of the devised problem; and its performance compared to other similar systems. The results are extremely positive, and show that it is possible to
-considerable reduce the price and flight duration, even for small problem instances. 
+%This work aims at the resolution of the \textit{unconstrained} multi-city flight 
+
+% The present work addresses the Flying Tourist Problem, whose goal is to find the best schedule, route and set of flights to any given unconstrained multi-city flight request. 
+% This problem occurs as a generalization of the Traveling Salesman Problem and its time-dependent variation, and is particularly hard to solve as the problem size increases. 
+% Despite the existence of numerous flight search applications, most of them lack the ability to properly address multi-city flight requests. 
+% Hence, the goal of this work is to develop an application that allows the resolution of this problem, by finding the best route, schedule and set of flights, for any unconstrained multi-city flight request. 
+% To accomplish this, the developed work uses different heuristics and meta-heuristic optimization algorithms, including the Ant Colony Optimization and the Simulated Annealing. Using different optimization strategies, it is possible to construct solutions in real-time, even for large problem instances. Finally, these methods are integrated into a web application prototype, that allows the resolution of user defined requests. The developed system is evaluated using three different criteria: the quality of its optimization system; the utility of the devised problem; and its performance compared to other similar systems. The results show that the developed optimization system consistently presents solutions within 10\% optimality. The results also show that the meta-heuristic optimization strategies present solutions up to 35\% cheaper than those developed by simpler heuristics. The comparison of the developed system to the only other known service that implements a solution to the problem, shows that the developed application presents the cheapest and the best recommended solution, respectively 95\% and 74\% of the times. Thus, upon the planning of a complex trip, the developed system allows the user to save time and money.
+
+% The considered problem belongs to the class of scheduling and routing problems. In particular, it occurs as a generalization of the Traveling Salesman Problem and its time-dependent variation. 
+% %Thus, an overview of the methodologies implemented in the resolution of these problems may be useful for the definition of an adequate strategy to the resolution of the considered problem. 
+
+% This work proposes a formal definition for the problem under resolution, and denotes it as the Flying Tourist Problem. In order to solve it, this work uses different heuristics and metaheuristics, including the Ant Colony Optimization and the Simulated Annealing. Using these methods, a solution may be constructed in real-time, even for large problem instances.
+
+% The methods developed for the resolution of this problem are integrated into a web application prototype, making it publicly available.
+
+% The developed system is evaluated using three different criteria: the quality of its optimization system; the utility of the devised problem; and its performance compared to other similar systems. The results are extremely positive, and show that it is possible to
+% considerable reduce the price and flight duration, even for small problem instances. 
 
 Keywords: Flight search application, Routing and scheduling problem, metaheuristics
 
