@@ -1,0 +1,96 @@
+\subsection{User search tools}
+\label{sec:user_st}
+
+This section will focus on providing an overview of the search tools available for users to find and book commercial flights online. Thus, it will provide an overview of the services provided by different meta-search engines, in particular, \textit{Google Flights}, \textit{Booking.com}, \textit{Tripadvisor}, \textit{Cheapflights.com}, \textit{Momondo}, \textit{Expedia}, \textit{Edreams}, \textit{Kayak}, \textit{Kiwi} and \textit{Skyscanner}. This overview will be grouped according to the trip size. Single-flights and round-trips are considered together, and multi-city trip are considered separately.
+
+As to present an overview of the solutions presented by each of the tested applications, the same flight queries were performed on each. In every application, three different queries were performed, one for each type of flight search. First, a single-flight from Lisbon to Amsterdam, on the date 8/6/2018. Second, a round-trip involving the same two cities and start date, but considering a duration of stay of 3 days. Finally, the third query considers three different single-flights: $i)$ from Lisbon to Amsterdam (8/6/2018); $ii)$ from Amsterdam to Berlin (11/6/2018); and $iii)$ from Berlin to Lisbon (14/6/2018).
+
+The results of the single-flight and round-trip queries are presented in table \ref{tab:single_round_flights}. The first column of this table indicates the application in which the query was performed. The second column denotes the ability of that application to provide a search over multiple start-dates, instead of forcing a single one. The third column indicates if the application presents an overview of the prices for different start-dates, usually in the form of a visual aid, as a bar graph. The fourth column indicates if the application responds to the query with different results for different objective functions, as the cheapest, the fastest and the recommended set of flights. In its turn, the fifth column indicates if the application integrates a map in its user interface. Finally, the fifth sixth column indicates the price, in euros, of the single flight query, while the seventh and last column indicates the price of the round-trip query.
+
+\begin{table}[]
+  \centering
+  \caption{Search results across several applications. Search tools provided according to application}
+  \label{tab:single_round_flights}
+  \begin{tabular}{c|c|c|c|c|c|c}
+  \hline
+%Application & RD               & VD         & PO         & VR         & Map        & A                          & B                           \\ \hline
+\multirow{2}{*}{Application} & Date- & Price & Multiple &  \multirow{2}{*}{Map}   & Price [€]    & Price [€]    \\ 
+ & range         & overview      & results       &       & single-flight    & round-trip      \\ \hline
+  Google Flights      & $\checkmark$ &  $\checkmark$ &            & $\checkmark$ & 65       & 127 \\ \hline
+  Expedia             &   &            &            & & 81 & 167\\ \hline
+  Booking.com        & & & $\checkmark$ & $\checkmark$ & 67 & 126 \\ \hline
+  Momondo             & & $\checkmark$ & $\checkmark$ & & 62   & \cellcolor[HTML]{C0C0C0}102 \\ \hline
+  TripAdvisor         &  & & &  & \cellcolor[HTML]{C0C0C0}56 & 124 \\ \hline
+  cheapflights.com    & & & & & 75 & 150 \\ \hline
+  Adioso              & $\checkmark$ & & $\checkmark$ & & 69 & 137 \\ \hline
+  Kiwi                & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & 76 & 224 \\ \hline
+  SkyScanner          & $\checkmark$ & $\checkmark$ &  & & 65 & 127 \\ \hline
+  Edreams             & $\checkmark$ & & $\checkmark$ & & \cellcolor[HTML]{C0C0C0}56 & 116 \\ \hline
+  \end{tabular}
+\end{table}
+  
+Given the single-flight and round-trip queries described, which were performed on all applications, and its results presented in table \ref{tab:single_round_flights}, it is possible to conclude that: 
+
+\begin{itemize}[itemsep=0pt, partopsep=0pt]
+  \item different applications provide significantly different results: 
+    \begin{itemize}[itemsep=0pt, topsep=0pt]
+        \item Single-flight prices vary up to 44\%;
+        \item Round-trip prices vary up to 120\%;
+    \end{itemize}
+  \item half of the applications provide date range support;
+  \item half of the applications provide multiple results for different objective functions;
+  \item some applications present an overview of the different prices as a function of time;
+  \item some applications present an interactive map;
+\end{itemize}
+
+% \begin{itemize}
+%   \item different applications provide significantly different results. \SubItem Single and round flight prices vary up to 44\% and 120\% respectively;
+%   \item half of the applications do not provide date range support;
+%   \item half of the applications do not provide price overview as a function of time;
+%   \item most applications do not present an interactive map;
+% \end{itemize}
+
+% ____________________________________________________________________________
+% MULTI CITY
+% ____________________________________________________________________________
+
+In its turn, the results of the multi-city query are presented in table  \ref{tab:multi_flights}. The columns 3-6 of this table present an overview of the search tools available on the respective applications, as previously described. In its turn, the seventh and final column indicates the price, in euros, of the multi-city flight requests. There is also a column (the second one) which indicates the applications ability to perform unconstrained multi-city flight requests. Note that upon the execution of these set of tests, there was no application that provided this tool, but during the development of this work, \textit{Kiwi} launched a service (denoted \textit{Nomad}) which addresses this problem. As far as we know, this is the only application which currently provides such a service.
+
+While the majority of the applications presents a multi-city flight search option, this options usually forces the user to constrain the query to a predefined route and schedule. If the trip requested involves visiting $n$ different cities, then there are $n!$ different routes to visit all cities. If the schedule of the trip considers an extended start period of $d$ days, then there are $n!*d$ combination of different routes and schedules for the trip. By forcing the user to a predefined a route and schedule, the application is effectively searching for only 1 of the $n!*d$ different available solutions to the request. 
+
+Given the multi-city queries described, which were performed on all applications, and its results presented in table \ref{tab:multi_flights}, it is possible to conclude that: 
+
+\begin{itemize}[itemsep=0pt]
+  \item different applications provide significantly different results, with prices varying up to 135\%;
+  \item most applications provide (constrained) multi-city trip search utilities;
+  \item only one application provides unconstrained multi-city trip search utilities;
+  \item most applications do not present different results for different search criteria;
+  \item no application offers the ability to perform multi-city trips on a range of start dates; 
+  \item no applications displays an interactive map;
+\end{itemize}
+
+\begin{table}[]
+  \centering
+  \caption{Multi-city search results and tools.}
+  \label{tab:multi_flights}
+  \begin{tabular}{c|c|c|c|c|c|c}
+  \hline
+\multirow{2}{*}{Application} & Flexible & Date- & Price & Multiple &  \multirow{2}{*}{Map}       & Price [€]    \\ 
+ & multi-city & range         & overview      & results       &           & multi-city      \\ \hline
+  Google Flights   &   &    &            &            &                          & 184 \\ \hline
+  Expedia & &    &            &            &                          & 420                         \\ \hline
+  Booking.com &        &    &            &            &                          & 191                         \\ \hline
+  Momondo &        &    &            & $\checkmark$ &                          & \cellcolor[HTML]{C0C0C0}178 \\ \hline
+  TripAdvisor  &        &    &            & $\checkmark$ &  & 238                         \\ \hline
+  cheapflights.com   &     &    &            &            &      & - \\ \hline
+  Adioso &        &    &            &            &  & - \\ \hline
+  Kiwi     & $\checkmark$ &    & $\checkmark$ &            &                          & 226                         \\ \hline
+  SkyScanner &      &    &            & $\checkmark$ &                          & 238                         \\ \hline
+  Edreams &     &    &            &            &  & 333                         \\ \hline
+  \end{tabular}
+\end{table}
+
+% PARAGRAPH ABOUT HOW MULTI-CITY SEARCH ARE EXECUTED
+
+
+

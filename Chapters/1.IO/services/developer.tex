@@ -1,0 +1,33 @@
+\subsection{Developer search tools}
+\label{sec:developer_st}
+
+\todo{Adicionar referencias. Perguntar ao professor o que se deve referenciar nesta seccao}
+
+For a developer that intends to create a flight search engine, there are several OTA that provide access to their API, allowing the access to flight data. These APIs usually offer the possibility of searching for cached and, sometimes, real-time flight data. In some cases, these APIs also extend their range of services, and include endpoints for the access of hotel information, car-rental and railroad services, and even cruise ships itineraries  \cite{expedia_docs, amadeus}.
+
+An API may be classified as \textit{public}, \textit{limited} or \textit{private} according to the restrictions it imposes to its access. Private APIs are those which are only accessible to enterprises. An example of a company whose API is private is \textit{Skyscanner}. In its turn, \textit{Google} offers a service which can be classified as limited, since it only offers up to 50 free queries per day. Finally, there are other APIs whose access is completely free and unlimited, and therefore, are classified as \textit{public}. \textit{Kiwi} is an example of a company that provides a public API.
+
+%In general, offering a public API has positive effects to the content provider, as it increases their traffic, the potential market and sometimes even the sales. 
+
+%Among the companies which extend their API for third party are Google, Skyscanner, Expedia and Kiwi. These API usually operate as a \textit{free}, \textit{limited} or \textit{private} service. For example, while Expedia and Kiwi offer free publicly accessible API's, Skyscanner has a \textit{private companies only} \cite{skyscanner_private} policy, denying any free public consultation for educational purposes. In its turn, Google has a free, but limited API, in the sense that only 50 free daily queries are available, and anything beyond that has an associated cost \cite{google_qpx}.
+
+
+%Usually, these content providers benefit from sharing their API, as this generally increases the traffic to their application, as well as the number of potential clients and bookings. In some cases, these OTA do not handle booking themselves, but redirect to the respective DTS. In this case, the content provider retains the entirety of the booking fees. In the case where the meta-search engine does manage the booking, the content provider retains the majority of the booking fee’s, while the second party may retain some share of these revenues \cite{skyscanner_pricing}.
+
+Given the educational purpose of this work, the selection of a flight API is restricted to those which are \textit{public}. Unfortunately, the number of public flight API is very short. Among the 10 companies enumerated in the previous section, only three have public APIs: \textit{Expedia, Amadeus} and \textit{Kiwi}. The first two companies operate mostly in North America and their flight data is mostly restricted to that continent. In its turn, \textit{Kiwi} is an European company, but does not limit its services to this continent. Instead, its API functions as a meta-search engine, aggregating data from different content providers. 
+
+As a consequence, during the development of this work, the necessary flight data will be provided by the \textit{Kiwi} public API. The major search utilities that this API offers are \cite{kiwi_api}:
+
+\begin{itemize}
+    \item access to relevant information about cities, airports and airline companies;
+    \item access to single-flight and round-trip information, with flexible queries that include:
+        \begin{itemize}
+            \item flexible start dates;
+            \item flexible durations of stay;
+            \item queries with unspecified destination;
+            \item queries with multiple origins and destinations;
+        \end{itemize}
+  \item the possibility to aggregate up to 9 single-flights and round-trip queries in a single request.
+\end{itemize}
+
+It is worth noting that, although Kiwi (and other companies) enable the query of multiple flights at once, each flight must specify a particular pair of cities and date. Thus, this corresponds to a constrained multi-city search, as discussed in the previous section, and does not actually provide information regarding the best route, schedule or set of flights for an unconstrained multi-city trip.  
