@@ -24,8 +24,8 @@ then the combinatorial optimization problem is said to be solvable in $\mathcal{
 
 Hence, A \textit{polynomial time algorithm} is characterized by a computation time bounded by $\mathcal{O}(p(n))$, for some polynomial function $p$, 
 where $n$ is the size of the problem instance. If $k$ is the largest exponent of such a polynomial, 
-the problem is said to be solvable in $\mathcal{O}(n^k)$. On the contrary, 
-any algorithm whose computational time can not be bounded by a polynomial function is referred to as an \textit{exponential time algorithm}.
+the problem is said to be solvable in $\mathcal{O}(n^k)$. On the other hand
+an algorithm whose computational time can not be bounded by a polynomial function is most of the time an \textit{exponential time algorithm}.
 Any problem that can be solved in polynomial time is said to be \textit{tractable}, while problems that 
 are not solvable in polynomial time are called \textit{intractable}.
 
@@ -39,8 +39,8 @@ The class of NP-complete refers to the most difficult problems in NP.
 It is worth mentioning that there exists another class, called NP-hard, for which each problem is as hard as the hardest NP-complete problem.
 More precisely, a problem $H$ is NP-hard when every problem in NP can be reduced to $H$ using a polynomial time transformation.
 This definition of the NP-hard class leads to the logical conclusion that finding a polynomial time algorithm for \textit{any} problem in NP-hard,
-would imply the resolution of \textit{all} NP-complete problems in polynomial time. However, up until now, no polynomial time algorithm was found for any NP-hard problem.
-Note that the class NP-hard does not necessary belong to the class NP, but this is used following the name convention.
+would imply the resolution of \textit{all} NP problems in polynomial time. However, until now, no polynomial time algorithm was found for any NP-hard problem.
+Note that the class NP-hard does not necessary coincide  class NP.
 
 Regarding this, there exists an infamous discussion among the scientific community regarding the question "$P=NP?$",
 since it is one of the major unsolved problems in computer science.

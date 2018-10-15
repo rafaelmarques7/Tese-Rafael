@@ -26,10 +26,12 @@ Time-dependent scheduling problems can also be solved using this meta-heuristic 
     \While{$(T_{u} > T_{f})$}
     \State set $n$ = 0
     \While{($n$ \leq $R$)}
-      generate neighbour solution $y$
+    \State generate neighbour solution $y$
     \State  Calculate $\Delta Z_{yx}$
-    \State if ( $\Delta Z_{yx}$ \leq 0) accept solution 
-    \State  elif (exp(- $\Delta Z_{yx}/T$) $>$ random(0,1)) accept solution
+    \If ( $\Delta Z_{yx}$ \leq 0) 
+    \State accept solution 
+    \Elif (exp(- $\Delta Z_{yx}/T$) $>$ random(0,1)) 
+    \State accept solution
     \State  $n$ += 1
     \EndWhile
     \State  $u$ += 1

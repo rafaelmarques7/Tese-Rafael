@@ -1,7 +1,7 @@
 \section{Graph representation}
 \label{sec:ftp_graph}
 
-\todo{Correct image to have T0m and not T0a}
+%\todo{Correct image to have T0m and not T0a}
 
 As described in section \ref{sec:ftp}, a FTP instance is completely described by a structure $G =(V_c, A, T_{0}, D, TW)$. Note that the previously referenced structure requires a set of arcs $A$ connecting every pair of nodes belonging to $V_c$. Thus, it is possible to represent this information in a weight matrix, where each of its entries corresponds to a particular arc.
 
@@ -18,7 +18,7 @@ To conclude the analysis of the characteristics of the FTP weight matrix, it is 
 %% ----- use this figure to explain the arc families -----
 \begin{figure}[htpb]
   \centering
-  \includegraphics[width=\textwidth]{./Figures/system_design/flights_times.png}
+  \includegraphics[width=\textwidth]{./Figures/system_design/tempos.png}
   \caption{Illustration of the distribution *in time) of the initial, final and transition arcs.}
   \label{fig:arc_families} 
 \end{figure}
@@ -40,22 +40,22 @@ The union of the initial, transition and final arcs gives the set $A$ of all the
 
 This section 
 %will make a brief analysis of the dimensions associated to this problem. This will cover 
-does a brief analysis of the dimensions of the weight matrix of an FTP instance, in particular, the number of entries and its size in memory. It also includes an overview of the solution space associated to a FTP request. 
+presents a brief analysis of the weight matrix dimensions of an FTP instance, in particular, the number of entries and its size in memory. It also includes an overview of the solution space associated to a FTP request. 
 
 The FTP is described by a tri-dimensional array (weight matrix), with shape $(|Vc|,|Vc|, |T_{0}| + \sum D)$, where $V_c$ is the complete set of nodes (note that$|Vc|=(n+2)$), and $T_{0}$ is the length of the start period and $\sum D$ is the total trip duration. The total number of entries ($n_e$) of the weight matrix is given by $n_{e} = (n+2)^2\times(T_{0} + \sum D)$. 
 
-Thus, the number of entries of the weight matrix depends mostly on the number of cities to visit, since there is a quadratic relation. Furthermore, it is always true that $1 \leq (T_{0} + \sum D) \leq 365$, since commercial flights are not sold with more than one year in advance. Thus, it is possible to simplify the expression of the number of entries of a weight matrix by considering $n_{e} = k(n+2)^2$, where k is 
+Consequently, the total number of entries of the weight matrix depends mostly on the number of cities to visit, since there is a quadratic relation. Furthermore, it is always true that $1 \leq (T_{0} + \sum D) \leq 365$, since commercial flights are not sold with more than one year in advance. Thus, it is possible to simplify the expression of the number of entries of a weight matrix by considering $n_{e} = k(n+2)^2$, where $k$ is 
 $(T_{0} + \sum D)$.
 %a constant - the maximum length (in days) of a possible trip schedule. 
 
-Each entry of the weight matrix will be forced to a 32bit integer (as described in \ref{sec:os_implementation}) and thus, it is possible to calculate the size of the weight matrix in memory ($m_{graph}$), given by $m_{graph} = 4*n_e$ (bytes). 
+Each entry of the weight matrix shall be represented with a 32bit integer (as described in section \ref{sec:os_implementation}) and thus, it is possible to calculate the size of the weight matrix in memory ($m_{graph}$), given by $m_{graph} = 4*n_e$ (bytes). 
 
 
-Consider the TSP, where given $n$ cities to visit, there are $n!$ possible routes. The goal of the FTP is to find both the best route and schedule for a trip. Note that in a FTP problem, the trip start length is given by $T_{0}$, and thus, there are at most $T_{0}$ different possible schedules. Thus, the size of the solution space to a FTP is given by $|S| = T_{0}*n!$  
+Hence, when considering a TSP instance $n$ cities to visit, there are $n!$ possible routes. The goal of the FTP is to find both the best route and schedule for a trip. Note that in a FTP problem, the trip start length is given by $T_{0}$, and thus, there are at most $T_{0}$ different possible schedules. Thus, the size of the solution space to a FTP is given by $|S| = T_{0}*n!$  
 
-From the above, it is possible to conclude that the size search space of an FTP instance is closely related to that of the TSP. In particular, if there is a single start date, the size is the same. As the length of the start period increases, than so does the search space. This increase is always linear, and is usually below 3 orders of magnitude. 
+From the above, it is possible to conclude that the size of the search space of an FTP instance is closely related to that of the TSP. In particular, if there is a single start date, the size is the same. As the length of the start period increases, than so does the search space. This increase is always linear, and it is usually below 3 orders of magnitude. 
 
-Note that the procedures considered above are only true after reducing the family of arcs into a single arc, according to the objective function, as described in the previous section. Prior to this, instead of having a single 32bit integer representing a weight matrix entry, there is a JSON object with flight information. In general, each flight occupies roughly 3500 bytes, and there are multiple flights ($\approx$1-100) for each pair of cities, and for each date. 
+Note that the procedures considered above are only true after reducing the family of arcs into a single arc, according to the objective function, as described in the previous section. Prior to this, instead of having a single 32bit integer representing a weight matrix entry, there is a structured data object (JSON) with flight information. In general, each flight roughly occupies 3500 bytes, and there are multiple flights ($\approx$1-100) for each pair of cities, and for each date. 
 %Thus, 1GB of memory allows the storage of, approximately, 300.000 commercial flights. 
 
 
