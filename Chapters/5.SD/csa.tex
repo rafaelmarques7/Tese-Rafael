@@ -3,7 +3,7 @@
 
 The CSA is a web application designed to interact with the user, allowing the definition of flight requests and the presentation of meaningful solutions. The response to t   hese requests are not processed directly by the CSA, as it would consume too much resources (CPU and RAM) of the users device, and are, instead, redirected to the SSA to be solved. Thus, the CSA intends to be only an input/output port between the user and the SSA. 
 
-Each user defined request is constructed in such a way that it can be used to instantiate a FTP, as defined in section \ref{sec:ftp}. Each FTP request is a specific resource, uniquely identified by a particular Uniform Resource Identifier (URI). This will be further detailed in section \ref{sec:api_protocol}. Each of these resources are used to request a solution to the request from the the server side application. Following this convention, the user interface must enable the collection, from the user, the following information:
+Each user defined request is constructed in such a way that it can be used to instantiate a FTP, as defined in section \ref{sec:ftp}. Each FTP request is a specific resource, uniquely identified by a particular \ac{URI}. This will be further detailed in section \ref{sec:api_protocol}. Each of these resources are used to request a solution to the request from the the server side application. Following this convention, the user interface must enable the collection, from the user, the following information:
 
 \begin{itemize}
   \item the start city and return city, $v_{0}$ and $v_{n+1}$, respectively;
@@ -11,7 +11,7 @@ Each user defined request is constructed in such a way that it can be used to in
   \item the start dates $T_{0}$ associated to the trip.
 \end{itemize}
 
-Upon receiving a solution to a user request, the User Interface (UI) must be updated, displaying the relevant information of these solutions. Each solution to a request is an object which contains at least one set of flights that satisfy the user defined itinerary. However, a response to a request should 
+Upon receiving a solution to a user request, the \ac{UI} must be updated, displaying the relevant information of these solutions. Each solution to a request is an object which contains at least one set of flights that satisfy the user defined itinerary. However, a response to a request should 
 contain several valid solutions, so that the user might choose the most adequate to his needs.
 Each solution is composed of one or several flights, and each of the presented flights should contain, at least, the following information:
 

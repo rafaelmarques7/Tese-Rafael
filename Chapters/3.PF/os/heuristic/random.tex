@@ -1,7 +1,7 @@
 \subsubsection{Pseudo-random construction procedure}
 \label{sec:pseudo_random}
 
-Formally, The method introduced in this subsection is not an optimization algorithm, but rather a solution construction procedure for the Flying Tourist Problem. This procedure is relevant for two reasons. First, it can be used to construct a preliminary solution to a given request in a very fast manner. Naturally, the quality of this solution may be extremely poor, but it is very useful as an initial and fast response to a user request. Furthermore, this construction procedure is also relevant, because some optimization algorithms, like the Simulated Annealing (discussed in section \ref{sec:sa}), require an initial valid and complete solution.
+Formally, the method introduced in this subsection is not an optimization algorithm, but rather a solution construction procedure for the Flying Tourist Problem. This procedure is relevant for two reasons. First, it can be used to construct a preliminary solution to a given request in a very fast manner. Naturally, the quality of this solution may be extremely poor, but it is very useful as an initial and fast response to a user request. Furthermore, this construction procedure is also relevant, because some optimization algorithms, like the Simulated Annealing (discussed in section \ref{sec:sa}), require an initial valid and complete solution.
 
 The method introduced below will be hereinafter called pseudo-random construction procedure, and requires an instance of the Flying Tourist Problem $G=(Vc,A,T_0,D,TW)$ where there are no restrictions regarding the time-windows, that is $TW(i) = [0, +\infty[$, $\forall i \in V$. The procedure can be summarized as follows:
 

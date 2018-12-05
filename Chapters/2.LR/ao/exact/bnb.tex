@@ -1,7 +1,7 @@
 \subsubsection{Branch and Bound}
 \label{sec:bnb}
 
-Branch and Bound ($B\&B$) is one of the most used tools to solve large NP-hard combinatorial optimization problems. As an example, the software tool \textit{Concorde} uses a Branch and Bound algorithm, and it was used to solve all 110 instances of the \textit{TSPLib}, reporting exact solutions in every problem, including a instance with 89.900 nodes, although it required more than 110 CPU years. To be precise, $B\&B$ should be classified as an algorithm paradigm, constituted by 3 main parts, which have to be chosen according to the problem under consideration, and for which many options may exist \cite{bnb}.
+\ac{BB} is one of the most used tools to solve large NP-hard combinatorial optimization problems. As an example, the software tool \textit{Concorde} uses a Branch and Bound algorithm, and it was used to solve all 110 instances of the \textit{TSPLib}, reporting exact solutions in every problem, including a instance with 89.900 nodes, although it required more than 110 CPU years. To be precise, $B\&B$ should be classified as an algorithm paradigm, constituted by 3 main parts, which have to be chosen according to the problem under consideration, and for which many options may exist \cite{bnb}.
 
 The force of the $B\&B$ comes from it being a search algorithm which (indirectly) searches the complete search space of the problem. Since this is not directly feasible, due to the common exponential growth of the solution space, $B\&B$ takes advantage of \textit{bounds}, combined with information regarding the current best solution,to safely discard certain solutions among the search space.
 

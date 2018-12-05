@@ -67,6 +67,7 @@
 \begin{abstract}
 	\input{./Chapters/Thesis-MSc-Abstract-EN-Abstract.tex}
 \end{abstract}
+\clearpage
 \begin{keywords}
 	\input{./Chapters/Thesis-MSc-Abstract-EN-KeyWords.tex}
 \end{keywords}
@@ -137,8 +138,9 @@
 \listoftables
 % If Printing on DOUBLE SIDED pages, the second page should be white.
 % Otherwise, comment the following command:
-\let\cleardoublepage\relax
-%\cleardoublepage
+%\let\cleardoublepage\relax
+\cleardoublepage
+%\clearpage
 % -----------------------------------------------------------------------------
 % List of Algorithms
 % If not used, comments the lines!
@@ -153,14 +155,21 @@
 % Listings
 % If not used, comments the lines!
 % Requires packages listings
-\pdfbookmark[1]{Listings}{lol}
-\lstlistoflistings
-\cleardoublepage
+%\pdfbookmark[1]{Listings}{lol}
+%\lstlistoflistings
+%\cleardoublepage
 % -----------------------------------------------------------------------------
 % % List of acronyms
 \pdfbookmark[1]{Acronyms}{loac}
 \chapter*{\tlangAcronyms}
 \input{./Chapters/Thesis-MSc-Acronyms.tex}
+% If Printing on DOUBLE SIDED pages, the second page should be white.
+% Otherwise, comment the following command:
+\cleardoublepage
+% -----------------------------------------------------------------------------
+% % List of symbols
+\pdfbookmark[1]{Symbols}{loac}
+\input{./Chapters/symbols.tex}
 % If Printing on DOUBLE SIDED pages, the second page should be white.
 % Otherwise, comment the following command:
 \cleardoublepage

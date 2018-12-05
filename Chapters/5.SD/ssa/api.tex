@@ -16,7 +16,7 @@ To construct a solution to a given request, it is necessary to sequentially exec
   \item construct a solution to the request.
 \end{enumerate}
 
-Each step of the \textit{main cycle} is executed by a particular set of functions. Steps number 1), 3) and 5) are managed by a predefined python class, which implements the logic associated to each FTP request. This class is also responsible for the communication with the DMS and OS, which execute steps number 2) and 4), respectively. It should be noted that the execution of the optimization step (iv) is only required for multi-city flight requests, since, for the single-flight and round trip, determining the best solution is a trivial task.
+Each step of the \textit{main cycle} is executed by a particular set of functions. Steps number 1), 3) and 5) are managed by a predefined python class, which implements the logic associated to each FTP request. This class is also responsible for the communication with the DMS and OS, which execute steps number 2) and 4), respectively. It should be noted that the execution of the optimization step (4) is only required for multi-city flight requests, since, for the single-flight and round trip, determining the best solution is a trivial task.
 
 %From this main cycle, steps i), iii) and v) are handled internally by python defined class objects, while steps ii) and iv) are managed by the Data Management and Optimization systems, respectively. 
 

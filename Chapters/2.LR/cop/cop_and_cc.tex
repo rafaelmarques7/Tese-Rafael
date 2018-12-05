@@ -12,7 +12,7 @@ Following a more concise definition \cite{aco_overview_advances}, a combinatoria
   \item an objective function $f$: $S$ $\rightarrow$ $\mathbb{R}_{0}^{+}$, to be minimized.
 \end{enumerate}
 
-The search space is defined by a set of decision variables $X_{i}, i = (1,...,n)$, each associated to a domain $D_{i}$, which specifies the possible value of each decision variable. An instantiation of a variable is an assignment of a value $v_{i}^{j} \in D_{i}$ to a variable $X_{i}$. This leads to the definition of a feasible solution $s \in S$, which corresponds to the assignment of a value to each decision variable, according to its domain, in such a way that all constraints in $\Omega$ are satisfied. Finally, the objective of the problem is to find a global minimum of P, that is, a solution $s^{*} \in S$ such that $f(s^{*}) < f(s) \forall s \in S$. The set of all global minima is denoted by $S^{*} \subseteq S$.
+The search space is defined by a set of decision variables $X_{i}, i = (1,...,n)$, each associated to a domain $D_{i}$, which specifies the possible value of each decision variable. An instantiation of a variable is an assignment of a value $v_{i}^{j} \in D_{i}$ to a variable $X_{i}$. This leads to the definition of a feasible solution $s \in S$, which corresponds to the assignment of a value to each decision variable, according to its domain, in such a way that all constraints in $\Omega$ are satisfied. Finally, the objective of the problem is to find a global minimum of P, that is, a solution $s^{*} \in S$ such that $f(s^{*}) \leq f(s)$ $\forall s \in S$. The set of all global minima is denoted by $S^{*} \subseteq S$.
 
 When working on combinatorial optimization problems, it is useful to have an idea of how difficult the problem is. This characterization is provided by a field called computation complexity. A COP, $\Pi$, is said to have worst-case time complexity  $O(g(n))$, if the best algorithm 
 for solving $\Pi$ finds an optimal solution to any instance of size $n$ of $\Pi$,
@@ -22,10 +22,9 @@ A problem $\Pi$ is said to be solvable in polynomial time if the maximum amount 
 is bounded by a polynomial in $n$. If $k$ is the largest exponent of such a polynomial,
 then the combinatorial optimization problem is said to be solvable in $\mathcal{O}(n^k)$ time.
 
-Hence, A \textit{polynomial time algorithm} is characterized by a computation time bounded by $\mathcal{O}(p(n))$, for some polynomial function $p$, 
-where $n$ is the size of the problem instance. If $k$ is the largest exponent of such a polynomial, 
-the problem is said to be solvable in $\mathcal{O}(n^k)$. On the other hand
-an algorithm whose computational time can not be bounded by a polynomial function is most of the time an \textit{exponential time algorithm}.
+Hence, a \textit{polynomial time algorithm} is characterized by a computation time bounded by $\mathcal{O}(p(n))$, for some polynomial function $p$, 
+where $n$ is the size of the problem instance.  If 
+an algorithm has a computational time that can not be bound by a polynomial function is denoted as an \textit{exponential time algorithm}.
 Any problem that can be solved in polynomial time is said to be \textit{tractable}, while problems that 
 are not solvable in polynomial time are called \textit{intractable}.
 
@@ -40,9 +39,9 @@ It is worth mentioning that there exists another class, called NP-hard, for whic
 More precisely, a problem $H$ is NP-hard when every problem in NP can be reduced to $H$ using a polynomial time transformation.
 This definition of the NP-hard class leads to the logical conclusion that finding a polynomial time algorithm for \textit{any} problem in NP-hard,
 would imply the resolution of \textit{all} NP problems in polynomial time. However, until now, no polynomial time algorithm was found for any NP-hard problem.
-Note that the class NP-hard does not necessary coincide  class NP.
+Note that the class NP-hard does not necessary coincide with the class NP.
 
-Regarding this, there exists an infamous discussion among the scientific community regarding the question "$P=NP?$",
+Regarding this, there is a discussion among the scientific community regarding the question "$P=NP?$",
 since it is one of the major unsolved problems in computer science.
 Figure \ref{fig:p_vs_np} illustrates this discussion by depicting the several classes, according to both possible solutions to the aforementioned question.
 %src:: "https://en.wikipedia.org/wiki/NP-hardness#/media/File:P_np_np-complete_np-hard.svg
